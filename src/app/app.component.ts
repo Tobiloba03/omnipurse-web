@@ -7,9 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'omnipurse-web';
-  displayedColumns: string[] = ['position', 'name'];
-  dataSource = [
-    { position: 1, name: 'Hydrogen' },
-    { position: 2, name: 'Helium' },
-  ];
+  
 }
