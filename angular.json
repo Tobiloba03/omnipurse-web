@@ -103,5 +103,8 @@
       }
     }
   },
-  "defaultProject": "omnipurse-web"
+  "defaultProject": "omnipurse-web",
+  "cli": {
+    "analytics": "1fcb50a1-b9b2-4184-a79b-e6c2f1166f27"
+  }
 }
