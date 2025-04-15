@@ -1,19 +1,259 @@
-<!-- <mat-form-field appearance="fill">
-    <mat-label>Enter your name</mat-label>
-    <input matInput placeholder="Name">
-  </mat-form-field>
-  
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> Position </th>
-      <td mat-cell *matCellDef="let element"> {{ element.position }} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>   -->
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<section class="hero video-hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source
+      src="../../../assets/VID/6774633-uhd_3840_2160_30fps.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+
+  <header class="navbar">
+    <div class="logo">
+      <img
+        src="../../../assets/iMG/IMG_9286.PNG"
+        alt="Omnipurse Logo"
+        class="logo-icon"
+      />
+      <span>Omnipurse</span>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <button class="signin">Sign In</button>
+    </nav>
+  </header>
+
+  <div class="hero-content">
+    <h1>Empowering Your Business with Technology</h1>
+    <p>
+      We're a software development company with expertise across software
+      engineering, IT, business, consulting, and training. We help brands and
+      enterprises harness technology to revolutionize their operations and
+      customer experience.
+    </p>
+    <div class="hero-buttons">
+      <button class="cta-button">More About Us</button>
+      <button class="cta-button outline">Explore Our Products</button>
+    </div>
+  </div>
+
+  <div class="consult-overlay">
+    <h2>Let's Talk About Your Business</h2>
+    <p>
+      Get expert advice on how to grow, scale, and automate your business with
+      tailored solutions. Book a free consultation with our team today.
+    </p>
+    <button class="consult-button">Book a Free Consultation</button>
+  </div>
+</section>
+
+<!-- About Us Section -->
+<section class="about-section">
+  <div class="about-content">
+    <h2>See How We Can Help <br />Your Business Grow.</h2>
+    <p>
+      Unlock business growth with cutting-edge web & mobile <br />applications,
+      driving success through innovative digital <br />solutions.
+    </p>
+  </div>
+  <button class="about-button">Our Mission</button>
+</section>
+
+
+<!-- Services Section -->
+<section class="services">
+  <h2>What We Offer</h2>
+  <div class="services-grid">
+    <div class="service-card fancy">
+      <div class="top-row">
+        <div class="icon-circle">
+          <i class="fas fa-tv"></i>
+        </div>
+        <div class="text-top">
+          <h3>Web Design</h3>
+          <p class="brief">
+            Designing visually engaging, user-friendly websites
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="bottom-content">
+        <p class="deep-text">
+          Crafting visually stunning, responsive website that capture our
+          brand's essence and transforms ideas into seamless digital
+          experiences.
+        </p>
+        <button class="start-btn">Get Started</button>
+      </div>
+    </div>
+    <div class="service-card fancy">
+      <div class="top-row">
+        <div class="icon-circle2">
+          <i class="fas fa-globe"></i>
+        </div>
+        <div class="text-top">
+          <h3>Web Development</h3>
+          <p class="brief">
+            Building secure, custom websites with performance.
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="bottom-content">
+        <p class="deep-text">
+          building robust, high-perfomance websites with cutting-edge
+          technology,delivering seamless functionality and exceptional user
+          experiences.
+        </p>
+        <button class="start-btn2">Get Started</button>
+      </div>
+    </div>
+    <div class="service-card fancy">
+      <div class="top-row">
+        <div class="icon-circle">
+          <i class="fas fa-envelope-open-text"></i>
+        </div>
+        <div class="text-top">
+          <h3>Digital Marketing</h3>
+          <p class="brief">
+            Driving online visibility through strategic campaigns.
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="bottom-content">
+        <p class="deep-text">
+          Boost your brand visibility with strategic digital marketing, driving
+          engagement, growth, and measurable results.
+        </p>
+        <button class="start-btn" style="margin-top: 25px">Get Started</button>
+      </div>
+    </div>
+
+    <div class="service-card fancy">
+      <div class="top-row">
+        <div class="icon-circle2">
+          <i class="fa-solid fa-gauge-high"></i>
+        </div>
+        <div class="text-top">
+          <h3>Visual Identity</h3>
+          <p class="brief">Creating consistent, impactful brand visuals.</p>
+        </div>
+      </div>
+      <hr />
+      <div class="bottom-content">
+        <p class="deep-text">
+          Creating cohesive visual identities that reflect our brand's essence,
+          ensuring memorable and impactful impressions.
+        </p>
+        <button class="start-btn2" style="margin-top: 30px">Get Started</button>
+      </div>
+    </div>
+
+    <div class="service-card fancy">
+      <div class="top-row">
+        <div class="icon-circle">
+          <i class="fa-solid fa-lightbulb"></i>
+        </div>
+        <div class="text-top">
+          <h3>Consultation</h3>
+          <p class="brief">Providing expert advice on digital strategy.</p>
+        </div>
+      </div>
+      <hr />
+      <div class="bottom-content">
+        <p class="deep-text">
+          Unlock the full potential of our online presence with our expert web
+          agency consultation. we offer tailored strategies to enhance your
+          website's design, functionality, and performance.
+        </p>
+        <button class="start-btn" style="margin-top: -15px">Get Started</button>
+      </div>
+    </div>
+
+    <div class="service-card fancy">
+      <div class="top-row">
+        <div class="icon-circle2">
+          <i class="fa-solid fa-gear"></i>
+        </div>
+        <div class="text-top">
+          <h3>Web Maintenance</h3>
+          <p class="brief">
+            Ensuring website security, updates, and functionality.
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="bottom-content">
+        <p class="deep-text">
+          building robust, high-perfomance websites with cutting-edge
+          technology,delivering seamless functionality and exceptional user
+          experiences.
+        </p>
+        <button class="start-btn2" style="margin-top: 8px">Get Started</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Start Your Journey Section -->
+<section class="start-journey">
+  <div class="journey-content">
+    <h2>Ready to Start? Let's build something great<br/> together!</h2>
+    <p>
+      Let Omnipurse guide your brand from idea to impact with expert-driven solutions in tech and business.
+    </p>
+    <button class="journey-btn">Start Your Journey</button>
+  </div>
+</section>
+
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+  <h2 style="color: #001f3f"><b>What Our Clients Say</b></h2>
+  <div class="testimonial-list">
+    <div class="testimonial">
+      <p style="font-size: 16px">
+        “Omnipurse transformed our business with smart IT solutions. They’re
+        professional and truly innovative.”
+      </p>
+      <strong>- Ada O., Tech Founder</strong>
+    </div>
+    <div class="testimonial">
+      <p style="font-size: 16px">
+        “Great service, amazing team! They helped us build our app from scratch
+        and even trained our staff.”
+      </p>
+      <strong>- Emeka K., Startup Owner</strong>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p>
+    Email: <a href="mailto:omnipurse.ltd@gmail.com">omnipurse.ltd@gmail.com</a>
+  </p>
+  <p>Phone: <a href="tel:+2349128510854">+234 912 851 0854</a></p>
+  <p>Location: Lagos, Nigeria</p>
+  <form>
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Omnipurse Ltd. All rights reserved.</p>
+</footer>
