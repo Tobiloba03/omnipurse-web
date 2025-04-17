@@ -23,11 +23,12 @@
       <span>Omnipurse</span>
     </div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-      <button class="signin">Sign In</button>
+      <a [routerLink]="['']">Home</a>
+      <a [routerLink]="['/about-us']">About us</a>
+      <a [routerLink]="['/services/services-overview']">Services</a>
+      <a [routerLink]="['/products/products-overview']">Products</a>
+      <a [routerLink]="['/contact-us']" routerLinkActive="router-link-active">Contact us</a>
+      <button type="button" class="signin" [routerLink]="['/login']">Sign In</button>
     </nav>
   </header>
 
@@ -40,8 +41,8 @@
       customer experience.
     </p>
     <div class="hero-buttons">
-      <button class="cta-button">More About Us</button>
-      <button class="cta-button outline">Explore Our Products</button>
+      <button type="button" class="cta-button" [routerLink]="['/about-us']">More About Us</button>
+      <button class="cta-button outline" [routerLink]="['/products/products-overview']">Explore Our Products</button>
     </div>
   </div>
 
@@ -51,7 +52,7 @@
       Get expert advice on how to grow, scale, and automate your business with
       tailored solutions. Book a free consultation with our team today.
     </p>
-    <button class="consult-button">Book a Free Consultation</button>
+    <button type="button" [routerLink]="['/consultation']" class="consult-button">Book a Free Consultation</button>
   </div>
 </section>
 
@@ -64,7 +65,7 @@
       driving success through innovative digital <br />solutions.
     </p>
   </div>
-  <button class="about-button">Our Mission</button>
+  <button class="about-button" [routerLink]="['/services/business-development']">Learn More</button>
 </section>
 
 
@@ -137,7 +138,6 @@
         <button class="start-btn" style="margin-top: 25px">Get Started</button>
       </div>
     </div>
-
     <div class="service-card fancy">
       <div class="top-row">
         <div class="icon-circle2">
@@ -211,7 +211,7 @@
     <p>
       Let Omnipurse guide your brand from idea to impact with expert-driven solutions in tech and business.
     </p>
-    <button class="journey-btn">Start Your Journey</button>
+    <button class="journey-btn" [routerLink]="['/services/software-development']">Start Your Journey</button>
   </div>
 </section>
 
@@ -237,21 +237,26 @@
   </div>
 </section>
 
-<!-- Contact Section -->
-<section class="contact">
-  <h2>Contact Us</h2>
-  <p>
-    Email: <a href="mailto:omnipurse.ltd@gmail.com">omnipurse.ltd@gmail.com</a>
-  </p>
-  <p>Phone: <a href="tel:+2349128510854">+234 912 851 0854</a></p>
-  <p>Location: Lagos, Nigeria</p>
-  <form>
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+  <div class="newsletter-content">
+    <div class="logo_newsletter">
+      <img src="../../../assets/iMG/IMG_9286.PNG" alt="Omnipurse Logo" />
+      <span class="logo_text">Omnipurse</span>
+    </div>
+    <div class="subscription-box">
+      <p class="description">
+        Enjoy free tips, insights, ideas, and product updates that will accelerate your growth.
+      </p>
+      <form class="subscribe-form">
+        <input type="phone" placeholder="Your phone number" width="50%" required />
+        <input type="email" placeholder="Your email address" width="50%" required />
+        <button type="submit">SUBSCRIBE</button>
+      </form>
+    </div>
+  </div>
 </section>
+
 
 <!-- Footer -->
 <footer class="footer">
