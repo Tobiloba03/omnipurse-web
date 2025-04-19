@@ -13,6 +13,8 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ProductsModule } from './modules/products/products.module';
 import { ConsultationComponent } from './components/consultation/consultation.component';
 import { ServicesModule } from './modules/services/services.module';
+import { HttpClientModule } from '@angular/common/http';
+import { WebsiteHeadMenuComponent } from './components/website-head-menu/website-head-menu.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +25,13 @@ import { ServicesModule } from './modules/services/services.module';
     ContactUsComponent,
     AboutUsComponent,
     ConsultationComponent,
+    WebsiteHeadMenuComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     SharedModule,
     ProductsModule,
     ServicesModule

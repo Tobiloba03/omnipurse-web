@@ -1,1 +1,110 @@
-<p>contact-us works!</p>
+<div class="contact-container">
+  <!-- LEFT SIDE -->
+  <div class="contact-info">
+    <h1>Get in Touch</h1>
+    <p class="contact-description">
+      Do you need a website, have a question or comment? Please feel free to send us an email or fill in our handy contact form. We aim to reply within 24 hours.
+    </p>
+    <p class="contact-highlight">
+      Tell us about your dream or idea and we will contact you as we are here to turn your ideas/business needs into scalable and agile solution.
+    </p>
+    <div class="office-info">
+      <h3>The Office</h3>
+      <strong>Omnipurse Limited.</strong><br />
+      Lagos, Nigeria.
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="contact-form">
+    <!-- Your form component goes here -->
+    <div>
+      <div>
+          <mat-card class="matcard">
+            <span [hidden]="!isBusy">
+              <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+            </span>
+            <mat-card-subtitle class="card__title"> <h2>Please fill the form below. We guarantee 100% security of your information.</h2>
+              <p>All information you provide will be kept strictly confidential.</p>
+           </mat-card-subtitle>
+            <mat-card-content class="matcontent">
+              <form #myform="ngForm" class="issue__log__form" (ngSubmit)="submitContactUs()">
+             
+                  <div class="row">
+                      <div class="col s5 m12 l12">
+                          <div class="form-field">
+                              <mat-form-field class="mat-field" style="width:100%;">
+                                <mat-label> PHONE </mat-label>
+                                <input matInput name="phoneNumber" [(ngModel)]="ePhone"/>
+                              </mat-form-field>
+                            </div>
+                      </div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col s12 m12 l12">
+                        <div class="form-field">
+                          <mat-form-field class="mat-field" style="width:100%;">
+                              <mat-label>EMAIL</mat-label>
+                              <input matInput required name="emailAddress" [(ngModel)]="eEmail"/>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </div>
+  
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                      <div class="form-field">
+                        <mat-form-field class="mat-field" style="width:100%;">
+                          <mat-label> NAME </mat-label>
+                          <input type="text" matInput name="name" required [(ngModel)]="eName" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="row">
+                    <div class="col s12 m12 l12">
+                      <div class="form-field">
+                        <mat-form-field class="mat-field" style="width:100%;">
+                          <mat-label> SUBJECT </mat-label>
+                          <input type="text" required matInput name="subject" [(ngModel)]="eSubject"/>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="row">
+                    <div class="col s12 m12 l12">
+                      <div class="form-field">
+                        <mat-form-field class="mat-field" style="width:100%;">
+                          <mat-label> MESSAGE </mat-label>
+                          <textarea matInput name="message" required [(ngModel)]="eMessage"></textarea>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    
+                  </div>
+                
+                  <div class="row">
+                    <div>
+                      <button type="submit" mat-raised-button color="primary">
+                        Send Message
+                      </button>
+                    </div>
+                  </div>
+                            
+                </form>
+            </mat-card-content>
+          </mat-card>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .contact-info {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+  }
+  
+  .contact-info h1 {
+    color: teal;
+    font-size: 2rem;
+  }
+  
+  .contact-description {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #015958;
+  }
+  
+  .contact-highlight {
+    color: red;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  .office-info {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+  
+  .contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+  }
+  
