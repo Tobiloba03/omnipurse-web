@@ -1,42 +1,163 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 64, 0.7);
+  flex-wrap: wrap;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: goldenrod;
+}
+
+.logo-icon {
+  width: 30px;
+  height: 30px;
+}
+.navbar nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.navbar a,
+.signin {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signin {
+  background-color: goldenrod;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.contact-section {
+  background: url("../../../assets/iMG/pexels-karolina-grabowska-5387294.jpg")
+    center/cover no-repeat;
+  padding: 80px 20px;
+  position: relative;
+  text-align: center;
+  border-bottom: 5px solid #001f3f;
+}
+.contact-info {
+  max-width: 550px;
+  margin-left: 650px;
+  margin-top: 50px;
+  background-color: rgba(0, 0, 64, 0.3);
+  padding: 50px 10px 60px;
+  text-align: center;
+  border-radius: 10px;
+  line-height: 1.3rem;
+  color: white;
+}
+.contact-info h2 {
+  color: gold;
+  font-size: 2rem;
+}
+
+.contact-info h3 {
+  font-size: 1.6rem;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  color: rgba(256, 256, 256, 0.9);
+}
+.map-section {
+  padding: 60px 20px;
+  background-color: #001f3f;
+  text-align: center;
+  border-bottom: 5px solid #001f3f;
+}
+
+.map-section h2 {
+  font-size: 2rem;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.map-section p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: goldenrod;
+}
+
+.map-container {
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 5px 20px rgba(218, 165, 32, 0.3);
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+  overflow: hidden;
+}
 .contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 2rem 10rem;
-    gap: 5rem;
-  }
-  
-  .contact-info {
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px;
-  }
-  
-  .contact-info h1 {
-    color: teal;
-    font-size: 2rem;
-  }
-  
-  .contact-description {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #015958;
-  }
-  
-  .contact-highlight {
-    color: red;
-    font-weight: bold;
-    margin-top: 1rem;
-  }
-  
-  .office-info {
-    margin-top: 2rem;
-    font-size: 1rem;
-  }
-  
-  .contact-form {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem 10rem;
+  gap: 5rem;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.contact-info h1 {
+  color: teal;
+  font-size: 2rem;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #015958;
+}
+
+.contact-highlight {
+  color: red;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.office-info {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+* {
+  box-sizing: border-box;
+}
