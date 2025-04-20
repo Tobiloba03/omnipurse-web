@@ -1,12 +1,67 @@
+<section class="contact-section">
+  <header class="navbar">
+    <div class="logo">
+      <img
+        src="../../../assets/iMG/IMG_9286.PNG"
+        alt="Omnipurse Logo"
+        class="logo-icon"
+      />
+      <span>Omnipurse</span>
+    </div>
+    <nav>
+      <a [routerLink]="['']">Home</a>
+      <a [routerLink]="['/about-us']">About us</a>
+      <a [routerLink]="['/services/services-overview']">Services</a>
+      <a [routerLink]="['/products/products-overview']">Products</a>
+      <a [routerLink]="['/contact-us']" routerLinkActive="router-link-active"
+        >Contact us</a
+      >
+      <button type="button" class="signin" [routerLink]="['/login']">
+        Sign In
+      </button>
+    </nav>
+  </header>
+  <div class="contact-info">
+    <h2>Get in touch with us!</h2>
+    <h3>Contact Infomation.</h3>
+    <p>
+      We would love to hear from you. Fill in our contact form below, give us a
+      call, send us an
+      <span style="color: gold; font-weight: bold">email</span> or visit us
+      during our <span style="text-decoration: underline">office hours</span>.
+    </p>
+  </div>
+</section>
+
+<section class="map-section">
+  <h2>Our Office Location</h2>
+  <p>Visit us in person — we’d love to meet you!</p>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.9936909443123!2d3.379205874024629!3d6.496187423015663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf518d7b03bd7%3A0xc17c391f97d28f6f!2sYaba%20College%20of%20Technology!5e0!3m2!1sen!2sng!4v1713445190179!5m2!1sen!2sng"
+      width="100%"
+      height="400"
+      style="border: 0; border-radius: 10px"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    >
+    </iframe>
+  </div>
+</section>
+
 <div class="contact-container">
   <!-- LEFT SIDE -->
   <div class="contact-info">
     <h1>Get in Touch</h1>
     <p class="contact-description">
-      Do you need a website, have a question or comment? Please feel free to send us an email or fill in our handy contact form. We aim to reply within 24 hours.
+      Do you need a website, have a question or comment? Please feel free to
+      send us an email or fill in our handy contact form. We aim to reply within
+      24 hours.
     </p>
     <p class="contact-highlight">
-      Tell us about your dream or idea and we will contact you as we are here to turn your ideas/business needs into scalable and agile solution.
+      Tell us about your dream or idea and we will contact you as we are here to
+      turn your ideas/business needs into scalable and agile solution.
     </p>
     <div class="office-info">
       <h3>The Office</h3>
@@ -20,91 +75,116 @@
     <!-- Your form component goes here -->
     <div>
       <div>
-          <mat-card class="matcard">
-            <span [hidden]="!isBusy">
-              <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
-            </span>
-            <mat-card-subtitle class="card__title"> <h2>Please fill the form below. We guarantee 100% security of your information.</h2>
-              <p>All information you provide will be kept strictly confidential.</p>
-           </mat-card-subtitle>
-            <mat-card-content class="matcontent">
-              <form #myform="ngForm" class="issue__log__form" (ngSubmit)="submitContactUs()">
-             
-                  <div class="row">
-                      <div class="col s5 m12 l12">
-                          <div class="form-field">
-                              <mat-form-field class="mat-field" style="width:100%;">
-                                <mat-label> PHONE </mat-label>
-                                <input matInput name="phoneNumber" [(ngModel)]="ePhone"/>
-                              </mat-form-field>
-                            </div>
-                      </div>
-                    </div>
-  
-                    <div class="row">
-                      <div class="col s12 m12 l12">
-                        <div class="form-field">
-                          <mat-form-field class="mat-field" style="width:100%;">
-                              <mat-label>EMAIL</mat-label>
-                              <input matInput required name="emailAddress" [(ngModel)]="eEmail"/>
-                          </mat-form-field>
-                        </div>
-                      </div>
-                    </div>
-  
-                <div class="row">
-                    <div class="col s12 m12 l12">
-                      <div class="form-field">
-                        <mat-form-field class="mat-field" style="width:100%;">
-                          <mat-label> NAME </mat-label>
-                          <input type="text" matInput name="name" required [(ngModel)]="eName" />
-                        </mat-form-field>
-                      </div>
-                    </div>
+        <mat-card class="matcard">
+          <span [hidden]="!isBusy">
+            <mat-progress-bar
+              mode="indeterminate"
+              color="warn"
+            ></mat-progress-bar>
+          </span>
+          <mat-card-subtitle class="card__title">
+            <h2>
+              Please fill the form below. We guarantee 100% security of your
+              information.
+            </h2>
+            <p>
+              All information you provide will be kept strictly confidential.
+            </p>
+          </mat-card-subtitle>
+          <mat-card-content class="matcontent">
+            <form
+              #myform="ngForm"
+              class="issue__log__form"
+              (ngSubmit)="submitContactUs()"
+            >
+              <div class="row">
+                <div class="col s5 m12 l12">
+                  <div class="form-field">
+                    <mat-form-field class="mat-field" style="width: 100%">
+                      <mat-label> PHONE </mat-label>
+                      <input matInput name="phoneNumber" [(ngModel)]="ePhone" />
+                    </mat-form-field>
                   </div>
-  
-                  <div class="row">
-                    <div class="col s12 m12 l12">
-                      <div class="form-field">
-                        <mat-form-field class="mat-field" style="width:100%;">
-                          <mat-label> SUBJECT </mat-label>
-                          <input type="text" required matInput name="subject" [(ngModel)]="eSubject"/>
-                        </mat-form-field>
-                      </div>
-                    </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s12 m12 l12">
+                  <div class="form-field">
+                    <mat-form-field class="mat-field" style="width: 100%">
+                      <mat-label>EMAIL</mat-label>
+                      <input
+                        matInput
+                        required
+                        name="emailAddress"
+                        [(ngModel)]="eEmail"
+                      />
+                    </mat-form-field>
                   </div>
-  
-                  <div class="row">
-                    <div class="col s12 m12 l12">
-                      <div class="form-field">
-                        <mat-form-field class="mat-field" style="width:100%;">
-                          <mat-label> MESSAGE </mat-label>
-                          <textarea matInput name="message" required [(ngModel)]="eMessage"></textarea>
-                        </mat-form-field>
-                      </div>
-                    </div>
-                    
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s12 m12 l12">
+                  <div class="form-field">
+                    <mat-form-field class="mat-field" style="width: 100%">
+                      <mat-label> NAME </mat-label>
+                      <input
+                        type="text"
+                        matInput
+                        name="name"
+                        required
+                        [(ngModel)]="eName"
+                      />
+                    </mat-form-field>
                   </div>
-                
-                  <div class="row">
-                    <div>
-                      <button type="submit" mat-raised-button color="primary">
-                        Send Message
-                      </button>
-                    </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s12 m12 l12">
+                  <div class="form-field">
+                    <mat-form-field class="mat-field" style="width: 100%">
+                      <mat-label> SUBJECT </mat-label>
+                      <input
+                        type="text"
+                        required
+                        matInput
+                        name="subject"
+                        [(ngModel)]="eSubject"
+                      />
+                    </mat-form-field>
                   </div>
-                            
-                </form>
-            </mat-card-content>
-          </mat-card>
-        </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s12 m12 l12">
+                  <div class="form-field">
+                    <mat-form-field class="mat-field" style="width: 100%">
+                      <mat-label> MESSAGE </mat-label>
+                      <textarea
+                        matInput
+                        name="message"
+                        required
+                        [(ngModel)]="eMessage"
+                      ></textarea>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div>
+                  <button type="submit" mat-raised-button color="primary">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
