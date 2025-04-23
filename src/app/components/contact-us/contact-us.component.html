@@ -38,7 +38,7 @@
   <p>Visit us in person — we’d love to meet you!</p>
   <div class="map-container">
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.9936909443123!2d3.379205874024629!3d6.496187423015663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf518d7b03bd7%3A0xc17c391f97d28f6f!2sYaba%20College%20of%20Technology!5e0!3m2!1sen!2sng!4v1713445190179!5m2!1sen!2sng"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15853.335985622942!2d3.2438129!3d6.6053532!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9a8952f3c043%3A0xc535e05cd3311792!2sAyobo%2C%20Lagos%20102213%2C%20Lagos!5e0!3m2!1sen!2sng!4v1745314916035!5m2!1sen!2sng"
       width="100%"
       height="400"
       style="border: 0; border-radius: 10px"
@@ -52,7 +52,7 @@
 
 <div class="contact-container">
   <!-- LEFT SIDE -->
-  <div class="contact-info">
+  <div class="contact-info2">
     <h1>Get in Touch</h1>
     <p class="contact-description">
       Do you need a website, have a question or comment? Please feel free to
@@ -70,9 +70,7 @@
     </div>
   </div>
 
-  <!-- RIGHT SIDE -->
   <div class="contact-form">
-    <!-- Your form component goes here -->
     <div>
       <div>
         <mat-card class="matcard">
@@ -92,99 +90,163 @@
             </p>
           </mat-card-subtitle>
           <mat-card-content class="matcontent">
-            <form
-              #myform="ngForm"
-              class="issue__log__form"
-              (ngSubmit)="submitContactUs()"
-            >
-              <div class="row">
-                <div class="col s5 m12 l12">
-                  <div class="form-field">
-                    <mat-form-field class="mat-field" style="width: 100%">
-                      <mat-label> PHONE </mat-label>
-                      <input matInput name="phoneNumber" [(ngModel)]="ePhone" />
-                    </mat-form-field>
-                  </div>
-                </div>
-              </div>
+            <form (ngSubmit)="submitContactUs()">
+              <!-- NAME -->
+              <mat-form-field
+                class="mat-field"
+                floatLabel="always"
+                style="width: 100%"
+              >
+                <mat-label>NAME</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  required
+                  name="name"
+                  [(ngModel)]="eName"
+                />
+              </mat-form-field>
 
-              <div class="row">
-                <div class="col s12 m12 l12">
-                  <div class="form-field">
-                    <mat-form-field class="mat-field" style="width: 100%">
-                      <mat-label>EMAIL</mat-label>
-                      <input
-                        matInput
-                        required
-                        name="emailAddress"
-                        [(ngModel)]="eEmail"
-                      />
-                    </mat-form-field>
-                  </div>
-                </div>
-              </div>
+              <!-- PHONE -->
+              <mat-form-field
+                class="mat-field"
+                floatLabel="always"
+                style="width: 100%"
+              >
+                <mat-label>PHONE</mat-label>
+                <input
+                  matInput
+                  required
+                  name="phoneNumber"
+                  [(ngModel)]="ePhone"
+                />
+              </mat-form-field>
 
-              <div class="row">
-                <div class="col s12 m12 l12">
-                  <div class="form-field">
-                    <mat-form-field class="mat-field" style="width: 100%">
-                      <mat-label> NAME </mat-label>
-                      <input
-                        type="text"
-                        matInput
-                        name="name"
-                        required
-                        [(ngModel)]="eName"
-                      />
-                    </mat-form-field>
-                  </div>
-                </div>
-              </div>
+              <!-- EMAIL -->
+              <mat-form-field
+                class="mat-field"
+                floatLabel="always"
+                style="width: 100%"
+              >
+                <mat-label>EMAIL</mat-label>
+                <input
+                  matInput
+                  required
+                  name="emailAddress"
+                  [(ngModel)]="eEmail"
+                />
+              </mat-form-field>
 
-              <div class="row">
-                <div class="col s12 m12 l12">
-                  <div class="form-field">
-                    <mat-form-field class="mat-field" style="width: 100%">
-                      <mat-label> SUBJECT </mat-label>
-                      <input
-                        type="text"
-                        required
-                        matInput
-                        name="subject"
-                        [(ngModel)]="eSubject"
-                      />
-                    </mat-form-field>
-                  </div>
-                </div>
-              </div>
+              <!-- SUBJECT -->
+              <mat-form-field
+                class="mat-field"
+                floatLabel="always"
+                style="width: 100%"
+              >
+                <mat-label>SUBJECT</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  required
+                  name="subject"
+                  [(ngModel)]="eSubject"
+                />
+              </mat-form-field>
 
-              <div class="row">
-                <div class="col s12 m12 l12">
-                  <div class="form-field">
-                    <mat-form-field class="mat-field" style="width: 100%">
-                      <mat-label> MESSAGE </mat-label>
-                      <textarea
-                        matInput
-                        name="message"
-                        required
-                        [(ngModel)]="eMessage"
-                      ></textarea>
-                    </mat-form-field>
-                  </div>
-                </div>
-              </div>
+              <!-- MESSAGE -->
+              <mat-form-field
+                class="mat-field"
+                floatLabel="always"
+                style="width: 100%"
+              >
+                <mat-label>MESSAGE</mat-label>
+                <textarea
+                  matInput
+                  required
+                  name="message"
+                  [(ngModel)]="eMessage"
+                ></textarea>
+              </mat-form-field>
 
-              <div class="row">
-                <div>
-                  <button type="submit" mat-raised-button color="primary">
-                    Send Message
-                  </button>
-                </div>
+              <!-- SUBMIT BUTTON -->
+              <div style="text-align: right; margin-top: 20px">
+                <button
+                  type="submit"
+                  mat-raised-button
+                  color="primary"
+                  [disabled]="isBusy"
+                >
+                  <mat-progress-spinner
+                    *ngIf="isBusy"
+                    diameter="20"
+                    mode="indeterminate"
+                    color="accent"
+                    style="vertical-align: middle; margin-right: 10px"
+                  ></mat-progress-spinner>
+                  {{ isBusy ? "Sending..." : "Send Message" }}
+                </button>
               </div>
             </form>
           </mat-card-content>
         </mat-card>
       </div>
     </div>
+  </div>
+</div>
+<div class="contact-access-pane">
+  <div class="contact-item">
+    <div class="icon address-icon"></div>
+    <h4>ADDRESS</h4>
+    <p>
+      The first gate,<br />
+      8 Emmanuel Ajasa street, Lafenwa,<br />
+      Ado-odo ota, Ogun
+    </p>
+  </div>
+
+  <div class="contact-item">
+    <div class="icon phone-icon"></div>
+    <h4>PHONES</h4>
+    <p>Phone: <a href="tel:+2349128510854">+2349128510854</a></p>
+  </div>
+
+  <div class="contact-item">
+    <div class="icon email-icon"></div>
+    <h4>CONTACTS</h4>
+    <p><a href="mailto:omnipurse.ltd@gmai.com">omnipurse.ltd@gmail.com</a></p>
+  </div>
+
+  <div class="contact-item">
+    <div class="icon hours-icon"></div>
+    <h4>WORKING HOURS</h4>
+    <p>Monday–Friday<br />(9:00 – 17:00)</p>
+  </div>
+</div>
+
+<div class="connect-pane">
+  <h2>CONNECT WITH US</h2>
+  <div class="social-icons">
+    <a href="#" class="social twitter" aria-label="Twitter" target="_blank"></a>
+    <a
+      href="#"
+      class="social facebook"
+      aria-label="Facebook"
+      target="_blank"
+    ></a>
+    <a
+      href="#"
+      class="social instagram"
+      aria-label="Instagram"
+      target="_blank"
+    ></a>
+    <a
+      href="#"
+      class="social whatsapp"
+      aria-label="WhatsApp"
+      target="_blank"
+    ></a>
+    <a href="#" class="social youtube" aria-label="YouTube" target="_blank"></a>
+    <a href="#" class="social tiktok" aria-label="TikTok" target="_blank"></a>
+      
   </div>
 </div>
