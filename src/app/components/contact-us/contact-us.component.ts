@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { ContactUs } from 'src/app/interfaces/interfaces';
 import { FormService } from 'src/app/services/form.service';
@@ -10,51 +9,30 @@ import { UtilService } from 'src/app/services/util.service';
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.css'],
 })
-
 export class ContactUsComponent implements OnInit {
-  contactForm!: FormGroup;
   subscription: Subscription = new Subscription();
+  isBusy: boolean = false;
+
+  // Bound to form inputs
   eName: string = '';
   ePhone: string = '';
   eEmail: string = '';
   eSubject: string = '';
   eMessage: string = '';
-  objContactUs: ContactUs = {
-    Name: '',
-    PhoneNumber: '',
-    EmailAddress: '',
-    Subject: '',
-    Message: '',
-  };
-  isBusy: boolean = false;
 
-  constructor(
-    private formservice: FormService,
-    private util: UtilService,
-    private fb: FormBuilder
-  ) {}
+  constructor(private formservice: FormService, private util: UtilService) {}
 
-  ngOnInit(): void {
-    this.contactForm = this.fb.group({
-      name: ['', Validators.required],
-      phoneNumber: ['', Validators.required],
-      emailAddress: ['', [Validators.required, Validators.email]],
-      subject: ['', Validators.required],
-      message: ['', Validators.required],
-    });
-  }
+  ngOnInit(): void {}
 
   submitContactUs() {
     this.isBusy = true;
 
-    const formValues = this.contactForm.value;
-
     const objContactUs: ContactUs = {
-      Name: formValues.name,
-      PhoneNumber: formValues.phoneNumber,
-      EmailAddress: formValues.emailAddress,
-      Subject: formValues.subject,
-      Message: formValues.message,
+      Name: this.eName,
+      PhoneNumber: this.ePhone,
+      EmailAddress: this.eEmail,
+      Subject: this.eSubject,
+      Message: this.eMessage,
     };
 
     this.subscription = this.formservice
@@ -62,7 +40,7 @@ export class ContactUsComponent implements OnInit {
       .subscribe(
         (res) => {
           if (res.response === 'success') {
-            this.contactForm.reset();
+            this.clearFields();
             this.util.snackBarNotification(
               'Submitted successfully, we will reach out to you soon.'
             );
@@ -71,7 +49,7 @@ export class ContactUsComponent implements OnInit {
         },
         (err: any) => {
           this.isBusy = false;
-          return this.util.snackBarNotification(
+          this.util.snackBarNotification(
             'Something went wrong, please check your internet connection'
           );
         }
