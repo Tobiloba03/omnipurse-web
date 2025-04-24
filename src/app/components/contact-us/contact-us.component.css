@@ -1,42 +1,378 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 64, 0.7);
+  position: absolute;
+  width: 96.84%;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: goldenrod;
+}
+
+.logo-icon {
+  width: 30px;
+  height: 30px;
+}
+.navbar nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.navbar a,
+.signin {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signin {
+  background-color: goldenrod;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.contact-section {
+  background: url("../../../assets/iMG/pexels-karolina-grabowska-5387294.jpg")
+    center/cover no-repeat;
+  padding: 80px 20px;
+  position: relative;
+  text-align: center;
+  border-bottom: 5px solid #001f3f;
+}
+.contact-info {
+  max-width: 550px;
+  margin-left: 650px;
+  margin-top: 50px;
+  background-color: rgba(0, 0, 64, 0.3);
+  padding: 50px 10px 60px;
+  text-align: center;
+  border-radius: 10px;
+  line-height: 1.3rem;
+  color: white;
+}
+.contact-info h2 {
+  color: gold;
+  font-size: 2rem;
+}
+
+.contact-info h3 {
+  font-size: 1.6rem;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  color: rgba(256, 256, 256, 0.9);
+}
+.map-section {
+  padding: 60px 20px;
+  background-color: #001f3f;
+  text-align: center;
+  border-bottom: 5px solid #001f3f;
+}
+
+.map-section h2 {
+  font-size: 2rem;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.map-section p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: goldenrod;
+}
+
+.map-container {
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 5px 20px rgba(218, 165, 32, 0.3);
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 .contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 2rem 10rem;
-    gap: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem 3rem;
+  gap: 3rem;
+  background-color: goldenrod;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.contact-info2 {
+  flex: 1 1 45%;
+  min-width: 280px;
+  max-width: 400px;
+  line-height: 1.6;
+  color: #001f3f;
+}
+
+.contact-info2 h1 {
+  font-size: 2rem;
+  color: #001f3f;
+  margin-bottom: 1rem;
+}
+
+.contact-description,
+.contact-highlight {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+.contact-description {
+  color: #015958;
+  font-weight: 500;
+}
+
+.contact-highlight {
+  color: #b30000;
+  font-weight: bold;
+}
+
+.office-info {
+  background: rgba(218, 165, 32, 0.7);
+  box-shadow:  0 4px 12px rgba(0, 33, 71, 0.4);
+  padding: 15px;
+  border-left: 5px solid rgb(0, 33, 71);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.contact-form {
+ flex: 1 1 50%;
+  min-width: 200px;
+  max-width: 100%;
+  width: 100%;
+}
+.matcard {
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: white;
+}
+
+.card__title h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #001f3f;
+}
+
+.card__title p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.mat-field {
+  margin-bottom: 20px;
+}
+
+/* Button & Progress Spinner */
+button[mat-raised-button] {
+  min-width: 150px;
+  padding: 10px 24px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+mat-progress-spinner {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    padding: 2rem 1rem;
+    gap: 2rem;
   }
-  
-  .contact-info {
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px;
+
+  .contact-info h1,
+  .card__title h2 {
+    font-size: 1.5rem;
   }
-  
-  .contact-info h1 {
-    color: teal;
-    font-size: 2rem;
-  }
-  
-  .contact-description {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #015958;
-  }
-  
-  .contact-highlight {
-    color: red;
-    font-weight: bold;
-    margin-top: 1rem;
-  }
-  
-  .office-info {
-    margin-top: 2rem;
-    font-size: 1rem;
-  }
-  
+
+  .contact-info,
   .contact-form {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
+    max-width: 100%;
   }
-  
+
+  .contact-access-pane {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .connect-pane h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.footer {
+  background: url("../../../assets/iMG/pexels-kevin-ku-92347-577585.jpg")
+  center/cover no-repeat;
+}
+
+.contact-access-pane {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay look */
+  color: white;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.contact-item {
+  flex: 1 1 200px;
+  margin: 20px;
+}
+
+.contact-item .icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Icons — you can replace with real SVGs or Font Awesome if available */
+.address-icon {
+  background-color: #001f3f;
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/marker.png");
+}
+
+.phone-icon {
+  background-color: goldenrod;
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/phone.png");
+}
+
+.email-icon {
+  background-color: red;
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/new-post.png");
+}
+
+.hours-icon {
+  background-color: #015958;
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/clock.png");
+}
+
+.contact-item h4 {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.contact-item a {
+  color: #4ecaff;
+  text-decoration: none;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-item a:hover {
+  background-color: rgba(78, 202, 255, 0.15);
+  color: #fff; 
+}
+
+.connect-pane {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.connect-pane h2 {
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.social {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  border-radius: 50%;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #001f3f;
+  transition: transform 0.2s ease;
+}
+
+.social:hover {
+  transform: scale(1.1);
+}
+
+/* Specific icons using icons8 free CDN or your own assets */
+.twitter {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/twitter.png");
+}
+.facebook {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png");
+}
+.instagram {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png");
+}
+.whatsapp {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png");
+}
+.youtube {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png");
+}
+.tiktok {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/tiktok.png");
+}
+
+.note {
+  font-size: 13px;
+  margin-top: 10px;
+  color: white;
+}
