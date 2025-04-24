@@ -39,4 +39,134 @@
     min-width: 300px;
     max-width: 600px;
   }
+
+  /* Added 20-04-2025 */
+  .contact-access-pane {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: rgba(0, 0, 0, 0.6); /* dark overlay look */
+    color: white;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .contact-item {
+    flex: 1 1 200px;
+    margin: 20px;
+  }
+  
+  .contact-item .icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px;
+    border-radius: 10px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  /* Icons — you can replace with real SVGs or Font Awesome if available */
+  .address-icon {
+    background-color: #00e2c4;
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/marker.png');
+  }
+  
+  .phone-icon {
+    background-color: #00e2c4;
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/phone.png');
+  }
+  
+  .email-icon {
+    background-color: #568bff;
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/new-post.png');
+  }
+  
+  .hours-icon {
+    background-color: #b6a7f5;
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/clock.png');
+  }
+  
+  .contact-item h4 {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .contact-item p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .contact-item a {
+    color: #4ecaff;
+    text-decoration: none;
+  }
+
+  .connect-pane {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .connect-pane h2 {
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 20px;
+  }
+  
+  .social {
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    border-radius: 50%;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #00e2c4;
+    transition: transform 0.2s ease;
+  }
+  
+  .social:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Specific icons using icons8 free CDN or your own assets */
+  .twitter {
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/twitter.png');
+  }
+  .facebook {
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png');
+  }
+  .instagram {
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png');
+  }
+  .whatsapp {
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png');
+  }
+  .youtube {
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png');
+  }
+  .tiktok {
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/tiktok.png');
+  }
+  
+  .note {
+    font-size: 13px;
+    margin-top: 10px;
+    color: white;
+  }
+
   

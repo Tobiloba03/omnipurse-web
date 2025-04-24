@@ -46,9 +46,15 @@ export class ContactUsComponent implements OnInit {
       if(res.response == 'success'){
         this.clearFields();
         this.isBusy = false;
-        this.util.snackBarNotification("Submitted successfully");
-        
+        this.util.snackBarNotification("Submitted successfully, we will reach out to you soon.");
       }
+    },
+    (err:any) => {
+      this.isBusy = false;
+  
+      return this.util.snackBarNotification(
+        "Something went wrong, please check your internet connection"
+      );
     });
   }
 
