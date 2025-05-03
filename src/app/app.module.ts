@@ -8,7 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/auth/login/login.component';
+import { LoginComponent } from './modules/auth/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
@@ -20,6 +20,9 @@ import { ConsultationComponent } from './components/consultation/consultation.co
 import { ServicesModule } from './modules/services/services.module';
 import { HttpClientModule } from '@angular/common/http';
 import { WebsiteHeadMenuComponent } from './components/website-head-menu/website-head-menu.component';
+import { ForgotPasswordComponent } from './modules/auth/forgot-password/forgot-password.component';
+import { CreateAccountComponent } from './modules/auth/create-account/create-account.component';
+import { AuthModule } from './modules/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,8 @@ import { WebsiteHeadMenuComponent } from './components/website-head-menu/website
     AboutUsComponent,
     ConsultationComponent,
     WebsiteHeadMenuComponent,
+    ForgotPasswordComponent,
+    CreateAccountComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +51,7 @@ import { WebsiteHeadMenuComponent } from './components/website-head-menu/website
     SharedModule,
     ProductsModule,
     ServicesModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -12,11 +12,12 @@ import { throwError as observableThrowError, Observable } from 'rxjs';
 
 export class HttpService {
   constructor(
-    private http: HttpClient,
-    private authService: AuthService,
+    private http: HttpClient
   ) { }
 
-  
+  getCurrentToken() {
+    return localStorage.getItem('token');
+  }
 
   postFile(source: string, fileToUpload: File) {
     const formData: FormData = new FormData();
@@ -54,11 +55,24 @@ export class HttpService {
     );
   }
 
+  getData(source: string) {
+    // this.checkAuth();
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + this.getCurrentToken()
+    });
+    const options = { headers };
+    return this.http.get(source, options).pipe(
+      tap((res: any) => res),
+      catchError(this.handleError)
+    );
+  }
+
   postData(source: string, data: any) {
     // this.checkAuth();
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      Authorization: 'Bearer ' + this.authService.getCurrentToken(),
+      Authorization: 'Bearer ' + this.getCurrentToken(),
       "Access-Control-Allow-Origin": "*",
       'Access-Control-Allow-Headers': 'Content-Type',
     });
@@ -72,7 +86,7 @@ export class HttpService {
   deleteData(source: string) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      Authorization: 'Bearer ' + this.authService.getCurrentToken()
+      Authorization: 'Bearer ' + this.getCurrentToken()
     });
     const options = { headers };
     return this.http.delete(source, options).pipe(
