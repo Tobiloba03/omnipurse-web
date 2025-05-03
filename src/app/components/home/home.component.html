@@ -250,9 +250,19 @@
         Enjoy free tips, insights, ideas, and product updates that will accelerate your growth.
       </p>
       <form class="subscribe-form">
-        <input type="phone" placeholder="Your phone number" width="50%" required />
-        <input type="email" placeholder="Your email address" width="50%" required />
-        <button type="submit">SUBSCRIBE</button>
+        <input type="phone" placeholder="Your phone number" width="50%" required [(ngModel)]="ePhone" [ngModelOptions]="{standalone: true}" />
+        <input type="email" placeholder="Your email address" width="50%" required [(ngModel)]="eEmail" [ngModelOptions]="{standalone: true}" />
+        <button type="submit" 
+        [disabled]="isBusy" 
+        (click)="SubscribeToNewsletter()">
+        <mat-progress-spinner
+                    *ngIf="isBusy"
+                    diameter="20"
+                    mode="indeterminate"
+                    style="vertical-align: middle; margin-right: 10px"
+                  >
+                  </mat-progress-spinner>
+                  {{ isBusy ? "Sending..." : "Subscribe" }}</button>
       </form>
     </div>
   </div>

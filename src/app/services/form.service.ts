@@ -13,4 +13,19 @@ export class FormService {
   {
     return this.http.postData(`${Values.apiUrl}ContactUs/CreateContactUs`,objContactUs);
   }
+
+  SubscribeToNewsletter(objSTNl:any)
+  {
+    debugger
+    return this.http.postData(`${Values.apiUrl}Subscriber/SubscribeToNewsletter`,objSTNl);
+  }
+
+  GetCountrys()
+  {
+    return this.http.getData(`${Values.apiUrl}Form/GetCountrys`);
+  }
+  GetStates()
+  {
+    return this.http.getData(`${Values.apiUrl}Form/GetStates`);
+  }
 }
