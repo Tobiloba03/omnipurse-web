@@ -1,3 +1,4 @@
+
 <header class="navbar">
   <div class="logo">
     <img
@@ -24,6 +25,7 @@
   <div class="auth-container">
     <h2>Please sign in or create an account</h2>
 
+
     <div class="auth-box">
       <!-- Login Section -->
       <div class="login-section">
@@ -46,13 +48,15 @@
           />
 
           <a (click)="openForgotPassword()" class="forgot-link"
-            >Forgotten password?</a
-          >
+            >Forgotten password?</a>
+
+
 
           <div class="remember-me">
             <input type="checkbox" id="remember" />
             <label for="remember">REMEMBER ME</label>
           </div>
+
 
           <button type="submit" class="sign-in-btn">Sign in</button>
         </form>
@@ -63,10 +67,13 @@
         <span>OR</span>
       </div>
 
+  
+
       <!-- Register Section -->
       <div class="register-section">
         <h3>New to us?</h3>
         <p>Creating an account is quick and easy</p>
+
         <button class="register-btn" (click)="openCreateAccount()">
           Create an account
         </button>
