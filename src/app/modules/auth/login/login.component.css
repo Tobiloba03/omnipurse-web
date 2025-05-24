@@ -1,6 +1,5 @@
 /* Reset and layout */
 * {
-
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -15,7 +14,6 @@ body {
   align-items: center;
   color: black;
 }
-
 
 .consult-btn {
   display: inline-block;
@@ -33,7 +31,6 @@ body {
 .consult-btn:hover {
   background-color: #e0a800;
 }
-
 
 .auth-container {
   max-width: 900px;
@@ -93,7 +90,7 @@ body {
   display: inline-block;
   margin: 10px 0;
   font-size: 14px;
-   color: #00274f;/* #0073e6; */
+  color: #00274f; /* #0073e6; */
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -178,7 +175,7 @@ body {
 
 .register-section p {
   margin-bottom: 25px;
-color: rgb(0, 0, 0, 0.7);
+  color: rgb(0, 0, 0, 0.7);
   font-size: 14px;
 }
 
@@ -193,7 +190,7 @@ color: rgb(0, 0, 0, 0.7);
   transition: background 0.3s ease;
 }
 .button-group {
- display:flex;
+  display: flex;
   gap: 8px;
 }
 

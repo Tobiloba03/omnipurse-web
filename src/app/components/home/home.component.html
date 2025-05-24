@@ -27,8 +27,15 @@
       customer experience.
     </p>
     <div class="hero-buttons">
-      <button type="button" class="cta-button" [routerLink]="['/about-us']">More About Us</button>
-      <button class="cta-button outline" [routerLink]="['/products/products-overview']">Explore Our Products</button>
+      <button type="button" class="cta-button" [routerLink]="['/about-us']">
+        More About Us
+      </button>
+      <button
+        class="cta-button outline"
+        [routerLink]="['/products/products-overview']"
+      >
+        Explore Our Products
+      </button>
     </div>
   </div>
 
@@ -38,7 +45,13 @@
       Get expert advice on how to grow, scale, and automate your business with
       tailored solutions. Book a free consultation with our team today.
     </p>
-    <button type="button" [routerLink]="['/consultation']" class="consult-button">Book a Free Consultation</button>
+    <button
+      type="button"
+      [routerLink]="['/consultation']"
+      class="consult-button"
+    >
+      Book a Free Consultation
+    </button>
   </div>
 </section>
 
@@ -51,9 +64,13 @@
       driving success through innovative digital <br />solutions.
     </p>
   </div>
-  <button class="about-button" [routerLink]="['/services/business-development']">Learn More</button>
+  <button
+    class="about-button"
+    [routerLink]="['/services/business-development']"
+  >
+    Learn More
+  </button>
 </section>
-
 
 <!-- Services Section -->
 <section class="services">
@@ -193,14 +210,22 @@
 <!-- Start Your Journey Section -->
 <section class="start-journey">
   <div class="journey-content">
-    <h2>Ready to Start? Let's build something great<br/> together!</h2>
+    <h2>
+      Ready to Start? Let's build something great<br />
+      together!
+    </h2>
     <p>
-      Let Omnipurse guide your brand from idea to impact with expert-driven solutions in tech and business.
+      Let Omnipurse guide your brand from idea to impact with expert-driven
+      solutions in tech and business.
     </p>
-    <button class="journey-btn" [routerLink]="['/services/software-development']">Start Your Journey</button>
+    <button
+      class="journey-btn"
+      [routerLink]="['/services/software-development']"
+    >
+      Start Your Journey
+    </button>
   </div>
 </section>
-
 
 <!-- Testimonials Section -->
 <section class="testimonials">
@@ -232,27 +257,44 @@
     </div>
     <div class="subscription-box">
       <p class="description">
-        Enjoy free tips, insights, ideas, and product updates that will accelerate your growth.
+        Enjoy free tips, insights, ideas, and product updates that will
+        accelerate your growth.
       </p>
       <form class="subscribe-form">
-        <input type="phone" placeholder="Your phone number" width="50%" required [(ngModel)]="ePhone" [ngModelOptions]="{standalone: true}" />
-        <input type="email" placeholder="Your email address" width="50%" required [(ngModel)]="eEmail" [ngModelOptions]="{standalone: true}" />
-        <button type="submit" 
-        [disabled]="isBusy" 
-        (click)="SubscribeToNewsletter()">
-        <mat-progress-spinner
-                    *ngIf="isBusy"
-                    diameter="20"
-                    mode="indeterminate"
-                    style="vertical-align: middle; margin-right: 10px"
-                  >
-                  </mat-progress-spinner>
-                  {{ isBusy ? "Sending..." : "Subscribe" }}</button>
+        <input
+          type="phone"
+          placeholder="Your phone number"
+          width="50%"
+          required
+          [(ngModel)]="ePhone"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <input
+          type="email"
+          placeholder="Your email address"
+          width="50%"
+          required
+          [(ngModel)]="eEmail"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <button
+          type="submit"
+          [disabled]="isBusy"
+          (click)="SubscribeToNewsletter()"
+        >
+          <mat-progress-spinner
+            *ngIf="isBusy"
+            diameter="20"
+            mode="indeterminate"
+            style="vertical-align: middle; margin-right: 10px"
+          >
+          </mat-progress-spinner>
+          {{ isBusy ? "Sending..." : "Subscribe" }}
+        </button>
       </form>
     </div>
   </div>
 </section>
-
 
 <!-- Footer -->
 <footer class="footer">

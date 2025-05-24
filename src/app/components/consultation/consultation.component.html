@@ -102,32 +102,32 @@
         </mat-form-field>
       </div>
       <div class="button-group">
-      <button
-        type="submit"
-        (click)="bookConsultation()"
-        mat-raised-button
-        color="primary"
-        [disabled]="isBusy"
-      >
-        <mat-progress-spinner
-          *ngIf="isBusy"
-          diameter="20"
-          mode="indeterminate"
-          color="accent"
-          style="vertical-align: middle; margin-right: 10px"
-        ></mat-progress-spinner>
-        {{ isBusy ? "booking..." : "Book Now" }}
-      </button>
-      <button
-        type="submit"
-        mat-raised-button
-        color="secondary"
-        routerLink="/dashboard"
-      >
-        Dashboard
-      </button></div>
+        <button
+          type="submit"
+          (click)="bookConsultation()"
+          mat-raised-button
+          color="primary"
+          [disabled]="isBusy"
+        >
+          <mat-progress-spinner
+            *ngIf="isBusy"
+            diameter="20"
+            mode="indeterminate"
+            color="accent"
+            style="vertical-align: middle; margin-right: 10px"
+          ></mat-progress-spinner>
+          {{ isBusy ? "booking..." : "Book Now" }}
+        </button>
+        <button
+          type="submit"
+          mat-raised-button
+          color="secondary"
+          routerLink="/dashboard"
+        >
+          Dashboard
+        </button>
+      </div>
     </form>
- 
   </div>
 </section>
 
@@ -150,8 +150,8 @@
   </p>
   <button (click)="goToFAQ()">Visit FAQ</button>
 </section>
- <!-- Footer Section -->
- <footer class="contact-footer">
+<!-- Footer Section -->
+<footer class="contact-footer">
   <div class="footer-content">
     <h4>Omnipurse Limited</h4>
     <p>8 Emmanuel Ajasa Street, Lafenwa, Ado-Odo Ota, Ogun, Nigeria</p>
@@ -163,8 +163,6 @@
     <p>Hours: Monday – Friday (9:00 – 17:00)</p>
   </div>
 </footer>
-
-
 
 <!-- Value Proposition -->
 <section class="value-section">

@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+=======
+import { Component, OnInit } from '@angular/core';
+>>>>>>> a7417ec6043f8d874e18027ee0a5ec1f86db8651
 
 @Component({
   selector: 'app-consultation',
   templateUrl: './consultation.component.html',
+<<<<<<< HEAD
   styleUrls: ['./consultation.component.css'],
 })
 export class ConsultationComponent {
@@ -55,4 +60,15 @@ export class ConsultationComponent {
     script.setAttribute('crossorigin', '*');
     document.body.appendChild(script);
   }
+=======
+  styleUrls: ['./consultation.component.css']
+})
+export class ConsultationComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+>>>>>>> a7417ec6043f8d874e18027ee0a5ec1f86db8651
 }
