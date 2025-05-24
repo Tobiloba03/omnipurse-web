@@ -1,55 +1,62 @@
-@media screen and (max-width: 768px) {
-    .hero-content h1 {
-      font-size: 2rem;
-    }
-  
-    .navbar nav {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .logo {
-      flex-direction: row;
-    }
-  
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .testimonial-list {
-      padding: 0 10px;
-    }
-  }
+/* Reset and layout */
+* {
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 64, 0.7);
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  .navbar nav {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-  
-  .navbar a,
-  .signin {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .signin {
-    background-color: goldenrod;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
+body {
+  margin: 0;
+  background-color: #001f3f;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 64, 0.4);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: goldenrod;
+}
+
+.logo-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar a,
+.signin {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signin {
+  background-color: goldenrod;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}

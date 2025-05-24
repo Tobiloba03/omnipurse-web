@@ -1,18 +1,22 @@
 <header class="navbar">
-    <div class="logo">
-      <img
-        src="../../../assets/iMG/IMG_9286.PNG"
-        alt="Omnipurse Logo"
-        class="logo-icon"
-      />
-      <span>Omnipurse</span>
-    </div>
-    <nav>
-      <a [routerLink]="['']">Home</a>
-      <a [routerLink]="['/about-us']">About us</a>
-      <a [routerLink]="['/services/services-overview']">Services</a>
-      <a [routerLink]="['/products/products-overview']">Products</a>
-      <a [routerLink]="['/contact-us']" routerLinkActive="router-link-active">Contact us</a>
-      <button type="button" class="signin" [routerLink]="['/login']">Sign In</button>
-    </nav>
-  </header>
+  <div class="logo">
+    <img
+      src="../../../assets/iMG/IMG_9286.PNG"
+      alt="Omnipurse Logo"
+      class="logo-icon"
+    />
+    <span>Omnipurse</span>
+  </div>
+  <nav>
+    <a [routerLink]="['']">Home</a>
+    <a [routerLink]="['/about-us']">About us</a>
+    <a [routerLink]="['/services/services-overview']">Services</a>
+    <a [routerLink]="['/products/products-overview']">Products</a>
+    <a [routerLink]="['/contact-us']" routerLinkActive="router-link-active"
+      >Contact us</a
+    >
+    <button type="button" class="signin" [routerLink]="['/login']">
+      Sign In
+    </button>
+  </nav>
+</header>
