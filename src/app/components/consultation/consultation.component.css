@@ -1,107 +1,148 @@
 .banner {
-    background: url('../../../assets/iMG/pexels-karolina-grabowska-5387294.jpg') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-  }
-  
-  .banner-text h1 {
-    font-size: 2.5rem;
-  }
-  
-  .info-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 50px 20px;
-    gap: 20px;
-  }
-  
-  .image-side {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .image-side img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-  }
-  
-  .text-side {
-    flex: 1;
-  }
-  
-  .text-side h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  
-  .text-side button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #1976d2;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .testimonials {
-    background: #f9f9f9;
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .testimonial-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  
-  .testimonial {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 300px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  .faq-section {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .faq-section button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #43a047;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .value-section {
-    padding: 30px 20px;
-    text-align: center;
-    font-style: italic;
-    background-color: #e8f5e9;
-  }
-  
-  .live-chat {
-    padding: 40px 20px;
-    background: #f1f8e9;
-    text-align: center;
-  }
-  
-  .chat-placeholder {
-    margin-top: 20px;
-    padding: 40px;
-    border: 2px dashed #ccc;
-    border-radius: 8px;
-    color: #777;
-  }
-  
+  background: url("../../../assets/iMG/pexels-cottonbro-4101143.jpg")
+    center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+}
+
+.info-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 50px 20px;
+  gap: 20px;
+}
+
+.image-side {
+  flex: 1;
+  text-align: center;
+}
+
+.image-side img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.text-side {
+  flex: 1;
+}
+
+.text-side h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.text-side button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.button-group {
+  display: flex;
+  gap: 16px;
+}
+
+
+.testimonials {
+  background: #daa520;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.testimonial-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.testimonial {
+  background: #00274f;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.faq-section button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #43a047;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact-footer {
+  background-color: #001f3f;
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-footer h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: goldenrod;
+}
+
+.contact-footer p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.contact-footer a {
+  color: #4ecaff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Optional: Add a subtle top border to visually separate footer */
+.contact-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.value-section {
+  padding: 30px 20px;
+  text-align: center;
+  font-style: italic;
+  background-color: #e8f5e9;
+}
+
+.live-chat {
+  padding: 40px 20px;
+  background: #f1f8e9;
+  text-align: center;
+}
+
+.chat-placeholder {
+  margin-top: 20px;
+  padding: 40px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  color: #777;
+}

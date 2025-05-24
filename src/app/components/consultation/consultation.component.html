@@ -1,109 +1,183 @@
-<!-- Header Banner -->
+<header>
+  <app-website-head-menu></app-website-head-menu>
+</header>
+
 <section class="banner">
-    <div class="banner-text">
-      <h1>Book Your Free Consultation</h1>
-      <p>Schedule a session with our experts and get personalized guidance tailored to your needs.</p>
-    </div>
-  </section>
-  
-  <!-- Image & Text Section -->
-  <section class="info-section">
-    <div class="image-side">
-      <img src="assets/consultation.jpg" alt="Consultation" />
-    </div>
-    <div class="text-side">
-      <h2>Experts, at Your Fingertips</h2>
-      <p>Our consultations are designed to help you make informed decisions. Talk to professionals who understand your needs.</p>
-      <form #bookConsultationForm="ngForm">
+  <div class="banner-text">
+    <h1>Book Your Free Consultation</h1>
+    <p>
+      Schedule a session with our experts and get personalized guidance tailored
+      to your needs.
+    </p>
+  </div>
+</section>
 
-       
-        
-        <div class="form-field">
-            <mat-form-field class="mat-field" style="width:100%;">
-              <mat-label> Name </mat-label>
-              <input type="text" matInput name="firstname" required [(ngModel)]="eName" [ngModelOptions]="{standalone: true}"/>
-            </mat-form-field>
-          </div>
+<!-- Image & Text Section -->
+<section class="info-section">
+  <div class="image-side">
+    <img
+      src="../../../assets/iMG/pexels-shvetsa-4226256.jpg"
+      alt="Consultation"
+    />
+  </div>
+  <div class="text-side">
+    <h2>Experts, at Your Fingertips</h2>
+    <p>
+      Our consultations are designed to help you make informed decisions. Talk
+      to professionals who understand your needs.
+    </p>
+    <form #bookConsultationForm="ngForm">
+      <div class="form-field">
+        <mat-form-field class="mat-field" style="width: 100%">
+          <mat-label> Name </mat-label>
+          <input
+            type="text"
+            matInput
+            name="firstname"
+            required
+            [(ngModel)]="eName"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </mat-form-field>
+      </div>
 
-          <!-- <div class="form-field">
+      <!-- <div class="form-field">
             <mat-label> Is Company?  </mat-label>
             <input type="checkbox" name="isCompany" [(ngModel)]="eIsCompany" [ngModelOptions]="{standalone: true}"/>
             <mat-label>&nbsp; (* check this box if Company) </mat-label>
         </div> -->
-            
-          <div class="form-field">
-            <mat-form-field class="mat-field" style="width:100%;">
-              <mat-label> Email </mat-label>
-              <input type="email" matInput name="email" required [(ngModel)]="eEmail" [ngModelOptions]="{standalone: true}" />
-            </mat-form-field>
-          </div>
-    
-          <div class="form-field">
-            <mat-form-field class="mat-field" style="width:100%;">
-              <mat-label> Phone </mat-label>
-              <input type="tel" matInput id="phone" name="phone" [(ngModel)]="ePhone" [ngModelOptions]="{standalone: true}" required />
-            </mat-form-field>
-          </div>
 
-          <div class="form-field">
-              <mat-form-field>
-                <mat-label>Date</mat-label>
-                <input type="date" matInput required [(ngModel)]="eScheduleDate" [ngModelOptions]="{standalone: true}">
-              </mat-form-field>
-              &nbsp;&nbsp;&nbsp;
+      <div class="form-field">
+        <mat-form-field class="mat-field" style="width: 100%">
+          <mat-label> Email </mat-label>
+          <input
+            type="email"
+            matInput
+            name="email"
+            required
+            [(ngModel)]="eEmail"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </mat-form-field>
+      </div>
 
-              <mat-form-field>
-                <mat-label>Time</mat-label>
-                <input type="time" matInput placeholder="HH:mm" required [(ngModel)]="eScheduleTime" [ngModelOptions]="{standalone: true}">
-              </mat-form-field>
-          </div> 
-    
-      <button type="submit" (click)="bookConsultation()" mat-raised-button color="primary" [disabled]="isBusy">
-        <mat-progress-spinner
+      <div class="form-field">
+        <mat-form-field class="mat-field" style="width: 100%">
+          <mat-label> Phone </mat-label>
+          <input
+            type="tel"
+            matInput
+            id="phone"
+            name="phone"
+            [(ngModel)]="ePhone"
+            [ngModelOptions]="{ standalone: true }"
+            required
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="form-field">
+        <mat-form-field>
+          <mat-label>Date</mat-label>
+          <input
+            type="date"
+            matInput
+            required
+            [(ngModel)]="eScheduleDate"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </mat-form-field>
+        &nbsp;&nbsp;&nbsp;
+
+        <mat-form-field>
+          <mat-label>Time</mat-label>
+          <input
+            type="time"
+            matInput
+            placeholder="HH:mm"
+            required
+            [(ngModel)]="eScheduleTime"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </mat-form-field>
+      </div>
+      <div class="button-group">
+        <button
+          type="submit"
+          (click)="bookConsultation()"
+          mat-raised-button
+          color="primary"
+          [disabled]="isBusy"
+        >
+          <mat-progress-spinner
             *ngIf="isBusy"
             diameter="20"
             mode="indeterminate"
             color="accent"
             style="vertical-align: middle; margin-right: 10px"
-            ></mat-progress-spinner>
-            {{ isBusy ? "booking..." : "Book Now" }}
-        
-      </button>
-    </form>
-      <!-- <button (click)="bookNow()">Book Now</button> -->
-    </div>
-  </section>
-  
-  <!-- Testimonials -->
-  <section class="testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial-list">
-      <div class="testimonial" *ngFor="let testimonial of testimonials">
-        <p>"{{ testimonial.feedback }}"</p>
-        <span>— {{ testimonial.name }}</span>
+          ></mat-progress-spinner>
+          {{ isBusy ? "booking..." : "Book Now" }}
+        </button>
+        <button
+          type="submit"
+          mat-raised-button
+          color="secondary"
+          routerLink="/dashboard"
+        >
+          Dashboard
+        </button>
       </div>
+    </form>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-list">
+    <div class="testimonial" *ngFor="let testimonial of testimonials">
+      <p>"{{ testimonial.feedback }}"</p>
+      <span>— {{ testimonial.name }}</span>
     </div>
-  </section>
-  
-  <!-- FAQ Section -->
-  <section class="faq-section">
-    <h2>Have Questions?</h2>
-    <p>Find answers to commonly asked questions about our consultation service.</p>
-    <button (click)="goToFAQ()">Visit FAQ</button>
-  </section>
-  
-  <!-- Value Proposition -->
-  <section class="value-section">
-    <p>Consultations with us offer clarity, strategic direction, and peace of mind. Take the first step towards better decisions.</p>
-  </section>
-  
-  <!-- Live Chat Placeholder -->
-  <section class="live-chat">
-    <h3>Need Help Right Now?</h3>
-    <p>Start a live chat with our team.</p>
-    <!-- Replace this div with your actual live chat widget code (e.g., Tawk.to, Intercom, etc.) -->
-    <!-- <div class="chat-placeholder">
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+  <h2>Have Questions?</h2>
+  <p>
+    Find answers to commonly asked questions about our consultation service.
+  </p>
+  <button (click)="goToFAQ()">Visit FAQ</button>
+</section>
+<!-- Footer Section -->
+<footer class="contact-footer">
+  <div class="footer-content">
+    <h4>Omnipurse Limited</h4>
+    <p>8 Emmanuel Ajasa Street, Lafenwa, Ado-Odo Ota, Ogun, Nigeria</p>
+    <p>
+      Email:
+      <a href="mailto:omnipurse.ltd@gmail.com">omnipurse.ltd@gmail.com</a>
+    </p>
+    <p>Phone: <a href="tel:+2349128510854">+2349128510854</a></p>
+    <p>Hours: Monday – Friday (9:00 – 17:00)</p>
+  </div>
+</footer>
+
+<!-- Value Proposition -->
+<section class="value-section">
+  <p>
+    Consultations with us offer clarity, strategic direction, and peace of mind.
+    Take the first step towards better decisions.
+  </p>
+</section>
+
+<!-- Live Chat Placeholder -->
+<section class="live-chat">
+  <h3>Need Help Right Now?</h3>
+  <p>Start a live chat with our team.</p>
+  <!-- Replace this div with your actual live chat widget code (e.g., Tawk.to, Intercom, etc.) -->
+  <!-- <div class="chat-placeholder">
      
     </div> -->
-  </section>
-  
+</section>

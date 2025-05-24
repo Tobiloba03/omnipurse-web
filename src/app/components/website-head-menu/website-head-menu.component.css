@@ -1,19 +1,26 @@
-/* Reset and layout */
-* {
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
 
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  .navbar nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    flex-direction: row;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-list {
+    padding: 0 10px;
+  }
 }
 
-body {
-  margin: 0;
-  background-color: #001f3f;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -21,7 +28,7 @@ body {
   padding: 20px;
   background-color: rgba(0, 0, 64, 0.4);
   position: absolute;
-  width: 100%;
+  width: 97%;
   top: 0;
   left: 0;
 }
