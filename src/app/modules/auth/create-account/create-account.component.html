@@ -1,0 +1,96 @@
+<h2>Create Account</h2>
+<form #registerForm="ngForm">
+
+    <div class="form-field">
+            <div class="radio-group">
+                <label>
+                  <input type="radio" name="userType" value="individual" [(ngModel)]="userType" (change)="onUserTypeChange()" />
+                  Individual
+                </label>
+                <label>
+                  <input type="radio" name="userType" value="company" [(ngModel)]="userType" (change)="onUserTypeChange()" />
+                  Company
+                </label>
+              </div>
+      </div>
+    
+    <div class="form-field" *ngIf="!isCompany">
+        <mat-form-field class="mat-field" style="width:100%;">
+          <mat-label> First name </mat-label>
+          <input type="text" matInput name="firstname" required [(ngModel)]="firstname" />
+        </mat-form-field>
+      </div>
+    
+      <div class="form-field" *ngIf="!isCompany">
+        <mat-form-field class="mat-field" style="width:100%;">
+          <mat-label> Last name </mat-label>
+          <input type="text" matInput name="lastname" required [(ngModel)]="lastname" />
+        </mat-form-field>
+      </div>
+
+      <div class="form-field" *ngIf="isCompany">
+        <mat-form-field class="mat-field" style="width:100%;">
+          <mat-label> Company name </mat-label>
+          <input type="text" matInput name="companyname" required [(ngModel)]="companyname" />
+        </mat-form-field>
+      </div>
+
+      <div class="form-field">
+        <mat-form-field class="mat-field" style="width:100%;">
+          <mat-label> Email </mat-label>
+          <input type="email" matInput name="email" required [(ngModel)]="email" />
+        </mat-form-field>
+      </div>
+
+      <div class="form-field">
+        <mat-form-field class="mat-field" style="width:100%;">
+          <mat-label> Phone </mat-label>
+          <input type="tel" matInput id="phone" name="phone" [(ngModel)]="phone" required />
+        </mat-form-field>
+      </div>
+
+  <div class="form-field">
+    <mat-form-field appearance="outline" style="width:100%;">
+      <mat-label>Country</mat-label>
+      <mat-select name="country" [(ngModel)]="countryId">
+        <mat-option *ngFor="let option of objCountrys">
+          {{ option.countryName }}
+        </mat-option>
+      </mat-select> 
+    </mat-form-field>
+  </div>
+
+  <div class="form-field">
+    <mat-form-field appearance="outline" style="width:100%;">
+      <mat-label>State</mat-label>
+      <mat-select name="state" [(ngModel)]="stateId">
+        <mat-option *ngFor="let option of objStates">
+          {{ option.stateName }}
+        </mat-option>
+      </mat-select> 
+    </mat-form-field>
+  </div>
+
+  <div class="form-field">
+    <mat-form-field class="mat-field" style="width:100%;">
+      <mat-label> Password </mat-label>
+      <input type="password" matInput id="password" name="password" [(ngModel)]="password" required />
+    </mat-form-field>
+  </div>
+  <button type="submit" (click)="onSubmit()" mat-raised-button color="primary" [disabled]="isBusy">
+    <mat-progress-spinner
+        *ngIf="isBusy"
+        diameter="20"
+        mode="indeterminate"
+        color="accent"
+        style="vertical-align: middle; margin-right: 10px"
+        ></mat-progress-spinner>
+        {{ isBusy ? "Creating..." : "Create Account" }}
+    
+  </button>
+   &nbsp;&nbsp;&nbsp;
+                
+    <button mat-raised-button color="warn" (click)="onCloseClick()">
+        Close
+    </button>
+</form>

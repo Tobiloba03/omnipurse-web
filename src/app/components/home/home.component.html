@@ -1,0 +1,260 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+
+<section class="hero video-hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source
+      src="../../../assets/VID/6774633-uhd_3840_2160_30fps.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+
+  <header>
+    <app-website-head-menu></app-website-head-menu>
+  </header>
+
+  <div class="hero-content">
+    <h1>Empowering Your Business with Technology</h1>
+    <p>
+      We're a software development company with expertise across software
+      engineering, IT, business, consulting, and training. We help brands and
+      enterprises harness technology to revolutionize their operations and
+      customer experience.
+    </p>
+    <div class="hero-buttons">
+      <button type="button" class="cta-button" [routerLink]="['/about-us']">More About Us</button>
+      <button class="cta-button outline" [routerLink]="['/products/products-overview']">Explore Our Products</button>
+    </div>
+  </div>
+
+  <div class="consult-overlay">
+    <h2>Let's Talk About Your Business</h2>
+    <p>
+      Get expert advice on how to grow, scale, and automate your business with
+      tailored solutions. Book a free consultation with our team today.
+    </p>
+    <button type="button" [routerLink]="['/consultation']" class="consult-button">Book a Free Consultation</button>
+  </div>
+</section>
+
+<!-- About Us Section -->
+<section class="about-section">
+  <div class="about-content">
+    <h2>See How We Can Help <br />Your Business Grow.</h2>
+    <p>
+      Unlock business growth with cutting-edge web & mobile <br />applications,
+      driving success through innovative digital <br />solutions.
+    </p>
+  </div>
+  <button class="about-button" [routerLink]="['/services/business-development']">Learn More</button>
+</section>
+
+
+<!-- Services Section -->
+<section class="services">
+  <h2>What We Offer</h2>
+  <div class="services-grid">
+    <div class="service-card fancy">
+      <div class="top-row">
+        <div class="icon-circle">
+          <i class="fas fa-tv"></i>
+        </div>
+        <div class="text-top">
+          <h3>Web Design</h3>
+          <p class="brief">
+            Designing visually engaging, user-friendly websites
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="bottom-content">
+        <p class="deep-text">
+          Crafting visually stunning, responsive website that capture our
+          brand's essence and transforms ideas into seamless digital
+          experiences.
+        </p>
+        <button class="start-btn">Get Started</button>
+      </div>
+    </div>
+    <div class="service-card fancy">
+      <div class="top-row">
+        <div class="icon-circle2">
+          <i class="fas fa-globe"></i>
+        </div>
+        <div class="text-top">
+          <h3>Web Development</h3>
+          <p class="brief">
+            Building secure, custom websites with performance.
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="bottom-content">
+        <p class="deep-text">
+          building robust, high-perfomance websites with cutting-edge
+          technology,delivering seamless functionality and exceptional user
+          experiences.
+        </p>
+        <button class="start-btn2">Get Started</button>
+      </div>
+    </div>
+    <div class="service-card fancy">
+      <div class="top-row">
+        <div class="icon-circle">
+          <i class="fas fa-envelope-open-text"></i>
+        </div>
+        <div class="text-top">
+          <h3>Digital Marketing</h3>
+          <p class="brief">
+            Driving online visibility through strategic campaigns.
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="bottom-content">
+        <p class="deep-text">
+          Boost your brand visibility with strategic digital marketing, driving
+          engagement, growth, and measurable results.
+        </p>
+        <button class="start-btn" style="margin-top: 25px">Get Started</button>
+      </div>
+    </div>
+    <div class="service-card fancy">
+      <div class="top-row">
+        <div class="icon-circle2">
+          <i class="fa-solid fa-gauge-high"></i>
+        </div>
+        <div class="text-top">
+          <h3>Visual Identity</h3>
+          <p class="brief">Creating consistent, impactful brand visuals.</p>
+        </div>
+      </div>
+      <hr />
+      <div class="bottom-content">
+        <p class="deep-text">
+          Creating cohesive visual identities that reflect our brand's essence,
+          ensuring memorable and impactful impressions.
+        </p>
+        <button class="start-btn2" style="margin-top: 30px">Get Started</button>
+      </div>
+    </div>
+
+    <div class="service-card fancy">
+      <div class="top-row">
+        <div class="icon-circle">
+          <i class="fa-solid fa-lightbulb"></i>
+        </div>
+        <div class="text-top">
+          <h3>Consultation</h3>
+          <p class="brief">Providing expert advice on digital strategy.</p>
+        </div>
+      </div>
+      <hr />
+      <div class="bottom-content">
+        <p class="deep-text">
+          Unlock the full potential of our online presence with our expert web
+          agency consultation. we offer tailored strategies to enhance your
+          website's design, functionality, and performance.
+        </p>
+        <button class="start-btn" style="margin-top: -15px">Get Started</button>
+      </div>
+    </div>
+
+    <div class="service-card fancy">
+      <div class="top-row">
+        <div class="icon-circle2">
+          <i class="fa-solid fa-gear"></i>
+        </div>
+        <div class="text-top">
+          <h3>Web Maintenance</h3>
+          <p class="brief">
+            Ensuring website security, updates, and functionality.
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="bottom-content">
+        <p class="deep-text">
+          building robust, high-perfomance websites with cutting-edge
+          technology,delivering seamless functionality and exceptional user
+          experiences.
+        </p>
+        <button class="start-btn2" style="margin-top: 8px">Get Started</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Start Your Journey Section -->
+<section class="start-journey">
+  <div class="journey-content">
+    <h2>Ready to Start? Let's build something great<br/> together!</h2>
+    <p>
+      Let Omnipurse guide your brand from idea to impact with expert-driven solutions in tech and business.
+    </p>
+    <button class="journey-btn" [routerLink]="['/services/software-development']">Start Your Journey</button>
+  </div>
+</section>
+
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+  <h2 style="color: #001f3f"><b>What Our Clients Say</b></h2>
+  <div class="testimonial-list">
+    <div class="testimonial">
+      <p style="font-size: 16px">
+        “Omnipurse transformed our business with smart IT solutions. They’re
+        professional and truly innovative.”
+      </p>
+      <strong>- Ada O., Tech Founder</strong>
+    </div>
+    <div class="testimonial">
+      <p style="font-size: 16px">
+        “Great service, amazing team! They helped us build our app from scratch
+        and even trained our staff.”
+      </p>
+      <strong>- Emeka K., Startup Owner</strong>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+  <div class="newsletter-content">
+    <div class="logo_newsletter">
+      <img src="../../../assets/iMG/IMG_9286.PNG" alt="Omnipurse Logo" />
+      <span class="logo_text">Omnipurse</span>
+    </div>
+    <div class="subscription-box">
+      <p class="description">
+        Enjoy free tips, insights, ideas, and product updates that will accelerate your growth.
+      </p>
+      <form class="subscribe-form">
+        <input type="phone" placeholder="Your phone number" width="50%" required [(ngModel)]="ePhone" [ngModelOptions]="{standalone: true}" />
+        <input type="email" placeholder="Your email address" width="50%" required [(ngModel)]="eEmail" [ngModelOptions]="{standalone: true}" />
+        <button type="submit" 
+        [disabled]="isBusy" 
+        (click)="SubscribeToNewsletter()">
+        <mat-progress-spinner
+                    *ngIf="isBusy"
+                    diameter="20"
+                    mode="indeterminate"
+                    style="vertical-align: middle; margin-right: 10px"
+                  >
+                  </mat-progress-spinner>
+                  {{ isBusy ? "Sending..." : "Subscribe" }}</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Omnipurse Ltd. All rights reserved.</p>
+</footer>

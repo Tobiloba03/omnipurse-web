@@ -1,0 +1,233 @@
+<section class="contact-section">
+  <header>
+    <app-website-head-menu></app-website-head-menu>
+  </header>
+  <div class="contact-info">
+    <h2>Get in touch with us!</h2>
+    <h3>Contact Infomation.</h3>
+    <p>
+      We would love to hear from you. Fill in our contact form below, give us a
+      call, send us an
+      <span style="color: gold; font-weight: bold">email</span> or visit us
+      during our <span style="text-decoration: underline">office hours</span>.
+    </p>
+  </div>
+</section>
+
+<section class="map-section">
+  <h2>Our Office Location</h2>
+  <p>Visit us in person — we’d love to meet you!</p>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15853.335985622942!2d3.2438129!3d6.6053532!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9a8952f3c043%3A0xc535e05cd3311792!2sAyobo%2C%20Lagos%20102213%2C%20Lagos!5e0!3m2!1sen!2sng!4v1745314916035!5m2!1sen!2sng"
+      width="100%"
+      height="400"
+      style="border: 0; border-radius: 10px"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    >
+    </iframe>
+  </div>
+</section>
+<div class="contact-container">
+  <!-- LEFT SIDE -->
+  <div class="contact-info2">
+    <h1>Get in Touch</h1>
+    <p class="contact-description">
+      Do you need a website, have a question or comment? Please feel free to
+      send us an email or fill in our handy contact form. We aim to reply within
+      24 hours.
+    </p>
+    <p class="contact-highlight">
+      Tell us about your dream or idea and we will contact you as we are here to
+      turn your ideas/business needs into scalable and agile solution.
+    </p>
+    <div class="office-info">
+      <h3>The Office</h3>
+      <strong>Omnipurse Limited.</strong><br />
+      Lagos, Nigeria.
+    </div>
+  </div>
+
+  <div class="contact-form">
+    <div>
+      <div>
+        <mat-card class="matcard">
+          <!-- <span [hidden]="!isBusy">
+            <mat-progress-bar
+              mode="indeterminate"
+              color="warn"
+            ></mat-progress-bar>
+          </span> -->
+          <mat-card-subtitle class="card__title">
+            <h2>
+              Please fill the form below. We guarantee 100% security of your
+              information.
+            </h2>
+            <p>
+              All information you provide will be kept strictly confidential.
+            </p>
+          </mat-card-subtitle>
+          <mat-card-content class="matcontent">
+            <form (ngSubmit)="submitContactUs()">
+              <!-- NAME -->
+              <mat-form-field
+                class="mat-field"
+                floatLabel="always"
+                style="width: 100%"
+              >
+                <mat-label>NAME</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  required
+                  name="name"
+                  [(ngModel)]="eName"
+                />
+              </mat-form-field>
+
+              <!-- PHONE -->
+              <mat-form-field
+                class="mat-field"
+                floatLabel="always"
+                style="width: 100%"
+              >
+                <mat-label>PHONE</mat-label>
+                <input
+                  matInput
+                  required
+                  name="phoneNumber"
+                  [(ngModel)]="ePhone"
+                />
+              </mat-form-field>
+
+              <!-- EMAIL -->
+              <mat-form-field
+                class="mat-field"
+                floatLabel="always"
+                style="width: 100%"
+              >
+                <mat-label>EMAIL</mat-label>
+                <input
+                  matInput
+                  required
+                  name="emailAddress"
+                  [(ngModel)]="eEmail"
+                />
+              </mat-form-field>
+
+              <!-- SUBJECT -->
+              <mat-form-field
+                class="mat-field"
+                floatLabel="always"
+                style="width: 100%"
+              >
+                <mat-label>SUBJECT</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  required
+                  name="subject"
+                  [(ngModel)]="eSubject"
+                />
+              </mat-form-field>
+
+              <!-- MESSAGE -->
+              <mat-form-field
+                class="mat-field"
+                floatLabel="always"
+                style="width: 100%"
+              >
+                <mat-label>MESSAGE</mat-label>
+                <textarea
+                  matInput
+                  required
+                  name="message"
+                  [(ngModel)]="eMessage"
+                ></textarea>
+              </mat-form-field>
+
+              <!-- SUBMIT BUTTON -->
+              <div style="text-align: right; margin-top: 20px">
+                <button
+                  type="submit"
+                  mat-raised-button
+                  color="primary"
+                  [disabled]="isBusy"
+                >
+                  <mat-progress-spinner
+                    *ngIf="isBusy"
+                    diameter="20"
+                    mode="indeterminate"
+                    color="accent"
+                    style="vertical-align: middle; margin-right: 10px"
+                  ></mat-progress-spinner>
+                  {{ isBusy ? "Sending..." : "Send Message" }}
+                </button>
+              </div>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="footer">
+<div class="contact-access-pane">
+  <div class="contact-item">
+    <div class="icon address-icon"></div>
+    <h4>ADDRESS</h4>
+    <p>
+      The first gate,<br />
+      8 Emmanuel Ajasa street, Lafenwa,<br />
+      Ado-odo ota, Ogun
+    </p>
+  </div>
+
+  <div class="contact-item">
+    <div class="icon phone-icon"></div>
+    <h4>PHONES</h4>
+    <p>Phone: <a href="tel:+2349128510854">+2349128510854</a></p>
+  </div>
+
+  <div class="contact-item">
+    <div class="icon email-icon"></div>
+    <h4>CONTACTS</h4>
+    <p><a href="mailto:omnipurse.ltd@gmai.com">omnipurse.ltd@gmail.com</a></p>
+  </div>
+
+  <div class="contact-item">
+    <div class="icon hours-icon"></div>
+    <h4>WORKING HOURS</h4>
+    <p>Monday–Friday<br />(9:00 – 17:00)</p>
+  </div>
+</div>
+
+<div class="connect-pane">
+  <h2>CONNECT WITH US</h2>
+  <div class="social-icons">
+    <a href="#" class="social twitter" aria-label="Twitter" target="_blank"></a>
+    <a
+      href="#"
+      class="social facebook"
+      aria-label="Facebook"
+      target="_blank"
+    ></a>
+    <a
+      href="#"
+      class="social instagram"
+      aria-label="Instagram"
+      target="_blank"
+    ></a>
+    <a
+      href="#"
+      class="social whatsapp"
+      aria-label="WhatsApp"
+      target="_blank"
+    ></a>
+    <a href="#" class="social youtube" aria-label="YouTube" target="_blank"></a>
+    <a href="#" class="social tiktok" aria-label="TikTok" target="_blank"></a>
+  </div>
+</div>
+</section>

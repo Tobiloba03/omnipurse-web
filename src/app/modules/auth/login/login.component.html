@@ -1,0 +1,63 @@
+<header>
+  <app-website-head-menu></app-website-head-menu>
+</header>
+
+<body>
+  <div class="auth-container">
+    <h2>Please sign in or create an account</h2>
+
+    <div class="auth-box">
+      <!-- Login Section -->
+      <div class="login-section">
+        <h3>Already registered?</h3>
+        <form>
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+
+          <a (click)="openForgotPassword()" class="forgot-link"
+            >Forgotten password?</a
+          >
+
+          <div class="remember-me">
+            <input type="checkbox" id="remember" />
+            <label for="remember">REMEMBER ME</label>
+          </div>
+
+          <button type="submit" class="sign-in-btn">Sign in</button>
+        </form>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider">
+        <span>OR</span>
+      </div>
+
+      <!-- Register Section -->
+      <div class="register-section">
+        <h3>New to us?</h3>
+        <p>Creating an account is quick and easy</p>
+        <div class="button-group">
+          <button class="register-btn" (click)="openCreateAccount()">
+            Create an account
+          </button>
+          <button mat-raised-button color="accent" routerLink="/consultation">
+            📅 Book Consultation
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
