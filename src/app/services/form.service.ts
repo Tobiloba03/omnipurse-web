@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from './http.service';
 import { Values } from 'src/config/values.config';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,18 +15,18 @@ export class FormService {
     return this.http.postData(`${Values.apiUrl}ContactUs/CreateContactUs`,objContactUs);
   }
 
-  SubscribeToNewsletter(objSTNl:any)
+  SubscribeToNewsletter(objSTNl:{})
   {
-    debugger
     return this.http.postData(`${Values.apiUrl}Subscriber/SubscribeToNewsletter`,objSTNl);
   }
 
-  GetCountrys()
+  GetCountrys(loggedUser:{}) 
   {
-    return this.http.getData(`${Values.apiUrl}Form/GetCountrys`);
+    return this.http.postData(`${Values.apiUrl}Generic/GetCountrys`,loggedUser);
   }
-  GetStates()
+  
+  GetStates(countryId: number,loggedUser: string="") : Observable<any>
   {
-    return this.http.getData(`${Values.apiUrl}Form/GetStates`);
+    return this.http.getData(`${Values.apiUrl}Generic/GetStatesByCountryID?countryId=${countryId}&loggedUser=${loggedUser}`);
   }
 }

@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { HttpService } from './http.service';
 import { Values } from 'src/config/values.config';
+import { LoginObj } from '../interfaces/interfaces';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -10,21 +11,22 @@ export class AuthService {
 
   constructor(private http: HttpService) {}
 
-  login(credentials: { email: string; password: string }): Observable<boolean> {
-    return this.http.postData(`${Values.apiUrl}Auth/Login`, credentials).pipe(
-      map((res: any) => {
-        if (res && res.token) {
-          this.currentUser = res.user;
-          localStorage.setItem('token', res.token);
-          return true;
-        }
-        return false;
-      })
-    );
+  login(credentials: LoginObj): Observable<any> {
+    return this.http.postData(`${Values.apiUrl}Auth/Login`, credentials);
+    // .pipe(
+    //   map((res: any) => {
+    //     if (res && res.token) {
+    //       this.currentUser = res.user;
+    //       localStorage.setItem('token', res.token);
+    //       return true;
+    //     }
+    //     return false;
+    //   })
+    // );
   }
 
   createAccount(objCreateUser: any): Observable<any> {
-    return this.http.postData(`${Values.apiUrl}Auth/Register`, objCreateUser);
+    return this.http.postData(`${Values.apiUrl}Auth/CreateAccount`, objCreateUser);
   }
 
   forgotPassword(email: string): Observable<any> {
@@ -33,5 +35,9 @@ export class AuthService {
 
   isLoggedIn(): boolean {
     return !!this.currentUser;
+  }
+
+  RetrievePassword(email: string): Observable<any> {
+    return this.http.postData(`${Values.apiUrl}Auth/RetrievePassword`, { email });
   }
 }

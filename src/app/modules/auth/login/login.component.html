@@ -10,13 +10,14 @@
       <!-- Login Section -->
       <div class="login-section">
         <h3>Already registered?</h3>
-        <form>
+        
           <label for="email">Email Address</label>
           <input
             type="email"
             id="email"
             placeholder="Enter your email"
             required
+            [(ngModel)]="eEmail"
           />
 
           <label for="password">Password</label>
@@ -25,6 +26,7 @@
             id="password"
             placeholder="Enter your password"
             required
+            [(ngModel)]="ePassword"
           />
 
           <a (click)="openForgotPassword()" class="forgot-link"
@@ -35,9 +37,20 @@
             <input type="checkbox" id="remember" />
             <label for="remember">REMEMBER ME</label>
           </div>
-
-          <button type="submit" class="sign-in-btn">Sign in</button>
-        </form>
+          <div class="primarybtn">
+<button type="button" (click)="onUserLogin()" [disabled]="isBusy">
+    <mat-progress-spinner
+                    *ngIf="isBusy"
+                    diameter="20"
+                    mode="indeterminate"
+                    color="accent"
+                    style="vertical-align: middle; margin-right: 10px;"
+                  ></mat-progress-spinner>
+                  {{ isBusy ? "checking..." : "Sign in" }}
+    
+  </button></div>
+          <!-- <button type="submit" class="sign-in-btn">Sign in</button> -->
+        
       </div>
 
       <!-- Divider -->
@@ -49,13 +62,15 @@
       <div class="register-section">
         <h3>New to us?</h3>
         <p>Creating an account is quick and easy</p>
-        <div class="button-group">
-          <button class="register-btn" (click)="openCreateAccount()">
+        <div>
+          <div class="secondarybtn">
+          <button (click)="openCreateAccount()">
             Create an account
           </button>
-          <button mat-raised-button color="accent" routerLink="/consultation">
+          </div>
+          <!-- <button mat-raised-button color="accent" routerLink="/consultation">
             📅 Book Consultation
-          </button>
+          </button> -->
         </div>
       </div>
     </div>

@@ -56,18 +56,6 @@ html, body {
   cursor: pointer;
   border-radius: 4px;
 }
-<<<<<<< HEAD
-.consultation{
-  background-color: #ff4081;
-  color: white;
-  font-weight: 550;
-  border: none;
-  padding: 10px 16px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-=======
->>>>>>> a7417ec6043f8d874e18027ee0a5ec1f86db8651
 
 .contact-section {
   background: url("../../../assets/iMG/pexels-karolina-grabowska-5387294.jpg")

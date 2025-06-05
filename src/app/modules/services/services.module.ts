@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ServicesRoutingModule } from './services-routing.module';
-import { SoftwareDevelopmentComponent } from './software-development/software-development.component';
+import { SoftwareSolutionsComponent } from './software-solutions/software-solutions';
 import { BusinessDevelopmentComponent } from './business-development/business-development.component';
 import { ServicesOverviewComponent } from './services-overview/services-overview.component';
 
@@ -10,7 +10,7 @@ import { ServicesOverviewComponent } from './services-overview/services-overview
 @NgModule({
   declarations: [
     BusinessDevelopmentComponent,
-    SoftwareDevelopmentComponent,
+    SoftwareSolutionsComponent,
     ServicesOverviewComponent
   ],
   imports: [

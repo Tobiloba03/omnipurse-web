@@ -52,9 +52,14 @@
   gap: 16px;
 }
 
+.bookSection {
+  background: #daa520;
+  /* padding: 50px 20px;
+  text-align: center; */
+}
 
 .testimonials {
-  background: #daa520;
+  /* background: #daa520; */
   padding: 50px 20px;
   text-align: center;
 }
@@ -90,6 +95,14 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+.consultation-form {
+ padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: white;
+}
+
 .contact-footer {
   background-color: #001f3f;
   color: #ffffff;

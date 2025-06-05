@@ -13,14 +13,14 @@
 </section>
 
 <!-- Image & Text Section -->
-<section class="info-section">
+<section class="info-section bookSection">
   <div class="image-side">
     <img
       src="../../../assets/iMG/pexels-shvetsa-4226256.jpg"
       alt="Consultation"
     />
   </div>
-  <div class="text-side">
+  <div class="text-side consultation-form">
     <h2>Experts, at Your Fingertips</h2>
     <p>
       Our consultations are designed to help you make informed decisions. Talk
@@ -102,30 +102,29 @@
         </mat-form-field>
       </div>
       <div class="button-group">
+        <div class="primarybtn">
         <button
           type="submit"
           (click)="bookConsultation()"
-          mat-raised-button
-          color="primary"
           [disabled]="isBusy"
         >
           <mat-progress-spinner
             *ngIf="isBusy"
             diameter="20"
             mode="indeterminate"
-            color="accent"
             style="vertical-align: middle; margin-right: 10px"
           ></mat-progress-spinner>
           {{ isBusy ? "booking..." : "Book Now" }}
         </button>
+        </div>
+        <div class="secondarybtn">
         <button
           type="submit"
-          mat-raised-button
-          color="secondary"
           routerLink="/dashboard"
         >
-          Dashboard
+          Visit Dashboard
         </button>
+        </div>
       </div>
     </form>
   </div>
@@ -148,8 +147,25 @@
   <p>
     Find answers to commonly asked questions about our consultation service.
   </p>
+  <div class="primarybtn">
   <button (click)="goToFAQ()">Visit FAQ</button>
+  </div>
 </section>
+
+<!-- Value Proposition -->
+<section class="value-section">
+  <p>
+    Consultations with us offer clarity, strategic direction, and peace of mind.
+    Take the first step towards better decisions.
+  </p>
+</section>
+
+<!-- Live Chat Placeholder -->
+<section class="live-chat">
+  <h3>Need Help Right Now?</h3>
+  <p>Start a live chat with our team.</p>
+</section>
+
 <!-- Footer Section -->
 <footer class="contact-footer">
   <div class="footer-content">
@@ -164,20 +180,3 @@
   </div>
 </footer>
 
-<!-- Value Proposition -->
-<section class="value-section">
-  <p>
-    Consultations with us offer clarity, strategic direction, and peace of mind.
-    Take the first step towards better decisions.
-  </p>
-</section>
-
-<!-- Live Chat Placeholder -->
-<section class="live-chat">
-  <h3>Need Help Right Now?</h3>
-  <p>Start a live chat with our team.</p>
-  <!-- Replace this div with your actual live chat widget code (e.g., Tawk.to, Intercom, etc.) -->
-  <!-- <div class="chat-placeholder">
-     
-    </div> -->
-</section>

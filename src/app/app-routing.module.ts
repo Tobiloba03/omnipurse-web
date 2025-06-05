@@ -5,6 +5,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ConsultationComponent } from './components/consultation/consultation.component';
 import { LoginComponent } from './modules/auth/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
 {
@@ -22,6 +23,10 @@ const routes: Routes = [
 {
   path: 'about-us',
   component: AboutUsComponent
+},
+{
+  path: 'dashboard',
+  component: DashboardComponent
 },
 {
   path: 'products',

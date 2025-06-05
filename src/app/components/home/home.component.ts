@@ -24,10 +24,15 @@ export class HomeComponent implements OnInit {
   {
     debugger
     this.isBusy = true;
+    if (this.eEmail === '')
+        return this.util.snackBarNotification(
+          'Enter email address'
+        );
     const objSubscriber : SubscribeToNewsletter = {
-      PhoneNumber : this.ePhone,
+      //PhoneNumber : this.ePhone,
       EmailAddress : this.eEmail
     };
+    
     this.subscription = this.formService.SubscribeToNewsletter(objSubscriber)
     .subscribe( (res) => {
       if (res.response === 'success') {
@@ -36,18 +41,14 @@ export class HomeComponent implements OnInit {
           'Subscribed successfully'
         );
       }
-      else if (res.response === 'null alert')
+      else if (res.response === 'invalid email syntax')
         this.util.snackBarNotification(
-          'Failed, empty fields detected'
+          'Invalid email address, try again.'
         );
-      else if (res.response === 'email null')
+      else if (res.response === 'already subscribed')
         this.util.snackBarNotification(
-          'Enter email address'
+          'Already subscribed'
         );
-        else if (res.response === 'already subscribed')
-          this.util.snackBarNotification(
-            'Already subscribed'
-          );
       this.isBusy = false;
     },
     (err: any) => {
@@ -60,7 +61,7 @@ export class HomeComponent implements OnInit {
   }
 
   clearFields() {
-    this.ePhone = '';
+    //this.ePhone = '';
     this.eEmail = '';
   }
 

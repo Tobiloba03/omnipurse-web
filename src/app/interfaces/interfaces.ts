@@ -9,7 +9,7 @@ export interface ContactUs
 
 export interface SubscribeToNewsletter
 {
-    PhoneNumber: string;
+    //PhoneNumber: string;
     EmailAddress: string;
 }
 
@@ -17,10 +17,17 @@ export interface CreateUser
 {
     FirstName: string;
     LastName: string;
+    CompanyName: string;
     EmailAddress: string;
     PhoneNumber: string;
     CountryId: number;
     StateId: number;
+    Password: string;
+}
+
+export interface LoginObj
+{
+    Email: string;
     Password: string;
 }
 

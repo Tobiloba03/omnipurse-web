@@ -15,8 +15,11 @@
     <a [routerLink]="['/contact-us']" routerLinkActive="router-link-active"
       >Contact us</a
     >
-    <button type="button" class="signin" [routerLink]="['/login']">
+    <button type="button" class="signin" [routerLink]="['/login']" *ngIf="!isLoggedIn">
       Sign In
+    </button>
+    <button type="button" class="signin" [routerLink]="['/dashboard']" *ngIf="isLoggedIn">
+      Dashboard
     </button>
   </nav>
 </header>

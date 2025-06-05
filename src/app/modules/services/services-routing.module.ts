@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BusinessDevelopmentComponent } from './business-development/business-development.component';
-import { SoftwareDevelopmentComponent } from './software-development/software-development.component';
+import { SoftwareSolutionsComponent } from './software-solutions/software-solutions';
 import { ServicesOverviewComponent } from './services-overview/services-overview.component';
 
 const routes: Routes = [
@@ -11,7 +11,7 @@ const routes: Routes = [
   },
   {
     path: 'software-development',
-    component: SoftwareDevelopmentComponent
+    component: SoftwareSolutionsComponent
   },
   {
     path: 'services-overview',

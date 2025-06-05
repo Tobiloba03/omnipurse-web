@@ -8,7 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
@@ -16,11 +16,14 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { RouterModule } from '@angular/router';
+import { WebsiteHeadMenuComponent } from '../components/website-head-menu/website-head-menu.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 @NgModule({
   declarations: [
-    AlertDialogComponent
+    AlertDialogComponent,
+    WebsiteHeadMenuComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +40,9 @@ import { RouterModule } from '@angular/router';
     MatSelectModule,
     MatOptionModule,
     MatDatepickerModule,
-    RouterModule
+    RouterModule,
+    MatProgressSpinnerModule,
+    ReactiveFormsModule
   ],
   exports: [
     MatTableModule,
@@ -55,6 +60,9 @@ import { RouterModule } from '@angular/router';
     MatDatepickerModule,
     RouterModule,
     AlertDialogComponent,
+    WebsiteHeadMenuComponent,
+    MatProgressSpinnerModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }

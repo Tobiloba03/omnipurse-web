@@ -35,7 +35,6 @@ import { AuthModule } from './modules/auth/auth.module';
     ContactUsComponent,
     AboutUsComponent,
     ConsultationComponent,
-    WebsiteHeadMenuComponent,
     ForgotPasswordComponent,
     CreateAccountComponent,
   ],
