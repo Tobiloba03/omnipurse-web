@@ -10,7 +10,7 @@ const routes: Routes = [
     component: BusinessDevelopmentComponent
   },
   {
-    path: 'software-development',
+    path: 'software-solutions',
     component: SoftwareSolutionsComponent
   },
   {

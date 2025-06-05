@@ -1,0 +1,133 @@
+
+.hero {
+  background: url('/assets/images/hero-bg.jpg') no-repeat center center/cover;
+  padding: 100px 20px;
+  color: white;
+  text-align: center;
+}
+
+.service-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.service {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.features {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.feature {
+  background: #f3f3f3;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+}
+
+.why-choose, .about-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 20px;
+}
+
+.why-choose .content, .about-us .intro {
+  flex: 1;
+}
+
+.why-choose .image img, .about-us .mobile img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.testimonials {
+  background: #e9ecef;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 250px;
+  text-align: left;
+}
+
+.team {
+  background: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact {
+  background: #1d4ed8;
+  color: white;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  max-width: 400px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+form button {
+  background: white;
+  color: #1d4ed8;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
