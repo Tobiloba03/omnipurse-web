@@ -1,21 +1,29 @@
-<div class="page-wrapper">
+<header>
+  <app-website-head-menu></app-website-head-menu>
+</header>
 
+<div class="page-wrapper">
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>Empowering Your Vision</h1>
-      <p>Explore tailored services to drive innovation, performance, and growth.</p>
+      <p>
+        Explore tailored services to drive innovation, performance, and growth.
+      </p>
     </div>
   </section>
 
   <!-- Features Overview -->
   <section class="features">
     <h2>We Provide Smart, Scalable Services</h2>
-    <p>From development to deployment, consultation to innovation — we've got you covered.</p>
+    <p>
+      From development to deployment, consultation to innovation — we've got you
+      covered.
+    </p>
 
     <div class="feature-list">
       <div class="feature-item" *ngFor="let f of features">
-        <img [src]="f.icon" alt="Feature Icon">
+        <img [src]="f.icon" alt="Feature Icons" />
         <h3>{{ f.title }}</h3>
         <p>{{ f.desc }}</p>
       </div>
@@ -23,23 +31,26 @@
   </section>
 
   <!-- Service Sections -->
-  <section class="services" *ngFor="let s of services; let i = index" [ngClass]="{ 'reverse': i % 2 !== 0 }">
+  <section
+    class="services"
+    *ngFor="let s of services; let i = index"
+    [ngClass]="{ reverse: i % 2 !== 0 }"
+  >
     <div class="service-text">
       <h2>{{ s.title }}</h2>
       <p>{{ s.description }}</p>
       <div>
         <a [routerLink]="s.link" class="btn primary">Learn More</a>
       </div>
-      
     </div>
     <div class="service-img">
-      <img [src]="s.image" alt="{{ s.title }}">
+      <img [src]="s.image" alt="{{ s.title }}" />
     </div>
   </section>
 
   <!-- Testimonials Placeholder -->
   <section class="testimonials">
-    <h2>What Our Clients Say</h2>
+    <h2>Our Clients Review</h2>
     <div class="testimonial-list">
       <div class="testimonial">
         <p>"Professional, timely, and innovative. Helped us grow digitally."</p>
@@ -49,38 +60,45 @@
         <p>"Their consultation services made our IT more efficient."</p>
         <strong>– Mark Smith</strong>
       </div>
+      <div class="testimonial">
+        <p>"They intuition, flexibilty and innovation drives their company"</p>
+        <strong>– Kelvin Jots</strong>
+      </div>
     </div>
   </section>
 
   <!-- CTA Section -->
   <section class="cta">
     <h2>Let’s Build Something Great</h2>
-    <p>Reach out now to schedule a consultation or learn more about our solutions.</p>
-    <a routerLink="/contact" class="btn secondary">Contact Us</a>
+    <p>
+      Reach out now to schedule a consultation or learn more about our
+      solutions.
+    </p>
   </section>
 
   <section class="contact-info">
-  <div class="info-card">
-    <i class="icon location"></i>
-    <h3>Our Main Office</h3>
-    <p>SoHo 94 Broadway St<br>New York, NY 1001</p>
-  </div>
-  <div class="info-card">
-    <i class="icon phone"></i>
-    <h3>Phone Number</h3>
-    <p>234-9876-5400<br>888-0123-4567 (Toll Free)</p>
-  </div>
-  <div class="info-card">
-    <i class="icon fax"></i>
-    <h3>Fax</h3>
-    <p>1-234-567-8900</p>
-  </div>
-  <div class="info-card">
-    <i class="icon email"></i>
-    <h3>Email</h3>
-    <p><a href="mailto:hello@theme.com">hello@theme.com</a></p>
-  </div>
-</section>
-
-
+    <div class="info-card">
+      <i class="icon location"></i>
+      <h3>Our Main Office</h3>
+      <p>
+       8 Emmanuel Ajasa street, Lafenwa,<br />Ado-odo ota, Ogun
+      </p>
+    </div>
+    <div class="info-card">
+      <i class="icon phone"></i>
+      <h3>Phone Number</h3>
+      <p>+234-912-851-0854<br />888-0123-4567 (Toll Free)</p>
+    </div>
+    <div class="info-card">
+      <i class="icon fax"></i>
+      <h3>Fax</h3>
+      <p>+234-912-851-0854</p>
+    </div>
+    <div class="info-card">
+      <i class="icon email"></i>
+      <h3>Email</h3>
+      <p><a href="mailto:omnipurse.ltd@gmail.com">omnipurse.ltd@gmail.com</a></p>
+    </div>
+    <a routerLink="/contact" class="btn secondary">Contact Us</a>
+  </section>
 </div>

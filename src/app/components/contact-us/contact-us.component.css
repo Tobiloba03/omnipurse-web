@@ -4,59 +4,6 @@ html, body {
   overflow-x: hidden;
   max-width: 100%;
 }
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: rgba(0, 0, 64, 0.7);
-  position: absolute;
-  width: 96.84%;
-  top: 0;
-  left: 0;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: goldenrod;
-}
-
-.logo-icon {
-  width: 30px;
-  height: 30px;
-}
-.navbar nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-  justify-content: flex-end;
-  flex-grow: 1;
-  max-width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
-}
-
-.navbar a,
-.signin {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.signin {
-  background-color: goldenrod;
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
 .contact-section {
   background: url("../../../assets/iMG/pexels-karolina-grabowska-5387294.jpg")
     center/cover no-repeat;
@@ -99,14 +46,14 @@ html, body {
 
 .map-section h2 {
   font-size: 2rem;
-  color: red;
+  color: #ff0000;
   margin-bottom: 10px;
 }
 
 .map-section p {
   font-size: 1rem;
   margin-bottom: 30px;
-  color: goldenrod;
+  color: #daa520;
 }
 
 .map-container {
