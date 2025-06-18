@@ -1,40 +1,44 @@
-/* Color Palette */
-:root {
-  --primary: #d9002c;
-  --secondary: #00274f;
-  --accent: #DAA520;
-  --white: #ffffff;
-}
-
-/* General Page Styling */
 .page-wrapper {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   color: var(--secondary);
   background-color: var(--white);
 }
 
 /* Hero Section */
 .hero {
-  background: url('/assets/images/banner.jpg') no-repeat center center/cover;
-  color: var(--white);
+  background: url("./../../../../assets/iMG/erik-mclean-aielvGxZB0g-unsplash.jpg")
+    no-repeat center center/cover;
   text-align: center;
   padding: 100px 20px;
+}
+.hero-content {
+  max-width: 650px;
+  margin-left: 300px;
+  margin-top: 50px;
+  background-color: rgba(0, 0, 64, 0.2);
+  padding: 60px 20px 60px;
+  text-align: center;
+  border-radius: 10px;
+  line-height: 1.3rem;
 }
 
 .hero h1 {
   font-size: 3rem;
+  font-weight: 400;
   margin-bottom: 15px;
+  color: var(--white);
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  color: var(--accent);
 }
 
 /* Features */
 .features {
   text-align: center;
-  padding: 60px 20px;
-  background-color: #f5f5f5;
+  padding: 80px 20px;
+  background-color: var(--secondary);
 }
 
 .features h2 {
@@ -43,11 +47,16 @@
   margin-bottom: 10px;
 }
 
+.features p {
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
 .feature-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px 0;
   margin-top: 40px;
 }
 
@@ -55,7 +64,7 @@
   background: var(--white);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   max-width: 250px;
   text-align: center;
 }
@@ -70,9 +79,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 10%;
+  padding: 40px 1%;
   flex-wrap: wrap;
   gap: 40px;
+  background-color: #f7f7f7;
 }
 
 .services.reverse {
@@ -82,6 +92,7 @@
 .service-text {
   flex: 1;
   min-width: 300px;
+  margin-left: 3rem;
 }
 
 .service-text h2 {
@@ -91,30 +102,33 @@
 }
 
 .service-text p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
   margin-bottom: 20px;
 }
 
 .service-img {
   flex: 1;
-  min-width: 300px;
+  min-width: 600px;
 }
 
 .service-img img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Testimonials */
 .testimonials {
-  background-color: #f0f0f0;
+  background-color: var(--accent);
   text-align: center;
   padding: 60px 20px;
 }
 
 .testimonials h2 {
-  color: var(--secondary);
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 600;
   margin-bottom: 30px;
 }
 
@@ -122,7 +136,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 50px;
 }
 
 .testimonial {
@@ -130,7 +144,7 @@
   padding: 20px;
   max-width: 300px;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .testimonial p {
@@ -141,18 +155,19 @@
 .cta {
   text-align: center;
   background-color: var(--secondary);
-  color: var(--white);
-  padding: 60px 20px 0px 20px;
+  padding: 60px 20px 20px;
 }
 
 .cta h2 {
   font-size: 2rem;
   margin-bottom: 10px;
+  color: var(--primary);
 }
 
 .cta p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 5px;
+  color: var(--accent);
 }
 
 /* Buttons */
@@ -215,7 +230,7 @@
   justify-content: center;
   background-color: var(--secondary);
   padding: 0px 20px 40px 20px;
-  gap: 20px;
+  gap: 30px;
 }
 
 .info-card {
@@ -224,19 +239,19 @@
   text-align: center;
   padding: 20px;
   width: 220px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .info-card h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-top: 10px;
   margin-bottom: 8px;
   color: var(--secondary);
 }
 
 .info-card p {
-  font-size: 0.95rem;
-  color: #333;
+  font-size: 0.9rem;
+  color: #000000;
   margin: 0;
   line-height: 1.4;
 }
@@ -277,4 +292,3 @@
     width: 90%;
   }
 }
-
