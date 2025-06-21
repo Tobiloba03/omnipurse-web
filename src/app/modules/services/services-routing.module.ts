@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AiandIoTInnovationsComponent } from './ai-and-iot-innovations/ai-and-iot-innovations.component';
 import { BusinessDevelopmentComponent } from './business-development/business-development.component';
 import { SoftwareSolutionsComponent } from './software-solutions/software-solutions';
 import { ServicesOverviewComponent } from './services-overview/services-overview.component';
@@ -7,16 +8,20 @@ import { ServicesOverviewComponent } from './services-overview/services-overview
 const routes: Routes = [
   {
     path: 'business-development',
-    component: BusinessDevelopmentComponent
+    component: BusinessDevelopmentComponent,
   },
   {
     path: 'software-solutions',
-    component: SoftwareSolutionsComponent
+    component: SoftwareSolutionsComponent,
   },
   {
     path: 'services-overview',
-    component: ServicesOverviewComponent
-  }
+    component: ServicesOverviewComponent,
+  },
+  {
+    path: 'ai-and-iot-innovations',
+    component: AiandIoTInnovationsComponent,
+  },
 ];
 
 @NgModule({

@@ -42,7 +42,7 @@ export class ServicesOverviewComponent implements OnInit {
       description:
         'Expert advisory services to help you make the right tech decisions and investments. We turn complex IT challenges into growth opportunities.',
       image: 'assets/ServicesIMG/it-consult.jpg',
-      link: '/services/it-consultations',
+      link: '/consultation',
     },
     {
       title: 'Business Development',
@@ -63,7 +63,7 @@ export class ServicesOverviewComponent implements OnInit {
       description:
         'Smart technology solutions powered by Artificial Intelligence and IoT, designed to automate, optimize, and transform your operations.',
       image: 'assets/ServicesIMG/ai-iot.jpg',
-      link: '/services/ai-iot',
+      link: '/services/ai-and-iot-innovations',
     },
     {
       title: 'Academy Trainings & Internships',
