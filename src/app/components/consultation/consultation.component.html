@@ -77,6 +77,34 @@
       </div>
 
       <div class="form-field">
+        <mat-form-field class="mat-field" style="width: 100%">
+          <mat-label> Company name (if company) </mat-label>
+          <input
+            type="text"
+            matInput
+            id="companyname"
+            name="companyname"
+            [(ngModel)]="eCompanyName"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="form-field">
+  <mat-form-field appearance="outline" style="width:100%;">
+    <mat-label>Service Area of Interest</mat-label>
+    <mat-select
+      name="service"
+      [(ngModel)]="eServiceId"
+    >
+      <mat-option *ngFor="let option of objServices" [value]="option.ServiceID">
+        {{ option.ServiceName }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+      <div class="form-field">
         <mat-form-field>
           <mat-label>Date</mat-label>
           <input
@@ -100,11 +128,26 @@
             [ngModelOptions]="{ standalone: true }"
           />
         </mat-form-field>
+
+        <div class="form-field">
+        <mat-form-field class="mat-field" style="width: 100%">
+          <mat-label> Additional information </mat-label>
+          <input
+            type="text"
+            matInput
+            id="addtionalInfo"
+            name="addtionalInfo"
+            [(ngModel)]="eAddtionalInfo"
+            [ngModelOptions]="{ standalone: true }"
+            
+          />
+        </mat-form-field>
+      </div>
       </div>
       <div class="button-group">
         <div class="primarybtn">
         <button
-          type="submit"
+          type="button"
           (click)="bookConsultation()"
           [disabled]="isBusy"
         >

@@ -29,4 +29,9 @@ export class FormService {
   {
     return this.http.getData(`${Values.apiUrl}Generic/GetStatesByCountryID?countryId=${countryId}&loggedUser=${loggedUser}`);
   }
+
+  GetServices() : Observable<any>
+  {
+    return this.http.getData(`${Values.apiUrl}Generic/GetServices`);
+  }
 }

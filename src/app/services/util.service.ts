@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { AlertDialogComponent } from '../shared/alert-dialog/alert-dialog.component';
+import { Values } from 'src/config/values.config';
+import { HttpService } from './http.service';
 // import * as FileSaver from 'file-saver';
 // import * as XLSX from 'xlsx';
 
@@ -14,7 +16,9 @@ const EXCEL_EXTENSION = '.xlsx';
 })
 export class UtilService {
 
-  constructor(private dialog: MatDialog, private _snackBar: MatSnackBar) { }
+  constructor(private dialog: MatDialog, private _snackBar: MatSnackBar,
+    private http: HttpService
+  ) { }
 
   formatMoney(n:any) {
     try {
@@ -202,5 +206,9 @@ export class UtilService {
       age--;
     }
     return age;
+  }
+
+  TextConversion(txtType:string, txtValue:string){
+    return this.http.getData(`${Values.apiUrl}Generic/TextConversion?tt=${txtType}&&tv=${txtValue}`);
   }
 }
