@@ -8,6 +8,7 @@
   justify-content: center;
   color: var(--white);
   text-align: center;
+   z-index: 1; 
 }
 
 .hero-section .overlay {
@@ -18,7 +19,13 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Ensure content is above the overlay */
+.hero-section > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-section h1 {
@@ -85,7 +92,7 @@
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
-  color: var(--primary);
+  color: var(--white);
 }
 .why-choose li {
   margin-bottom: 12px;

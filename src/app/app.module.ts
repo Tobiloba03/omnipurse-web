@@ -26,6 +26,7 @@ import { WebsiteHeadMenuComponent } from './components/website-head-menu/website
 import { ForgotPasswordComponent } from './modules/auth/forgot-password/forgot-password.component';
 import { CreateAccountComponent } from './modules/auth/create-account/create-account.component';
 import { AuthModule } from './modules/auth/auth.module';
+import { AcademyComponent } from './components/academy/academy.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AuthModule } from './modules/auth/auth.module';
     ConsultationComponent,
     ForgotPasswordComponent,
     CreateAccountComponent,
+    AcademyComponent,
   ],
   imports: [
     BrowserModule,

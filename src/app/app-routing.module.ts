@@ -6,6 +6,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ConsultationComponent } from './components/consultation/consultation.component';
 import { LoginComponent } from './modules/auth/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AcademyComponent } from './components/academy/academy.component';
 
 const routes: Routes = [
 {
@@ -46,6 +47,10 @@ const routes: Routes = [
   path: 'auth',
   loadChildren: () =>
     import('./modules/auth/auth.module').then(m => m.AuthModule)
+},
+{
+  path: 'academy',
+  component: AcademyComponent
 }
 ]; 
 

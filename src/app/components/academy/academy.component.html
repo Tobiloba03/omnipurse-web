@@ -1,0 +1,75 @@
+<!-- academy.component.html -->
+<section class="academy-hero">
+  <div class="hero-content">
+    <h1>Tech Academy, Trainings & Internships</h1>
+    <p>Get real-world experience, practical skills, and industry certifications that accelerate your tech career.</p>
+    <button class="cta-button" (click)="scrollToSection('programs')">Explore Programs</button>
+  </div>
+</section>
+
+<section class="academy-about">
+  <h2>Why Choose Our Academy?</h2>
+  <p>We provide a practical, project-based learning environment led by experts in the field. From bootcamps to internships, we’ve got your growth path covered.</p>
+  <div class="features">
+    <div class="feature">
+      <h4>🌐 Hybrid Learning</h4>
+      <p>Join physically or remotely from anywhere in the world.</p>
+    </div>
+    <div class="feature">
+      <h4>🛠️ Hands-On Projects</h4>
+      <p>Learn by building real applications and systems.</p>
+    </div>
+    <div class="feature">
+      <h4>🎯 Career Mentorship</h4>
+      <p>Get career coaching and portfolio reviews.</p>
+    </div>
+    <div class="feature">
+      <h4>🎓 Certification</h4>
+      <p>Earn recognized certifications after successful completion.</p>
+    </div>
+  </div>
+</section>
+
+<section id="programs" class="academy-programs">
+  <h2>Our Programs</h2>
+  <div class="program-grid">
+    <div class="program-card" *ngFor="let program of programs">
+      <h3>{{ program.title }}</h3>
+      <p>{{ program.description }}</p>
+      <button (click)="applyForProgram(program.title)">Apply Now</button>
+    </div>
+  </div>
+</section>
+
+<section class="internship-container">
+  <!-- Left Half -->
+  <div class="internship-left">
+    <h2>Internship Opportunities</h2>
+    <p>Work on real projects, learn from mentors, and gain valuable experience through our structured internship programs.</p>
+    <ul>
+      <li>🕒 3–6 Month Internships</li>
+      <li>💼 Work with real teams</li>
+      <li>📍 Remote, Hybrid, or Onsite</li>
+      <li>🧑‍🏫 Mentorship & Supervision</li>
+    </ul>
+  </div>
+
+  <!-- Right Half: Image -->
+  <div class="internship-right">
+    <img src="assets/iMG/internship1.jpg" alt="Internship Image">
+  </div>
+</section>
+
+
+<section class="enrollment-section">
+  <h2>Apply for a Program</h2>
+  <form (submit)="onSubmit()" #applyForm="ngForm">
+    <input type="text" name="name" [(ngModel)]="formData.name" placeholder="Your Name" required>
+    <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Your Email" required>
+    <select name="program" [(ngModel)]="formData.program" required>
+      <option value="">Select a Program</option>
+      <option *ngFor="let program of programs" [value]="program.title">{{ program.title }}</option>
+    </select>
+    <button type="submit">Submit Application</button>
+  </form>
+</section>
