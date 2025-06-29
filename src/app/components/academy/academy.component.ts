@@ -36,19 +36,11 @@ programs = [
   ngOnInit(): void {
   }
 
-
-    onSubmit() {
-    // Placeholder for API or service
-    console.log('Application Submitted:', this.formData);
-    alert(`Thank you ${this.formData.name}, your application for ${this.formData.program} has been received.`);
-    this.formData = { name: '', email: '', program: '' };
-  }
-
-  applyForProgram(programTitle: string) {
+ applyForProgram(programTitle: string) {
     this.formData.program = programTitle;
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
   }
-
+    
   scrollToSection(sectionId: string) {
     const el = document.getElementById(sectionId);
     if (el) {

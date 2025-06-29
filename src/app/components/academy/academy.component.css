@@ -110,58 +110,6 @@
   background-color: #001a38;
 }
 
-/* Container with Left and Right Halves */
-.internship-container {
-  display: flex;
-  flex-wrap: wrap;
-  background: #ffffff;
-  padding: 60px 20px;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Left Half - Text */
-.internship-left {
-  flex: 1 1 45%;
-  padding: 20px;
-  text-align: center;
-}
-
-.internship-left h2 {
-  font-size: 2em;
-  margin-bottom: 15px;
-}
-
-.internship-left p {
-  font-size: 1.1em;
-  margin-bottom: 20px;
-}
-
-.internship-left ul {
-  list-style: none;
-  padding: 0;
-}
-
-.internship-left li {
-  font-size: 1.1em;
-  padding: 10px 0;
-}
-
-/* Right Half - Image */
-.internship-right {
-  flex: 1 1 45%;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.internship-right img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
 
 
 /* Enrollment Form */
@@ -219,5 +167,107 @@ form button:hover {
   }
   .hero-content p {
     font-size: 1em;
+  }
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 8%;
+  gap: 50px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eee;
+  background-color: #f9f9f9;
+}
+
+.section:nth-child(even) {
+  flex-direction: row-reverse;
+  background-color: #ffffff;
+}
+
+.text-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.image-content {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-content img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #00274f;
+}
+
+h4 {
+  font-size: 1.2rem;
+  color: #d9002c;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.cta-button {
+  background-color: #d9002c;
+  color: white;
+  padding: 14px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #a70022;
+}
+
+@media screen and (max-width: 1000px) {
+  .section {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 60px 5%;
+  }
+
+  .text-content, .image-content {
+    max-width: 100%;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
   }
 }

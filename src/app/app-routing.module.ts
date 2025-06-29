@@ -7,6 +7,9 @@ import { ConsultationComponent } from './components/consultation/consultation.co
 import { LoginComponent } from './modules/auth/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AcademyComponent } from './components/academy/academy.component';
+import { OmnipurseInternshipsComponent } from './components/omnipurse-internships/omnipurse-internships.component';
+import { OmnipurseTrainingsComponent } from './components/omnipurse-trainings/omnipurse-trainings.component';
+import { OmnipurseAcademyComponent } from './components/omnipurse-academy/omnipurse-academy.component';
 
 const routes: Routes = [
 {
@@ -51,6 +54,18 @@ const routes: Routes = [
 {
   path: 'academy',
   component: AcademyComponent
+},
+{
+  path: 'omnipurse-academy',
+  component: OmnipurseAcademyComponent
+},
+{
+  path: 'omnipurse-trainings',
+  component: OmnipurseTrainingsComponent
+},
+{
+  path: 'omnipurse-internships',
+  component: OmnipurseInternshipsComponent
 }
 ]; 
 

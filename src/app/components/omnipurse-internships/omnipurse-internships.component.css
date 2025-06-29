@@ -1,0 +1,52 @@
+/* Container with Left and Right Halves */
+.internship-container {
+  display: flex;
+  flex-wrap: wrap;
+  background: #ffffff;
+  padding: 60px 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Left Half - Text */
+.internship-left {
+  flex: 1 1 45%;
+  padding: 20px;
+  text-align: center;
+}
+
+.internship-left h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.internship-left p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.internship-left ul {
+  list-style: none;
+  padding: 0;
+}
+
+.internship-left li {
+  font-size: 1.1em;
+  padding: 10px 0;
+}
+
+/* Right Half - Image */
+.internship-right {
+  flex: 1 1 45%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.internship-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

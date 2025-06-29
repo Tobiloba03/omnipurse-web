@@ -27,6 +27,9 @@ import { ForgotPasswordComponent } from './modules/auth/forgot-password/forgot-p
 import { CreateAccountComponent } from './modules/auth/create-account/create-account.component';
 import { AuthModule } from './modules/auth/auth.module';
 import { AcademyComponent } from './components/academy/academy.component';
+import { OmnipurseAcademyComponent } from './components/omnipurse-academy/omnipurse-academy.component';
+import { OmnipurseTrainingsComponent } from './components/omnipurse-trainings/omnipurse-trainings.component';
+import { OmnipurseInternshipsComponent } from './components/omnipurse-internships/omnipurse-internships.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,9 @@ import { AcademyComponent } from './components/academy/academy.component';
     ForgotPasswordComponent,
     CreateAccountComponent,
     AcademyComponent,
+    OmnipurseAcademyComponent,
+    OmnipurseTrainingsComponent,
+    OmnipurseInternshipsComponent,
   ],
   imports: [
     BrowserModule,
