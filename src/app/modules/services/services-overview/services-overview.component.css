@@ -53,10 +53,11 @@
 }
 
 .feature-list {
-  display: flex;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 30px 0;
+  gap: 30px;
+  justify-content: center;
+  
   margin-top: 40px;
 }
 
