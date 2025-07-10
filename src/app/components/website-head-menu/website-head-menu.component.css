@@ -23,12 +23,13 @@
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   align-items: center;
   padding: 20px;
   background-color: rgba(0, 0, 64, 0.4);
   position: absolute;
-  width: 97%;
+  z-index: 1;
+  width: 96vw;
   top: 0;
   left: 0;
 }
@@ -50,6 +51,7 @@
 .navbar nav {
   display: flex;
   gap: 20px;
+  margin-right: 1vw;
   align-items: center;
 }
 

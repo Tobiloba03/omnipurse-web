@@ -8,6 +8,7 @@ import { ServicesOverviewComponent } from './services-overview/services-overview
 import { AiandIoTInnovationsComponent } from './ai-and-iot-innovations/ai-and-iot-innovations.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 
+
 @NgModule({
   declarations: [
     BusinessDevelopmentComponent,
