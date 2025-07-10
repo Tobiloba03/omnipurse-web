@@ -10,6 +10,7 @@ import { AcademyComponent } from './components/academy/academy.component';
 import { OmnipurseInternshipsComponent } from './components/omnipurse-internships/omnipurse-internships.component';
 import { OmnipurseTrainingsComponent } from './components/omnipurse-trainings/omnipurse-trainings.component';
 import { OmnipurseAcademyComponent } from './components/omnipurse-academy/omnipurse-academy.component';
+import { OmnipurseCoursesComponent } from './componenets/omnipurse-courses/omnipurse-courses.component';
 
 const routes: Routes = [
 {
@@ -66,6 +67,10 @@ const routes: Routes = [
 {
   path: 'omnipurse-internships',
   component: OmnipurseInternshipsComponent
+},
+{
+  path: 'omnipurse-courses',
+  component: OmnipurseCoursesComponent
 }
 ]; 
 

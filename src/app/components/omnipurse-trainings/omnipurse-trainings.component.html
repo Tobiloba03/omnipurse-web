@@ -1,13 +1,27 @@
-<p>omnipurse-trainings works!</p>
-<section class="enrollment-section">
-  <h2>Apply for a Program</h2>
-  <form (submit)="onSubmit()" #applyForm="ngForm">
-    <input type="text" name="name" [(ngModel)]="formData.name" placeholder="Your Name" required>
-    <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Your Email" required>
-    <select name="program" [(ngModel)]="formData.program" required>
-      <option value="">Select a Program</option>
-      <option *ngFor="let program of programs" [value]="program.title">{{ program.title }}</option>
-    </select>
-    <button type="submit">Submit Application</button>
-  </form>
+<section class="op-service-section">
+  <div class="op-service-container">
+    <div class="op-service-text">
+      <h2><span class="op-highlight">Our</span> <span class="op-highlight-red">Services</span> Delivery</h2>
+      <p>
+        We offer world-class training to professionals from corporate companies,
+        government firms, public & private sectors, and multinational organizations.
+        Our main focus is to deliver high quality training at affordable rates to
+        individuals from various industries. We help them get certifications and
+        enhance their career in the most convenient, effective and best way possible.
+      </p>
+      <p>
+        We conduct training programs for popular certifications from various
+        domains in three modes of study – classroom training, and online training.
+        Our training's are conducted all across the world and at various schedules
+        enabling learners to take up training and learn at their convenience to earn
+        valuable certifications.
+      </p>
+      <a href="#" class="op-service-button">
+        <span class="op-icon">»</span> Click Here
+      </a>
+    </div>
+    <div class="op-service-image">
+      <img src="assets/iMG/training-img1.jpg" alt="Training illustration" />
+    </div>
+  </div>
 </section>
