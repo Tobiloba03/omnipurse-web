@@ -1,8 +1,8 @@
-<header>
-  <app-website-head-menu></app-website-head-menu>
-</header>
-
 <section class="banner">
+  <header>
+    <app-website-head-menu></app-website-head-menu>
+  </header>
+  <div class="background-blur"></div>
   <div class="banner-text">
     <h1>Book Your Free Consultation</h1>
     <p>
@@ -91,18 +91,18 @@
       </div>
 
       <div class="form-field">
-  <mat-form-field appearance="outline" style="width:100%;">
-    <mat-label>Service Area of Interest</mat-label>
-    <mat-select
-      name="service"
-      [(ngModel)]="eServiceId"
-    >
-      <mat-option *ngFor="let option of objServices" [value]="option.ServiceID">
-        {{ option.ServiceName }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-</div>
+        <mat-form-field appearance="outline" style="width: 100%">
+          <mat-label>Service Area of Interest</mat-label>
+          <mat-select name="service" [(ngModel)]="eServiceId">
+            <mat-option
+              *ngFor="let option of objServices"
+              [value]="option.ServiceID"
+            >
+              {{ option.ServiceName }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
 
       <div class="form-field">
         <mat-form-field>
@@ -130,43 +130,37 @@
         </mat-form-field>
 
         <div class="form-field">
-        <mat-form-field class="mat-field" style="width: 100%">
-          <mat-label> Additional information </mat-label>
-          <input
-            type="text"
-            matInput
-            id="addtionalInfo"
-            name="addtionalInfo"
-            [(ngModel)]="eAddtionalInfo"
-            [ngModelOptions]="{ standalone: true }"
-            
-          />
-        </mat-form-field>
-      </div>
+          <mat-form-field class="mat-field" style="width: 100%">
+            <mat-label> Additional information </mat-label>
+            <input
+              type="text"
+              matInput
+              id="addtionalInfo"
+              name="addtionalInfo"
+              [(ngModel)]="eAddtionalInfo"
+              [ngModelOptions]="{ standalone: true }"
+            />
+          </mat-form-field>
+        </div>
       </div>
       <div class="button-group">
         <div class="primarybtn">
-        <button
-          type="button"
-          (click)="bookConsultation()"
-          [disabled]="isBusy"
-        >
-          <mat-progress-spinner
-            *ngIf="isBusy"
-            diameter="20"
-            mode="indeterminate"
-            style="vertical-align: middle; margin-right: 10px"
-          ></mat-progress-spinner>
-          {{ isBusy ? "booking..." : "Book Now" }}
-        </button>
+          <button
+            type="button"
+            (click)="bookConsultation()"
+            [disabled]="isBusy"
+          >
+            <mat-progress-spinner
+              *ngIf="isBusy"
+              diameter="20"
+              mode="indeterminate"
+              style="vertical-align: middle; margin-right: 10px"
+            ></mat-progress-spinner>
+            {{ isBusy ? "booking..." : "Book Now" }}
+          </button>
         </div>
         <div class="secondarybtn">
-        <button
-          type="submit"
-          routerLink="/dashboard"
-        >
-          Visit Dashboard
-        </button>
+          <button type="submit" routerLink="/dashboard">Visit Dashboard</button>
         </div>
       </div>
     </form>
@@ -191,7 +185,7 @@
     Find answers to commonly asked questions about our consultation service.
   </p>
   <div class="primarybtn">
-  <button (click)="goToFAQ()">Visit FAQ</button>
+    <button (click)="goToFAQ()">Visit FAQ</button>
   </div>
 </section>
 
@@ -222,4 +216,3 @@
     <p>Hours: Monday – Friday (9:00 – 17:00)</p>
   </div>
 </footer>
-

@@ -14,7 +14,7 @@ html, body {
 }
 .contact-info {
   max-width: 550px;
-  margin-left: 450px;
+  margin-left: 30%;
   margin-top: 50px;
   background-color: rgba(0, 0, 64, 0.3);
   padding: 50px 10px 60px;

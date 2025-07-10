@@ -17,7 +17,8 @@ import { PasswordManagerComponent } from './password-manager/password-manager.co
 @NgModule({
   declarations: [
     LoginComponent,
-    PasswordManagerComponent
+    PasswordManagerComponent,
+
   ],
   imports: [
     CommonModule,
@@ -29,7 +30,7 @@ import { PasswordManagerComponent } from './password-manager/password-manager.co
     MatInputModule,
     MatButtonModule,
     MatRadioModule,
-    SharedModule
+    SharedModule,
   ],
 })
 export class AuthModule {}
