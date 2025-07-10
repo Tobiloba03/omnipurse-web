@@ -62,7 +62,6 @@ h1 {
   position: relative;
   margin: 65px;
   z-index: 2;
-  
 }
 
 .navbar {
@@ -219,11 +218,11 @@ h1 {
   position: relative;
   z-index: 1;
   max-width: 550px;
-  margin-left: 100px;
-  background-color: rgba(255, 255, 255, 0.06);
+  margin-left: 5%;
+  background-color: rgba(255, 255, 255, 0.05);
   padding: 50px 10px 80px;
   border-radius: 10px;
-  align-items: center;
+  align-items: left;
 }
 
 .about-content h2 {
@@ -243,14 +242,14 @@ h1 {
 }
 
 .about-button {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  margin-left: -480px; /* align with .about-content */
-  margin-top: -70px;
+  margin-left: 300px; /* align with .about-content */
+  margin-top: -10px;
   background: goldenrod;
   color: white;
   padding: 12px 24px;
-  border: none;
+  border: 1px solid #001f3f;
   font-size: 1rem;
   border-radius: 25px;
   cursor: pointer;
@@ -433,7 +432,7 @@ hr {
   position: relative;
   z-index: 1;
   max-width: 550px;
-  margin-left: 650px;
+  margin-left: 5%;
   background-color: rgba(255, 255, 255, 0.05);
   padding: 50px 10px 60px;
   border-radius: 10px;
@@ -457,7 +456,7 @@ hr {
   text-align: left;
 }
 
-.journey-btn{
+.journey-btn {
   position: relative;
   z-index: 1;
   margin-right: 300px; /* align with .about-content */
@@ -513,7 +512,7 @@ hr {
 .contact form {
   max-width: 500px;
   margin: 20px auto 0;
-  display: flex; 
+  display: flex;
   flex-direction: row;
   gap: 15px;
   background: rgba(255, 255, 255, 0.05);
