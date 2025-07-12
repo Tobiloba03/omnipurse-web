@@ -72,6 +72,108 @@
   }
 }
 
+
+/* CSS for Book Consultation Section */
+.omnipurse-consult-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #001f3f;
+}
+
+.omnipurse-consult-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.omnipurse-consult-image {
+  flex: 1 1 45%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.omnipurse-consult-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+.omnipurse-consult-content {
+  flex: 1 1 50%;
+}
+
+.omnipurse-consult-heading {
+  font-size: 2rem;
+  color: #001f3f;
+  margin-bottom: 10px;
+}
+
+.omnipurse-consult-sub {
+  color: #d9002c;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.omnipurse-consult-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.omnipurse-consult-tags {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.omnipurse-tag {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #001f3f;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.omnipurse-btn-consult {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #d9002c;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.omnipurse-btn-consult:hover {
+  background-color: #a80022;
+}
+
+@media (max-width: 768px) {
+  .omnipurse-consult-container {
+    flex-direction: column;
+  }
+  .omnipurse-consult-image,
+  .omnipurse-consult-content {
+    flex: 1 1 100%;
+  }
+}
+
+
+
 .live-chat {
   padding: 40px 20px;
   background-color: var(--accent);
