@@ -1,0 +1,262 @@
+/* it-services.component.css */
+.omnipurse-it-services {
+  background-color: #FFF6D4;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #001f3f;
+}
+
+.omnipurse-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.omnipurse-heading {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  color: #DAA520;
+}
+
+.omnipurse-intro {
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #001f3f;
+}
+
+.omnipurse-service-category {
+  background-color: #ffffff;
+  border-left: 5px solid #DAA520;
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.omnipurse-category-title {
+  font-size: 1.5rem;
+  color: #d9002c;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #d9002c;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.omnipurse-service-category ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.omnipurse-service-category li {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #001f3f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .omnipurse-heading {
+    font-size: 2rem;
+  }
+
+  .omnipurse-category-title {
+    font-size: 1.3rem;
+  }
+
+  .omnipurse-service-category {
+    padding: 20px;
+  }
+}
+
+.live-chat {
+  padding: 40px 20px;
+  background-color: var(--accent);
+  text-align: center;
+  color: var(--secondary);
+}
+
+
+/* footer */
+.footer {
+  background: url("../../../assets/iMG/pexels-kevin-ku-92347-577585.jpg")
+  center/cover no-repeat;
+}
+
+.contact-access-pane {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay look */
+  color: white;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.contact-item {
+  flex: 1 1 200px;
+  margin: 20px;
+}
+
+.contact-item .icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Icons — you can replace with real SVGs or Font Awesome if available */
+.address-icon {
+  background-color: #001f3f;
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/marker.png");
+}
+
+.phone-icon {
+  background-color: goldenrod;
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/phone.png");
+}
+
+.email-icon {
+  background-color: red;
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/new-post.png");
+}
+
+.hours-icon {
+  background-color: #015958;
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/clock.png");
+}
+
+.contact-item h4 {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.contact-item a {
+  color: #4ecaff;
+  text-decoration: none;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-item a:hover {
+  background-color: rgba(78, 202, 255, 0.15);
+  color: #fff; 
+}
+
+.connect-pane {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.connect-pane h2 {
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.social {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  border-radius: 50%;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #001f3f;
+  transition: transform 0.2s ease;
+}
+
+.social:hover {
+  transform: scale(1.1);
+}
+
+/* Specific icons using icons8 free CDN or your own assets */
+.twitter {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/twitter.png");
+}
+.facebook {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png");
+}
+.instagram {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png");
+}
+.whatsapp {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png");
+}
+.youtube {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png");
+}
+.tiktok {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/tiktok.png");
+}
+
+.note {
+  font-size: 13px;
+  margin-top: 10px;
+  color: white;
+}
+
+.footer-bottom {
+  background: #111;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid gold;
+}
+
+
+/* Links */
+.tas-footer-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #DAA520;
+}
+
+.tas-footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tas-footer-nav li {
+  margin-bottom: 10px;
+}
+
+.tas-footer-nav a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.tas-footer-nav a:hover {
+  color: #DAA520;
+}
+/* footer */

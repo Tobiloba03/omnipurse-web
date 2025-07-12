@@ -32,6 +32,7 @@ import { OmnipurseTrainingsComponent } from './components/omnipurse-trainings/om
 import { OmnipurseInternshipsComponent } from './components/omnipurse-internships/omnipurse-internships.component';
 import { ViewAcademyDetailsComponent } from './components/view-academy-details/view-academy-details.component';
 import { OmnipurseCoursesComponent } from './componenets/omnipurse-courses/omnipurse-courses.component';
+import { OmnipurseItServicesComponent } from './components/omnipurse-it-services/omnipurse-it-services.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { OmnipurseCoursesComponent } from './componenets/omnipurse-courses/omnip
     OmnipurseInternshipsComponent,
     ViewAcademyDetailsComponent,
     OmnipurseCoursesComponent,
+    OmnipurseItServicesComponent,
   ],
   imports: [
     BrowserModule,

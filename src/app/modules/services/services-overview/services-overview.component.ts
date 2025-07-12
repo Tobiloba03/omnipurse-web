@@ -35,7 +35,7 @@ export class ServicesOverviewComponent implements OnInit {
       description:
         'Reliable and scalable IT infrastructure tailored for your business needs. We provide maintenance, security, and optimization of your IT systems.',
       image: 'assets/ServicesIMG/it-services.jpg',
-      link: '/services/it-services',
+      link: '/omnipurse-it-services',
     },
     {
       title: 'IT Consultations',

@@ -11,6 +11,7 @@ import { OmnipurseInternshipsComponent } from './components/omnipurse-internship
 import { OmnipurseTrainingsComponent } from './components/omnipurse-trainings/omnipurse-trainings.component';
 import { OmnipurseAcademyComponent } from './components/omnipurse-academy/omnipurse-academy.component';
 import { OmnipurseCoursesComponent } from './componenets/omnipurse-courses/omnipurse-courses.component';
+import { OmnipurseItServicesComponent } from './components/omnipurse-it-services/omnipurse-it-services.component';
 
 const routes: Routes = [
 {
@@ -71,6 +72,10 @@ const routes: Routes = [
 {
   path: 'omnipurse-courses',
   component: OmnipurseCoursesComponent
+},
+{
+  path: 'omnipurse-it-services',
+  component: OmnipurseItServicesComponent
 }
 ]; 
 
