@@ -1,3 +1,173 @@
+.omnipurse-hero-banner {
+  background: url('/assets/iMG/trainings2.jpg') center/cover no-repeat;
+  color: #fff;
+  position: relative;
+  min-height: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.omnipurse-hero-overlay {
+  background: rgba(0, 0, 0, 0.65);
+  width: 90%;
+  padding: 60px 5%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.omnipurse-hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+/* Left Content */
+.omnipurse-hero-left {
+  max-width: 50%;
+}
+
+.omnipurse-tagline {
+  color: #FFD700;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.omnipurse-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.omnipurse-subtext {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.omnipurse-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.omnipurse-btn-primary {
+  background-color: #00d084;
+  color: #000;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.omnipurse-btn-primary:hover {
+  background-color: #00b36b;
+}
+
+.omnipurse-btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.omnipurse-btn-outline:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Right Stats */
+.omnipurse-hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.omnipurse-stat {
+  background: #fff;
+  color: #000;
+  padding: 15px 20px;
+  border-radius: 12px;
+  max-width: 220px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.omnipurse-stat h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.omnipurse-stat p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.omnipurse-stat .stars {
+  margin-top: 5px;
+  color: #007bff;
+}
+
+.omnipurse-stat.red {
+  background: #FF5E5E;
+  color: #fff;
+}
+
+.omnipurse-stat.blue {
+  background: #1DA1F2;
+  color: #fff;
+}
+
+.omnipurse-stat.yellow {
+  background: #FFD700;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Highlight footer */
+.omnipurse-highlight {
+  background: #6C63FF;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.1rem;
+}
+
+.omnipurse-highlight .yellow {
+  color: #FFD700;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .omnipurse-hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .omnipurse-hero-left {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .omnipurse-hero-right {
+    align-items: center;
+  }
+}
+
+
+
 .op-service-section {
   background-color: #fceeee; /* light pink */
   padding: 60px 5%;
@@ -69,3 +239,301 @@
   height: auto;
   border-radius: 10px;
 }
+
+
+/* training plans*/
+
+.courses-section {
+  background: #FFF6D4;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #001f4d;
+  margin-bottom: 40px;
+}
+
+.courses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.course-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.course-card h3 {
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+.btn-group {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-dark {
+  background: #001f4d;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.details p {
+  margin: 4px 0;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.modes {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 16px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.btn-red {
+  background: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.cta-button {
+  background-color: #d9002c;
+  color: white;
+  padding: 14px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 2rem;
+}
+
+.cta-button:hover {
+  background-color: #a70022;
+}
+
+/* trainings plan*/
+
+
+/* footer */
+.footer {
+  background: url("../../../assets/iMG/pexels-kevin-ku-92347-577585.jpg")
+  center/cover no-repeat;
+}
+
+.contact-access-pane {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay look */
+  color: white;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.contact-item {
+  flex: 1 1 200px;
+  margin: 20px;
+}
+
+.contact-item .icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Icons — you can replace with real SVGs or Font Awesome if available */
+.address-icon {
+  background-color: #001f3f;
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/marker.png");
+}
+
+.phone-icon {
+  background-color: goldenrod;
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/phone.png");
+}
+
+.email-icon {
+  background-color: red;
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/new-post.png");
+}
+
+.hours-icon {
+  background-color: #015958;
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/clock.png");
+}
+
+.contact-item h4 {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.contact-item a {
+  color: #4ecaff;
+  text-decoration: none;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-item a:hover {
+  background-color: rgba(78, 202, 255, 0.15);
+  color: #fff; 
+}
+
+.connect-pane {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.connect-pane h2 {
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.social {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  border-radius: 50%;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #001f3f;
+  transition: transform 0.2s ease;
+}
+
+.social:hover {
+  transform: scale(1.1);
+}
+
+/* Specific icons using icons8 free CDN or your own assets */
+.twitter {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/twitter.png");
+}
+.facebook {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png");
+}
+.instagram {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png");
+}
+.whatsapp {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png");
+}
+.youtube {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png");
+}
+.tiktok {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/tiktok.png");
+}
+
+.note {
+  font-size: 13px;
+  margin-top: 10px;
+  color: white;
+}
+
+.footer-bottom {
+  background: #111;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid gold;
+}
+
+
+/* Links */
+.tas-footer-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #DAA520;
+}
+
+.tas-footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tas-footer-nav li {
+  margin-bottom: 10px;
+}
+
+.tas-footer-nav a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.tas-footer-nav a:hover {
+  color: #DAA520;
+}
+/* footer */

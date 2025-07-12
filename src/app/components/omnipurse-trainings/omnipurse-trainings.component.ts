@@ -42,7 +42,16 @@ programs = [
     this.formData = { name: '', email: '', program: '' };
   }
 
- 
+ ViewPrerequisites(){
 
+ }
+
+ ViewSyllabus(){
+  
+ }
+
+EnrollNow(){
+
+}
 
 }
