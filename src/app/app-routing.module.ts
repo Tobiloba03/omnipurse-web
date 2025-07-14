@@ -6,12 +6,13 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ConsultationComponent } from './components/consultation/consultation.component';
 import { LoginComponent } from './modules/auth/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { AcademyComponent } from './components/academy/academy.component';
+import { AcademyOverviewComponent } from './components/academy-overview/academy-overview.component';
 import { OmnipurseInternshipsComponent } from './components/omnipurse-internships/omnipurse-internships.component';
 import { OmnipurseTrainingsComponent } from './components/omnipurse-trainings/omnipurse-trainings.component';
 import { OmnipurseAcademyComponent } from './components/omnipurse-academy/omnipurse-academy.component';
 import { OmnipurseCoursesComponent } from './componenets/omnipurse-courses/omnipurse-courses.component';
 import { OmnipurseItServicesComponent } from './components/omnipurse-it-services/omnipurse-it-services.component';
+import { FaqComponent } from './components/faq/faq.component';
 
 const routes: Routes = [
 {
@@ -54,8 +55,8 @@ const routes: Routes = [
     import('./modules/auth/auth.module').then(m => m.AuthModule)
 },
 {
-  path: 'academy',
-  component: AcademyComponent
+  path: 'academy-overview',
+  component: AcademyOverviewComponent
 },
 {
   path: 'omnipurse-academy',
@@ -76,6 +77,10 @@ const routes: Routes = [
 {
   path: 'omnipurse-it-services',
   component: OmnipurseItServicesComponent
+},
+{
+  path: 'faq',
+  component: FaqComponent
 }
 ]; 
 

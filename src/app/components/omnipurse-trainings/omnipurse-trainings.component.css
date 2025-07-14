@@ -47,7 +47,7 @@
 .omnipurse-subtext {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: #ddd;
+  color: #DAA520;
 }
 
 .omnipurse-buttons {
@@ -57,8 +57,8 @@
 }
 
 .omnipurse-btn-primary {
-  background-color: #00d084;
-  color: #000;
+  background-color: #d9002c;
+  color: #fff;
   padding: 14px 28px;
   border-radius: 50px;
   font-weight: 600;
@@ -67,7 +67,7 @@
 }
 
 .omnipurse-btn-primary:hover {
-  background-color: #00b36b;
+  background-color: #800000;
 }
 
 .omnipurse-btn-outline {
@@ -136,7 +136,7 @@
 
 /* Highlight footer */
 .omnipurse-highlight {
-  background: #6C63FF;
+  background: #001f3f;
   color: #fff;
   text-align: center;
   padding: 20px;

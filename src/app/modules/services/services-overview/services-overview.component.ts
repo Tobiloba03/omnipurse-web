@@ -70,7 +70,7 @@ export class ServicesOverviewComponent implements OnInit {
       description:
         'Upskill with hands-on training and internship programs in IT, AI, and software development—built to prepare you for real-world success.',
       image: 'assets/ServicesIMG/academy.jpg',
-      link: '/academy',
+      link: '/academy-overview',
     },
     {
       title: 'Corporate Incorporations',

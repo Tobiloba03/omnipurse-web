@@ -26,13 +26,14 @@ import { WebsiteHeadMenuComponent } from './components/website-head-menu/website
 import { ForgotPasswordComponent } from './modules/auth/forgot-password/forgot-password.component';
 import { CreateAccountComponent } from './modules/auth/create-account/create-account.component';
 import { AuthModule } from './modules/auth/auth.module';
-import { AcademyComponent } from './components/academy/academy.component';
+import { AcademyOverviewComponent } from './components/academy-overview/academy-overview.component';
 import { OmnipurseAcademyComponent } from './components/omnipurse-academy/omnipurse-academy.component';
 import { OmnipurseTrainingsComponent } from './components/omnipurse-trainings/omnipurse-trainings.component';
 import { OmnipurseInternshipsComponent } from './components/omnipurse-internships/omnipurse-internships.component';
 import { ViewAcademyDetailsComponent } from './components/view-academy-details/view-academy-details.component';
 import { OmnipurseCoursesComponent } from './componenets/omnipurse-courses/omnipurse-courses.component';
 import { OmnipurseItServicesComponent } from './components/omnipurse-it-services/omnipurse-it-services.component';
+import { FaqComponent } from './components/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -44,13 +45,14 @@ import { OmnipurseItServicesComponent } from './components/omnipurse-it-services
     ConsultationComponent,
     ForgotPasswordComponent,
     CreateAccountComponent,
-    AcademyComponent,
+    AcademyOverviewComponent,
     OmnipurseAcademyComponent,
     OmnipurseTrainingsComponent,
     OmnipurseInternshipsComponent,
     ViewAcademyDetailsComponent,
     OmnipurseCoursesComponent,
     OmnipurseItServicesComponent,
+    FaqComponent,
   ],
   imports: [
     BrowserModule,

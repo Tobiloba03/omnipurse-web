@@ -172,6 +172,22 @@
   }
 }
 
+.faq-section {
+  padding: 50px 20px 0 20px;
+  text-align: center;
+  background-color: var(--accent);
+  color: var(--secondary);
+}
+
+.faq-section button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 
 .live-chat {

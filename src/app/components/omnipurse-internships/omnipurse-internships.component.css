@@ -11,7 +11,7 @@
 }
 
 .omnipurse-hero-overlay {
-  background: rgba(0.8, 1, 0, 0.45);
+  background: rgba(0, 0, 0, 0.6);
   width: 90%;
   padding: 60px 5%;
   display: flex;
@@ -58,8 +58,8 @@
 }
 
 .omnipurse-btn-primary {
-  background-color: #00d084;
-  color: #000;
+  background-color: #d9002c;
+  color: #fff;
   padding: 14px 28px;
   border-radius: 50px;
   font-weight: 600;
@@ -68,7 +68,7 @@
 }
 
 .omnipurse-btn-primary:hover {
-  background-color: #00b36b;
+  background-color: #800000;
 }
 
 .omnipurse-btn-outline {
@@ -137,7 +137,7 @@
 
 /* Highlight footer */
 .omnipurse-highlight {
-  background: #6C63FF;
+  background: #001f3f;
   color: #fff;
   text-align: center;
   padding: 20px;
@@ -165,6 +165,92 @@
   .omnipurse-hero-right {
     align-items: center;
   }
+}
+
+
+.testimonial-section {
+  padding: 2rem;
+  background: #f8f9fc;
+  text-align: center;
+}
+
+.testimonial-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #001f3f;
+}
+
+.testimonial-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.testimonial-card {
+  min-width: 320px;
+  background: white;
+  border-radius: 1rem;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  align-items: center;
+}
+
+.testimonial-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.testimonial-text {
+  text-align: left;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.testimonial-name {
+  color: #f57c00;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.testimonial-title {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Navigation buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  z-index: 2;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-btn.left {
+  left: 0.5rem;
+}
+
+.carousel-btn.right {
+  right: 0.5rem;
 }
 
 /* footer */

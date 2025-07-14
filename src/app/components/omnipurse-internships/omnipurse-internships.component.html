@@ -20,11 +20,34 @@
   <!-- Footer highlight -->
   <div class="omnipurse-highlight">
     <p>
-      Thousands Of Graduates Have Started <span class="yellow">Rewarding Careers</span>
-      With Top Tech Companies.
+      <span class="yellow">Rewarding Internship</span> With Our Core Tech Team And <span class="yellow">Rewarding Careers</span>
+      With Top Companies.
     </p>
   </div>
 </section>
+
+
+<div class="testimonial-section">
+  <h2 class="testimonial-heading">Students Testimonials</h2>
+
+  <div class="testimonial-carousel-wrapper">
+    <button class="carousel-btn left" (click)="scrollLeft()">&#10094;</button>
+
+    <div class="testimonial-carousel" #carousel>
+      <div class="testimonial-card" *ngFor="let t of testimonials">
+        <img [src]="t.image" alt="Student" class="testimonial-img" />
+        <div class="testimonial-text">
+          <p>{{ t.message }}</p>
+          <hr />
+          <h4 class="testimonial-name">{{ t.name }}</h4>
+          <p class="testimonial-title">{{ t.title }}</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-btn right" (click)="scrollRight()">&#10095;</button>
+  </div>
+</div>
 
 <section class="footer">
   <div class="contact-access-pane">

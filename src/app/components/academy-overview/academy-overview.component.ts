@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-academy',
-  templateUrl: './academy.component.html',
-  styleUrls: ['./academy.component.css']
+  selector: 'app-academy-overview',
+  templateUrl: './academy-overview.component.html',
+  styleUrls: ['./academy-overview.component.css']
 })
-export class AcademyComponent implements OnInit {
+export class AcademyOverviewComponent implements OnInit {
 programs = [
     {
       title: 'Full-Stack Web Development',
