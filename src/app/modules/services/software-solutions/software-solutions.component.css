@@ -5,51 +5,6 @@
   min-height: 100vh;
 }
 
-/* Make design-section take half width */
-.left-half {
-  flex: 1 1 40%;
-  display: flex;
-  align-items: center;
-  padding: 60px 40px;
-  margin-top: -40px;
-  background-color: var(--secondary);
-  color: #fff;
-}
-
-/* Make image section take half width */
-.right-half {
-  flex: 1 1 50%;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  padding: 0;
-  overflow: hidden;
-}
-
-.right-half img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0;
-}
-
-/* Responsive: stack on mobile */
-@media (max-width: 768px) {
-  .software-layout {
-    flex-direction: column;
-  }
-
-  .left-half,
-  .right-half {
-    flex: 1 1 100%;
-    padding: 30px;
-  }
-
-  .right-half img {
-    width: 100%;
-  }
-}
-
 .hero-section {
   position: relative;
   background: url("../../../../assets/iMG/SoftwareSolution.jpg") no-repeat
@@ -161,6 +116,50 @@
     gap: 20px;
   }
 
+}
+/* Make design-section take half width */
+.left-half {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  padding: 60px 40px;
+  margin-top: -40px;
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+/* Make image section take half width */
+.right-half {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.right-half img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 768px) {
+  .software-layout {
+    flex-direction: column;
+  }
+
+  .left-half,
+  .right-half {
+    flex: 1 1 100%;
+    padding: 30px;
+  }
+
+  .right-half img {
+    width: 100%;
+  }
 }
 .design-section {
   padding: 0px 20px;
@@ -281,9 +280,12 @@
   align-items: center;
   justify-content: space-between;
   background-color: var(--accent);
+ 
   padding: 30px;
   border-radius: 0px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .icon-container img {
@@ -294,6 +296,7 @@
 .content {
   flex-grow: 1;
   margin-left: 20px;
+  min-width: 250px;
 }
 
 .content h2 {
@@ -311,7 +314,11 @@
 }
 
 .button-container {
-  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+   margin-right: 40vw;
 }
 
 .contact-button {

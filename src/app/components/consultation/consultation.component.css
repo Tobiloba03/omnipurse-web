@@ -73,17 +73,20 @@
 .text-side button {
   margin-top: 15px;
   padding: 10px 20px;
-  background-color: #1976d2;
+  background-color: var(--primary,);
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 5px;
 }
+.text-side button:hover {
+  background-color: var(--secondary);
+}
+
 .button-group {
   display: flex;
   gap: 16px;
 }
-
 .bookSection {
   background: #daa520;
   /* padding: 50px 20px;

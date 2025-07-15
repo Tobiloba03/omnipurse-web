@@ -17,13 +17,16 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { RouterModule } from '@angular/router';
 import { WebsiteHeadMenuComponent } from '../components/website-head-menu/website-head-menu.component';
+import { WebsiteFooterMenuComponent } from '../components/website-footer-menu/website-footer-menu.component';
+
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 @NgModule({
   declarations: [
     AlertDialogComponent,
-    WebsiteHeadMenuComponent
+    WebsiteHeadMenuComponent,
+    WebsiteFooterMenuComponent,
   ],
   imports: [
     CommonModule,
@@ -42,7 +45,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatDatepickerModule,
     RouterModule,
     MatProgressSpinnerModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports: [
     MatTableModule,
@@ -62,7 +65,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     AlertDialogComponent,
     WebsiteHeadMenuComponent,
     MatProgressSpinnerModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+    WebsiteFooterMenuComponent,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

@@ -539,14 +539,6 @@ hr {
   border-radius: 5px;
 }
 
-.footer {
-  background: #111;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  font-size: 0.9rem;
-  border-top: 1px solid gold;
-}
 
 @media screen and (max-width: 768px) {
   .hero-content h1 {

@@ -5,32 +5,52 @@
 }
 
 /* Hero Section */
-.hero {
+.hero-section {
+  position: relative;
   background: url("./../../../../assets/iMG/erik-mclean-aielvGxZB0g-unsplash.jpg")
     no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
   text-align: center;
-  padding: 100px 20px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.background-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
 .hero-content {
-  max-width: 45%;
-  margin-left: 25%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
   margin-top: 50px;
   background-color: rgba(0, 0, 64, 0.2);
-  padding: 60px 20px 60px;
+  padding: 80px 20px 60px;
   text-align: center, auto;
   border-radius: 10px;
   line-height: 1.3rem;
 }
 
-.hero h1 {
+.hero-content h1 {
   font-size: 3rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 20px;
   color: var(--white);
 }
 
-.hero p {
+.hero-content p {
   font-size: 1.3rem;
   color: var(--accent);
 }
@@ -38,7 +58,7 @@
 /* Features */
 .features {
   text-align: center;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   padding: 80px 20px;
   background-color: var(--secondary);
 }
@@ -226,7 +246,7 @@
   }
 }
 
-.contact-info {
+/* .contact-info {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -267,7 +287,7 @@
 .icon {
   font-size: 2rem;
   color: var(--primary);
-}
+} */
 
 /* Replace these with actual icons or use a library like FontAwesome */
 .icon.location::before {
