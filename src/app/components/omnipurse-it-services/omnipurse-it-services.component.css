@@ -1,35 +1,49 @@
 /* it-services.component.css */
 .omnipurse-it-services {
-  background-color: #FFF6D4;
+  position: relative;
+  background: url("../../../assets/iMG/internship1.jpg") no-repeat center
+    center/cover;
   padding: 60px 20px;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   color: #001f3f;
 }
-
+.background-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
 .omnipurse-container {
+  position: relative;
+  z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .omnipurse-heading {
   font-size: 2.5rem;
+  font-weight: 500;
   text-align: center;
   margin-bottom: 20px;
   margin-top: 30px;
-  color: #DAA520;
+  color: var(--white);
 }
 
 .omnipurse-intro {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-align: center;
   max-width: 800px;
   margin: 0 auto 40px;
-  color: #001f3f;
+  color: var(--accent);
 }
 
 .omnipurse-service-category {
   background-color: #ffffff;
-  border-left: 5px solid #DAA520;
+  border-left: 5px solid #daa520;
   padding: 20px 30px;
   border-radius: 10px;
   margin-bottom: 25px;
@@ -72,12 +86,11 @@
   }
 }
 
-
 /* CSS for Book Consultation Section */
 .omnipurse-consult-section {
   background-color: #fff;
   padding: 60px 20px;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   color: #001f3f;
 }
 
@@ -189,7 +202,6 @@
   cursor: pointer;
 }
 
-
 .live-chat {
   padding: 40px 20px;
   background-color: var(--accent);
@@ -197,11 +209,10 @@
   color: var(--secondary);
 }
 
-
 /* footer */
 .footer {
   background: url("../../../assets/iMG/pexels-kevin-ku-92347-577585.jpg")
-  center/cover no-repeat;
+    center/cover no-repeat;
 }
 
 .contact-access-pane {
@@ -273,7 +284,7 @@
 
 .contact-item a:hover {
   background-color: rgba(78, 202, 255, 0.15);
-  color: #fff; 
+  color: #fff;
 }
 
 .connect-pane {
@@ -349,13 +360,12 @@
   border-top: 1px solid gold;
 }
 
-
 /* Links */
 .tas-footer-heading {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #DAA520;
+  color: #daa520;
 }
 
 .tas-footer-nav {
@@ -375,6 +385,6 @@
 }
 
 .tas-footer-nav a:hover {
-  color: #DAA520;
+  color: #daa520;
 }
 /* footer */

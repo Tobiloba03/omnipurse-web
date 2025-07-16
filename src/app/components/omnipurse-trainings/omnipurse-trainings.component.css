@@ -1,9 +1,9 @@
 .omnipurse-hero-banner {
-  background: url('/assets/iMG/trainings2.jpg') center/cover no-repeat;
+  background: url("/assets/iMG/trainings2.jpg") center/cover no-repeat;
   color: #fff;
   position: relative;
   min-height: 600px;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -12,7 +12,8 @@
 .omnipurse-hero-overlay {
   background: rgba(0, 0, 0, 0.65);
   width: 90%;
-  padding: 60px 5%;
+  height: 100vh;
+  padding: 80px 5%;
   display: flex;
   flex: 1;
   align-items: center;
@@ -32,7 +33,7 @@
 }
 
 .omnipurse-tagline {
-  color: #FFD700;
+  color: #ffd700;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -47,7 +48,7 @@
 .omnipurse-subtext {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: #DAA520;
+  color: #daa520;
 }
 
 .omnipurse-buttons {
@@ -100,7 +101,7 @@
   border-radius: 12px;
   max-width: 220px;
   text-align: center;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .omnipurse-stat h3 {
@@ -119,17 +120,17 @@
 }
 
 .omnipurse-stat.red {
-  background: #FF5E5E;
+  background: #ff5e5e;
   color: #fff;
 }
 
 .omnipurse-stat.blue {
-  background: #1DA1F2;
+  background: #1da1f2;
   color: #fff;
 }
 
 .omnipurse-stat.yellow {
-  background: #FFD700;
+  background: #ffd700;
   color: #000;
   font-weight: 600;
 }
@@ -144,7 +145,7 @@
 }
 
 .omnipurse-highlight .yellow {
-  color: #FFD700;
+  color: #ffd700;
   font-weight: 700;
 }
 
@@ -166,12 +167,10 @@
   }
 }
 
-
-
 .op-service-section {
   background-color: #fceeee; /* light pink */
   padding: 60px 5%;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .op-service-container {
@@ -240,11 +239,10 @@
   border-radius: 10px;
 }
 
-
 /* training plans*/
 
 .courses-section {
-  background: #FFF6D4;
+  background: #fff6d4;
   padding: 60px 30px;
   text-align: center;
 }
@@ -356,11 +354,10 @@
 
 /* trainings plan*/
 
-
 /* footer */
 .footer {
   background: url("../../../assets/iMG/pexels-kevin-ku-92347-577585.jpg")
-  center/cover no-repeat;
+    center/cover no-repeat;
 }
 
 .contact-access-pane {
@@ -432,7 +429,7 @@
 
 .contact-item a:hover {
   background-color: rgba(78, 202, 255, 0.15);
-  color: #fff; 
+  color: #fff;
 }
 
 .connect-pane {
@@ -508,13 +505,12 @@
   border-top: 1px solid gold;
 }
 
-
 /* Links */
 .tas-footer-heading {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #DAA520;
+  color: #daa520;
 }
 
 .tas-footer-nav {
@@ -534,6 +530,6 @@
 }
 
 .tas-footer-nav a:hover {
-  color: #DAA520;
+  color: #daa520;
 }
 /* footer */
