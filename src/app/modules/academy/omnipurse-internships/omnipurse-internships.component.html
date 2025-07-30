@@ -1,0 +1,232 @@
+<section class="omnipurse-hero-banner">
+  <header>
+    <app-website-head-menu></app-website-head-menu>
+  </header>
+  <div class="omnipurse-hero-overlay">
+    <div class="omnipurse-hero-content">
+      <!-- Left Text Content -->
+      <div class="omnipurse-hero-left">
+        <!-- <p class="omnipurse-tagline">Over 1,000 tech trainees Since 2023</p> -->
+        <h1 class="omnipurse-heading">
+          Launch Your Tech Career With Real-World Internships
+        </h1>
+        <p class="omnipurse-subtext">
+          Join our structured internship programs designed to help aspiring tech
+          professionals gain practical skills, mentorship, and career-ready
+          experience.
+        </p>
+        <div class="omnipurse-buttons">
+          <a href="#" class="omnipurse-btn-primary">Apply for Internship</a>
+          <a href="#" class="omnipurse-btn-outline">Find a Programme</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer highlight -->
+  <div class="omnipurse-highlight">
+    <p>
+      <span class="yellow">Rewarding Internship</span> With Our Core Tech Team
+      And <span class="yellow">Rewarding Careers</span>
+      With Top Companies.
+    </p>
+  </div>
+</section>
+
+<!-- Image & Text Section -->
+<section class="info-section bookSection">
+  <div class="internship-wrapper">
+    <h2 class="internship-heading">Apply for internship</h2>
+
+    <div class="internship-container">
+      <div class="text-side">
+        <h2><span style="color:#d9002c">Experts</span>, at Your Fingertips</h2>
+        <p>
+          Our internships are designed to kickstart or propel your tech journey. Learn directly from industry professionals,
+    gain real-world experience, and build a career with confidence.
+        </p>
+        <form #internshipForm="ngForm" (ngSubmit)="submitInternshipApplication()">
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-half">
+        <mat-label>First Name</mat-label>
+        <input type="text" matInput name="firstName" required [(ngModel)]="eFirstName" [ngModelOptions]="{ standalone: true }" />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-half">
+        <mat-label>Last Name</mat-label>
+        <input type="text" matInput name="lastName" required [(ngModel)]="eLastName" [ngModelOptions]="{ standalone: true }" />
+      </mat-form-field>
+    </div>
+
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-half">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput name="email" required [(ngModel)]="eEmail" [ngModelOptions]="{ standalone: true }" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-half">
+        <mat-label>Phone</mat-label>
+        <input type="tel" matInput name="phone" required [(ngModel)]="ePhone" [ngModelOptions]="{ standalone: true }"/>
+      </mat-form-field>
+    </div>
+
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-half">
+        <mat-label>Gender</mat-label>
+        <mat-select name="gender" required [(ngModel)]="eGender" [ngModelOptions]="{ standalone: true }">
+          <mat-option value="Male">Male</mat-option>
+          <mat-option value="Female">Female</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-half">
+        <mat-label>Date of Birth</mat-label>
+        <input type="date" matInput name="dob" required [(ngModel)]="eDOB" [ngModelOptions]="{ standalone: true }" />
+      </mat-form-field>
+    </div>
+
+<div class="form-row">
+    <mat-form-field appearance="outline" class="form-half">
+    <mat-label>Country</mat-label>
+    <mat-select
+      name="country"
+      [(ngModel)]="eCountryId"
+      (selectionChange)="getStates(eCountryId, loggedUser)"
+      required
+    >
+      <mat-option *ngFor="let option of objCountrys" [value]="option.CountryID">
+        {{ option.CountryName }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  
+    <mat-form-field appearance="outline" class="form-half">
+      <mat-label>State</mat-label>
+      <mat-select name="state" [(ngModel)]="eStateId" required>
+        <mat-option *ngFor="let option of objStates" [value]="option.StateID">
+          {{ option.StateName }}
+        </mat-option>
+      </mat-select> 
+    </mat-form-field>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Address</mat-label>
+        <input matInput name="address" required [(ngModel)]="eAddress" [ngModelOptions]="{ standalone: true }"/>
+      </mat-form-field>
+    </div>
+
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-half">
+        <mat-label>Education Level</mat-label>
+        <input type="text" matInput name="educationLevel" placeholder="BSc, OND, HND..." required [(ngModel)]="eEducationLevel" [ngModelOptions]="{ standalone: true }" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-half">
+        <mat-label>School</mat-label>
+        <input type="text" matInput name="school" required [(ngModel)]="eSchool" [ngModelOptions]="{ standalone: true }" />
+      </mat-form-field>
+    </div>
+
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-half">
+        <mat-label>Course of Study</mat-label>
+        <input type="text" matInput name="course" required [(ngModel)]="eCourseofStudy" [ngModelOptions]="{ standalone: true }" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-half">
+        <mat-label>Your Skills</mat-label>
+        <input type="text" matInput name="skills" placeholder="seperate by comma(,)" [(ngModel)]="eSkills" [ngModelOptions]="{ standalone: true }"/>
+      </mat-form-field>
+    </div>
+
+    <!-- <div class="form-field">
+      <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Skill Track</mat-label>
+        <mat-select name="internshipTrack" required>
+          <mat-option value="Web Development">Web Development</mat-option>
+          <mat-option value="Graphic Design">Graphic Design</mat-option>
+          <mat-option value="UI/UX Design">UI/UX Design</mat-option>
+          <mat-option value="Digital Marketing">Digital Marketing</mat-option>
+          <mat-option value="Others">Others</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div> -->
+
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-half">
+        <mat-label>Duration</mat-label>
+        <input type="text" matInput name="duration" required [(ngModel)]="eDuration" [ngModelOptions]="{ standalone: true }" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-half">
+        <mat-label>Start Date</mat-label>
+        <input type="date" matInput name="startDate" required [(ngModel)]="eStartDate" [ngModelOptions]="{ standalone: true }" />
+      </mat-form-field>
+
+
+      <!-- <mat-form-field appearance="outline" class="form-half">
+        <mat-label>Upload CV</mat-label>
+        <input type="file" (change)="onFileSelected($event)" required />
+      </mat-form-field> -->
+    </div>
+
+    <div class="form-field">
+      <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Cover Letter</mat-label>
+        <textarea matInput name="coverLetter" rows="3" [(ngModel)]="eCoverLetter" [ngModelOptions]="{ standalone: true }"></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="button-group">
+      <button type="submit" mat-flat-button class="primarybtn" [disabled]="isBusy">
+        
+        <mat-progress-spinner
+        *ngIf="isBusy"
+        diameter="20"
+        mode="indeterminate"
+        color="accent"
+        style="vertical-align: middle; margin-right: 10px"
+        ></mat-progress-spinner>
+        {{ isBusy ? "submitting..." : "Submit Application" }}
+      </button>
+    </div>
+  </form>
+      </div>
+
+      <div class="image-side">
+        <img
+          src="../../../assets/iMG/internship3.png"
+          alt="internship"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="testimonial-section">
+  <h2 class="testimonial-heading">Students Testimonials</h2>
+
+  <div class="testimonial-carousel-wrapper">
+    <button class="carousel-btn left" (click)="scrollLeft()">&#10094;</button>
+
+    <div class="testimonial-carousel" #carousel>
+      <div class="testimonial-card" *ngFor="let t of testimonials">
+        <img [src]="t.image" alt="Student" class="testimonial-img" />
+        <div class="testimonial-text">
+          <p>{{ t.message }}</p>
+          <hr />
+          <h4 class="testimonial-name">{{ t.name }}</h4>
+          <p class="testimonial-title">{{ t.title }}</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-btn right" (click)="scrollRight()">&#10095;</button>
+  </div>
+</div>
+<footer>
+  <app-website-footer-menu></app-website-footer-menu>
+</footer>

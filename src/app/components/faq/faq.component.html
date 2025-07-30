@@ -1,1 +1,54 @@
-<p>faq works!</p>
+<section class="omnipurse-faq-section">
+  <div class="faq-container">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <p class="faq-subtitle">
+      Know more about our processes and how we work, with the help of the following FAQs.
+    </p>
+
+    <div class="faq-list">
+      <!-- FAQ Item 1 - Open -->
+      <div class="faq-item open">
+        <div class="faq-question">
+          <span class="faq-icon">✖</span>
+          <h3>
+            How can I hire cost-effective dedicated development teams<br />
+            from Nigeria?
+          </h3>
+        </div>
+        <div class="faq-answer">
+          <p>
+            If you are planning to hire dedicated development teams but have a budget constraint, then it is
+            better to go for a mid-scale Nigeria-based services provider company. We are a full-stack
+            development company with over 15 years of experience offering flexible models (hourly, monthly,
+            fixed) to global clients.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-icon">✔</span>
+          <h3>What should I consider before hiring dedicated development teams?</h3>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-icon">✔</span>
+          <h3>Which type of application programming you do?</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.faq-item').forEach((item) => {
+    item.addEventListener('click', () => {
+      document.querySelectorAll('.faq-item').forEach((el) => el.classList.remove('open'));
+      item.classList.toggle('open');
+    });
+  });
+</script>

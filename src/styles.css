@@ -12,7 +12,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.primarybtn button {
+/* .primarybtn button {
   background-color: #d9002c;
   color: white;
   border: 2px solid white;
@@ -26,9 +26,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background-color: white;
   color: #d9002c;
   border: 1px solid #d9002c;
-}
+} */
 
-.primarybtn a {
+.primarybtn a,button {
   background-color: #d9002c;
   color: white;
   border: 2px solid white;
@@ -38,7 +38,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   transition: background-color 0.3s ease;
 }
 
-.primarybtn a:hover {
+.primarybtn a:hover,button:hover {
   background-color: white;
   color: #d9002c;
   border: 1px solid #d9002c;

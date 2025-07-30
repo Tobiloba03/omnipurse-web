@@ -3,7 +3,11 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   />
+   
 </head>
+<header>
+    <app-website-head-menu></app-website-head-menu>
+  </header>
 
 <section class="hero video-hero">
   <video autoplay muted loop playsinline class="hero-video">
@@ -13,10 +17,6 @@
     />
     Your browser does not support the video tag.
   </video>
-
-  <header>
-    <app-website-head-menu></app-website-head-menu>
-  </header>
 
   <div class="hero-content">
     <h1>Empowering Your Business with Technology</h1>
@@ -39,7 +39,7 @@
     </div>
   </div>
 
-  <div class="consult-overlay">
+  <!-- <div class="consult-overlay">
     <h2>Let's Talk About Your Business</h2>
     <p>
       Get expert advice on how to grow, scale, and automate your business with
@@ -52,8 +52,61 @@
     >
       📅 Book a Free Consultation
     </button>
+  </div> -->
+</section>
+
+<section class="omnipurse-consulting">
+  <h2>Let's talk about your business</h2>
+  <p class="consulting-subtitle">
+    Get expert advice on how to grow, scale, and automate your business with tailored solutions. Book a free consultation with our team today.
+  </p>
+
+  <div class="consulting-cards">
+    <div class="consulting-card">
+      <img src="assets/iMG/ProductConsulting.jpg" alt="Product Consulting">
+      <h3>PRODUCT CONSULTING</h3>
+      <hr />
+      <ul>
+        <li>✔ Enhancing product capabilities</li>
+        <li>✔ Accelerating or boosting product performance</li>
+        <li>✔ Addition of new features & functionalities</li>
+      </ul>
+    </div>
+
+    <div class="consulting-card">
+      <img src="assets/iMG/SolutionConsulting.png" alt="Solution Consulting">
+      <h3>SOLUTION CONSULTING</h3>
+      <hr />
+      <ul>
+        <li>✔ Improve efficiency and security</li>
+        <li>✔ Optimize IT costs with utilization of latest technologies</li>
+        <li>✔ Get actionable insights on current solution offerings</li>
+      </ul>
+    </div>
+
+    <div class="consulting-card">
+      <img src="assets/iMG/TransformationalConsulting.jpg" alt="Transformational Consulting">
+      <h3>TRANSFORMATIONAL CONSULTING</h3>
+      <hr />
+      <ul>
+        <li>✔ Revise operations to deliver business value</li>
+        <li>✔ Alignment of business strategies & operations</li>
+        <li>✔ Identify scope of innovation and implementation plan</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="consulting-button">
+    <button
+      type="button"
+      [routerLink]="['/consultation']"
+      class="consult-button"
+    >
+      📅 Book a Free Consultation
+    </button>
   </div>
 </section>
+
 
 <!-- About Us Section -->
 <section class="about-section">

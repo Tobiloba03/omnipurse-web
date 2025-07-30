@@ -4,6 +4,7 @@ import { AiandIoTInnovationsComponent } from './ai-and-iot-innovations/ai-and-io
 import { BusinessDevelopmentComponent } from './business-development/business-development.component';
 import { SoftwareSolutionsComponent } from './software-solutions/software-solutions';
 import { ServicesOverviewComponent } from './services-overview/services-overview.component';
+import { ConsultationComponent } from './consultation/consultation.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'ai-and-iot-innovations',
     component: AiandIoTInnovationsComponent,
+  },
+  {
+    path: 'consultation',
+    component: ConsultationComponent
   },
 ];
 

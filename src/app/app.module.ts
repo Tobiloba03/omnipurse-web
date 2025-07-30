@@ -19,21 +19,24 @@ import { SharedModule } from './shared/shared.module';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ProductsModule } from './modules/products/products.module';
-import { ConsultationComponent } from './components/consultation/consultation.component';
+import { ConsultationComponent } from './modules/services/consultation/consultation.component';
 import { ServicesModule } from './modules/services/services.module';
 import { HttpClientModule } from '@angular/common/http';
 import { WebsiteHeadMenuComponent } from './components/website-head-menu/website-head-menu.component';
 import { ForgotPasswordComponent } from './modules/auth/forgot-password/forgot-password.component';
 import { CreateAccountComponent } from './modules/auth/create-account/create-account.component';
 import { AuthModule } from './modules/auth/auth.module';
-import { AcademyOverviewComponent } from './components/academy-overview/academy-overview.component';
-import { OmnipurseAcademyComponent } from './components/omnipurse-academy/omnipurse-academy.component';
-import { OmnipurseTrainingsComponent } from './components/omnipurse-trainings/omnipurse-trainings.component';
-import { OmnipurseInternshipsComponent } from './components/omnipurse-internships/omnipurse-internships.component';
-import { ViewAcademyDetailsComponent } from './components/view-academy-details/view-academy-details.component';
-import { OmnipurseCoursesComponent } from './componenets/omnipurse-courses/omnipurse-courses.component';
+import { AcademyOverviewComponent } from './modules/academy/academy-overview/academy-overview.component';
+import { OmnipurseAcademyComponent } from './modules/academy/omnipurse-academy/omnipurse-academy.component';
+import { OmnipurseTrainingsComponent } from './modules/academy/omnipurse-trainings/omnipurse-trainings.component';
+import { OmnipurseInternshipsComponent } from './modules/academy/omnipurse-internships/omnipurse-internships.component';
+import { ViewAcademyDetailsComponent } from './modules/academy/view-academy-details/view-academy-details.component';
+import { OmnipurseCoursesComponent } from './modules/academy/omnipurse-courses/omnipurse-courses.component';
 import { OmnipurseItServicesComponent } from './components/omnipurse-it-services/omnipurse-it-services.component';
 import { FaqComponent } from './components/faq/faq.component';
+import { JoinOurTeamComponent } from './components/join-our-team/join-our-team.component';
+import { AcademyModule } from './modules/academy/academy.module';
+import { BlogComponent } from './components/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -45,14 +48,10 @@ import { FaqComponent } from './components/faq/faq.component';
     ConsultationComponent,
     ForgotPasswordComponent,
     CreateAccountComponent,
-    AcademyOverviewComponent,
-    OmnipurseAcademyComponent,
-    OmnipurseTrainingsComponent,
-    OmnipurseInternshipsComponent,
-    ViewAcademyDetailsComponent,
-    OmnipurseCoursesComponent,
     OmnipurseItServicesComponent,
     FaqComponent,
+    JoinOurTeamComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,
@@ -80,8 +79,7 @@ import { FaqComponent } from './components/faq/faq.component';
     HttpClientModule,
 
     ProductsModule,
-
-    AppRoutingModule,
+    AcademyModule
   ],
   providers: [],
   bootstrap: [AppComponent],

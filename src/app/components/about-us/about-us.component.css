@@ -1,0 +1,591 @@
+.omnipurse-hero-banner {
+  background: url("/assets/AboutUs-IMG/about-us-banner.jpg") center/cover no-repeat;
+  color: #fff;
+  position: relative;
+  min-height: 600px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.omnipurse-hero-overlay {
+  background: rgba(0, 0, 0, 0.65);
+  width: 90%;
+  height: 100vh;
+  padding: 80px 5%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.omnipurse-hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+/* Left Content */
+.omnipurse-hero-left {
+  max-width: 50%;
+}
+
+.omnipurse-tagline {
+  color: #ffd700;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.omnipurse-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.omnipurse-subtext {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #daa520;
+}
+
+.omnipurse-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.omnipurse-btn-primary {
+  background-color: #d9002c;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.omnipurse-btn-primary:hover {
+  background-color: #800000;
+}
+
+.omnipurse-btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.omnipurse-btn-outline:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Right Stats */
+.omnipurse-hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.omnipurse-stat {
+  background: #fff;
+  color: #000;
+  padding: 15px 20px;
+  border-radius: 12px;
+  max-width: 220px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.omnipurse-stat h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.omnipurse-stat p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.omnipurse-stat .stars {
+  margin-top: 5px;
+  color: #007bff;
+}
+
+.omnipurse-stat.red {
+  background: #ff5e5e;
+  color: #fff;
+}
+
+.omnipurse-stat.blue {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.omnipurse-stat.yellow {
+  background: #ffd700;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Highlight footer */
+.omnipurse-highlight {
+  background: #001f3f;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.1rem;
+}
+
+.omnipurse-highlight .yellow {
+  color: #ffd700;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .omnipurse-hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .omnipurse-hero-left {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .omnipurse-hero-right {
+    align-items: center;
+  }
+}
+
+.omnipurse-about-section {
+  padding: 1rem 2rem;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #111;
+  /* background-color: #ffcccc; */
+}
+
+.omnipurse-about-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.omnipurse-about-heading2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: #d9002c;
+}
+
+.omnipurse-about-description {
+  font-size: 1.1rem;
+  color: #000;
+  line-height: 1.8;
+}
+
+.omnipurse-values-section {
+  padding: 1rem 2rem;
+  background-color: #ffcccc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.omnipurse-values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.omnipurse-value-card {
+  text-align: center;
+  border: 1px solid #eee;
+  padding: 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.omnipurse-value-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.omnipurse-value-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.omnipurse-value-card .underline {
+  width: 40px;
+  height: 3px;
+  background-color: #7a0000;
+  margin: 0 auto 1rem auto;
+}
+
+.omnipurse-value-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Hover Effects */
+.omnipurse-value-card.top-card:hover {
+  background-color: #daa520;
+  color: #fff;
+}
+
+.omnipurse-value-card.top-card:hover h3,
+.omnipurse-value-card.top-card:hover p {
+  color: #fff;
+}
+
+.omnipurse-value-card.bottom-card:hover {
+  background-color: #d9002c;
+  color: #fff;
+}
+
+.omnipurse-value-card.bottom-card:hover h3,
+.omnipurse-value-card.bottom-card:hover p {
+  color: #fff;
+}
+
+.omnipurse-mission-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-color: #ffcccc; 
+}
+
+.omnipurse-mission-background {
+  width: 50%;
+  max-height: 50%;
+  display: flex;
+  margin-left: auto;
+}
+
+.omnipurse-mission-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 30%;
+  background-color: #7a0000; /* Deep red */
+  color: white;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  margin-top:8%;
+
+}
+
+.omnipurse-mission-overlay h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.omnipurse-mission-overlay p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+
+.omnipurse-vision-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffcccc; 
+}
+
+.omnipurse-vision-background {
+  width: 50%;
+  max-height: 50%;
+  display: flex;
+  margin-right: auto;
+}
+
+.omnipurse-vision-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 30%;
+  background-color: #daa520; 
+  color: #000;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  margin-top:8%;
+  /* display: flex;
+    margin-right: auto; */
+}
+
+.omnipurse-vision-overlay h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.omnipurse-vision-overlay p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.omnipurse-policy-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffcccc; 
+}
+
+.omnipurse-policy-background {
+  width: 50%;
+  max-height: 50%;
+  display: flex;
+  margin-right: auto;
+}
+
+.omnipurse-policy-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 30%;
+  background-color: #001f3f; 
+  color: #fff;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  margin-top:8%;
+  /* display: flex;
+    margin-right: auto; */
+}
+
+.omnipurse-policy-overlay h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.omnipurse-policy-overlay p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.unique-capabilities-section {
+  background-image: url('/assets/AboutUs-IMG/OurCapabilities-Banner.jpg');
+  background-size: cover;
+  background-position: top; /* Ensures top of image is always shown */
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  /* min-height: 400px; Set a sensible minimum height */
+  width: 100%;
+  overflow: hidden; /* Optional: hides overflow if needed */
+  
+  max-height: 30%; /* Allow content to determine height */
+}
+
+.unique-capabilities-overlay {
+  background-color: #DAA520; /* Teal overlay */
+  padding: 60px 40px;
+  max-width: 600px;
+  border: 2px dotted white;
+  text-align: center;
+  color: #000;
+  margin-left: 300px;
+  /* left:2; */
+}
+
+.unique-capabilities-heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.unique-capabilities-text {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.unique-capabilities-subtext {
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.unique-capabilities-button {
+  background-color: white;
+  color: #d9002c;
+  padding: 12px 30px;
+  border: none;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.unique-capabilities-button:hover {
+  background-color: #e0f7f8;
+}
+
+
+ .omnipurse-hire-join-wrapper1 {
+  position: relative;
+  width: 100%;
+  background-color: #ffcccc; 
+}
+
+ .omnipurse-hire-join-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  
+  gap: 40px;
+  padding: 60px 20px;
+  max-width: 1300px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffcccc;
+}
+
+/* LEFT SECTION */
+.omnipurse-hire-left {
+  flex: 2;
+  min-width: 0;
+}
+
+.omnipurse-hire-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.omnipurse-hire-subtitle {
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.omnipurse-hire-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.omnipurse-hire-box {
+  border: 2px dotted #007B8A;
+  padding: 25px 20px;
+  border-radius: 10px;
+  background: white;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.omnipurse-hire-box:hover {
+  background-color: #DAA520;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.omnipurse-hire-box img {
+  width: 50px;
+  margin-bottom: 15px;
+  transition: filter 0.3s ease;
+}
+
+.omnipurse-hire-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.omnipurse-line {
+  width: 50px;
+  height: 3px;
+  background-color: #d9002c;
+  margin: 0 auto 10px auto;
+}
+
+.omnipurse-hire-box p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* RIGHT SECTION */
+.omnipurse-join-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.omnipurse-join-card {
+  background-color: #001f3f;
+  color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.omnipurse-join-card h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.omnipurse-join-card p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.omnipurse-join-btn {
+  background-color: #DAA520;
+  color: #001f3f;
+  text-decoration: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border-color: #DAA520;
+}
+
+.omnipurse-join-btn:hover {
+  background-color: white;
+  color: #d9002c;
+}

@@ -1,0 +1,206 @@
+<section class="banner">
+  <header>
+    <app-website-head-menu></app-website-head-menu>
+  </header>
+  <div class="background-blur"></div>
+  <div class="banner-text">
+    <h1>Book Your Free Consultation</h1>
+    <p>
+      Schedule a session with our experts and get personalized guidance tailored
+      to your needs.
+    </p>
+  </div>
+</section>
+
+<!-- Image & Text Section -->
+<section class="info-section bookSection">
+  <div class="consultation-wrapper">
+    <h2 class="consultation-heading">Book a <span style="color:#d9002c">Consultation</span></h2>
+
+    <div class="consultation-container">
+      <div class="text-side">
+        <h2><span style="color:#d9002c">Experts</span>, at Your Fingertips</h2>
+        <p>
+          Our consultations are designed to help you make informed decisions.
+          Talk to professionals who understand your needs.
+        </p>
+        <form #bookConsultationForm="ngForm">
+          <div class="form-field">
+            <mat-form-field class="mat-field" style="width: 100%">
+              <mat-label>Name</mat-label>
+              <input
+                type="text"
+                matInput
+                name="firstname"
+                required
+                [(ngModel)]="eName"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </mat-form-field>
+          </div>
+
+          <div class="form-field">
+            <mat-form-field class="mat-field" style="width: 100%">
+              <mat-label>Email</mat-label>
+              <input
+                type="email"
+                matInput
+                name="email"
+                required
+                [(ngModel)]="eEmail"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </mat-form-field>
+          </div>
+
+          <div class="form-field">
+            <mat-form-field class="mat-field" style="width: 100%">
+              <mat-label>Phone</mat-label>
+              <input
+                type="tel"
+                matInput
+                name="phone"
+                [(ngModel)]="ePhone"
+                [ngModelOptions]="{ standalone: true }"
+                required
+              />
+            </mat-form-field>
+          </div>
+
+          <div class="form-field">
+            <mat-form-field class="mat-field" style="width: 100%">
+              <mat-label>Company name (if company)</mat-label>
+              <input
+                type="text"
+                matInput
+                name="companyname"
+                [(ngModel)]="eCompanyName"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </mat-form-field>
+          </div>
+
+          <div class="form-field">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Service Area of Interest</mat-label>
+              <mat-select name="service" [(ngModel)]="eServiceId">
+                <mat-option
+                  *ngFor="let option of objServices"
+                  [value]="option.ServiceID"
+                >
+                  {{ option.ServiceName }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="form-row">
+            <mat-form-field appearance="outline" class="form-half">
+              <mat-label>Date</mat-label>
+              <input
+                type="date"
+                matInput
+                required
+                [(ngModel)]="eScheduleDate"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form-half">
+              <mat-label>Time</mat-label>
+              <input
+                type="time"
+                matInput
+                required
+                [(ngModel)]="eScheduleTime"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </mat-form-field>
+          </div>
+
+          <div class="form-field">
+            <mat-form-field class="mat-field" style="width: 100%">
+              <mat-label>Additional information</mat-label>
+              <input
+                type="text"
+                matInput
+                name="addtionalInfo"
+                [(ngModel)]="eAddtionalInfo"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </mat-form-field>
+          </div>
+
+          <div class="button-group">
+            <div class="primarybtn">
+              <button
+                type="button"
+                (click)="bookConsultation()"
+                [disabled]="isBusy"
+              >
+                <mat-progress-spinner
+                  *ngIf="isBusy"
+                  diameter="20"
+                  mode="indeterminate"
+                  style="vertical-align: middle; margin-right: 10px"
+                ></mat-progress-spinner>
+                {{ isBusy ? "booking..." : "Book Now" }}
+              </button>
+            </div>
+            <div class="secondarybtn">
+              <button type="submit" routerLink="/dashboard">Visit Dashboard</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="image-side">
+        <img
+          src="../../../assets/iMG/consultation2.png"
+          alt="Consultation"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonials -->
+<section class="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-list">
+    <div class="testimonial" *ngFor="let testimonial of testimonials">
+      <p>"{{ testimonial.feedback }}"</p>
+      <span>— {{ testimonial.name }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+  <h2>Have Questions?</h2>
+  <p>
+    Find answers to commonly asked questions about our consultation service.
+  </p>
+  <div class="primarybtn">
+    <button (click)="goToFAQ()">Visit FAQ</button>
+  </div>
+</section>
+
+<!-- Value Proposition -->
+<section class="value-section">
+  <p>
+    Consultations with us offer clarity, strategic direction, and peace of mind.
+    Take the first step towards better decisions.
+  </p>
+</section>
+
+<!-- Live Chat Placeholder -->
+<section class="live-chat">
+  <h3>Need Help Right Now?</h3>
+  <p>Start a live chat with our team.</p>
+</section>
+
+<footer>
+  <app-website-footer-menu></app-website-footer-menu>
+</footer>

@@ -1,0 +1,562 @@
+/* Headers */
+.omnipurse-hero-banner {
+  background: url('/assets/iMG/internships2.jpg') center/cover no-repeat;
+  color: #DAA520;
+  position: relative;
+  min-height: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.omnipurse-hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  width: 90%;
+  padding: 60px 5%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.omnipurse-hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+/* Left Content */
+.omnipurse-hero-left {
+  max-width: 50%;
+}
+
+.omnipurse-tagline {
+  color: #FFD700;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.omnipurse-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.omnipurse-subtext {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.omnipurse-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.omnipurse-btn-primary {
+  background-color: #d9002c;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.omnipurse-btn-primary:hover {
+  background-color: #800000;
+}
+
+.omnipurse-btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.omnipurse-btn-outline:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Right Stats */
+.omnipurse-hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.omnipurse-stat {
+  background: #fff;
+  color: #000;
+  padding: 15px 20px;
+  border-radius: 12px;
+  max-width: 220px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.omnipurse-stat h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.omnipurse-stat p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.omnipurse-stat .stars {
+  margin-top: 5px;
+  color: #007bff;
+}
+
+.omnipurse-stat.red {
+  background: #FF5E5E;
+  color: #fff;
+}
+
+.omnipurse-stat.blue {
+  background: #1DA1F2;
+  color: #fff;
+}
+
+.omnipurse-stat.yellow {
+  background: #FFD700;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Highlight footer */
+.omnipurse-highlight {
+  background: #001f3f;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.1rem;
+}
+
+.omnipurse-highlight .yellow {
+  color: #FFD700;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .omnipurse-hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .omnipurse-hero-left {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .omnipurse-hero-right {
+    align-items: center;
+  }
+}
+
+
+.testimonial-section {
+  padding: 2rem;
+  background: #f8f9fc;
+  text-align: center;
+}
+
+.testimonial-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #001f3f;
+}
+
+.testimonial-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.testimonial-card {
+  min-width: 320px;
+  background: white;
+  border-radius: 1rem;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  align-items: center;
+}
+
+.testimonial-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.testimonial-text {
+  text-align: left;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.testimonial-name {
+  color: #f57c00;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.testimonial-title {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Navigation buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  z-index: 2;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-btn.left {
+  left: 0.5rem;
+}
+
+.carousel-btn.right {
+  right: 0.5rem;
+}
+
+/* Section container */
+.info-section {
+  padding: 50px 20px;
+}
+
+.bookSection {
+  background: #daa520;
+}
+
+/* Wrapper with heading */
+.internship-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.internship-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #001f3f;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+/* Flex container */
+.internship-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding:40px 40px;
+  border-radius: 10px;
+}
+
+/* Text/form side */
+.text-side {
+  flex: 1;
+  min-width: 320px;
+  width: 100%;
+}
+
+.text-side h2 {
+  font-size: 2rem;
+  color: #00274f;
+  margin-bottom: 10px;
+}
+
+.text-side p {
+  margin-bottom: 25px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.form-half {
+  flex: 1;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #d9002c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.secondarybtn button {
+  background-color: #001f3f;
+}
+
+.secondarybtn button:hover {
+  background-color: #fff;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Image side */
+.image-side {
+  flex: 1;
+  text-align: center;
+  min-width: 320px;
+}
+
+.image-side img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.primarybtn a,button {
+  background-color: #d9002c;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.primarybtn a:hover,button:hover {
+  background-color: white;
+  color: #d9002c;
+  border: 1px solid #d9002c;
+}
+
+
+/* footer */
+.footer {
+  background: url("../../../assets/iMG/pexels-kevin-ku-92347-577585.jpg")
+  center/cover no-repeat;
+}
+
+.contact-access-pane {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay look */
+  color: white;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.contact-item {
+  flex: 1 1 200px;
+  margin: 20px;
+}
+
+.contact-item .icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Icons — you can replace with real SVGs or Font Awesome if available */
+.address-icon {
+  background-color: #001f3f;
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/marker.png");
+}
+
+.phone-icon {
+  background-color: goldenrod;
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/phone.png");
+}
+
+.email-icon {
+  background-color: red;
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/new-post.png");
+}
+
+.hours-icon {
+  background-color: #015958;
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/clock.png");
+}
+
+.contact-item h4 {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.contact-item a {
+  color: #4ecaff;
+  text-decoration: none;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-item a:hover {
+  background-color: rgba(78, 202, 255, 0.15);
+  color: #fff; 
+}
+
+.connect-pane {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.connect-pane h2 {
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.social {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  border-radius: 50%;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #001f3f;
+  transition: transform 0.2s ease;
+}
+
+.social:hover {
+  transform: scale(1.1);
+}
+
+/* Specific icons using icons8 free CDN or your own assets */
+.twitter {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/twitter.png");
+}
+.facebook {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png");
+}
+.instagram {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png");
+}
+.whatsapp {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png");
+}
+.youtube {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png");
+}
+.tiktok {
+  background-image: url("https://img.icons8.com/ios-filled/50/ffffff/tiktok.png");
+}
+
+.note {
+  font-size: 13px;
+  margin-top: 10px;
+  color: white;
+}
+
+.footer-bottom {
+  background: #111;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid gold;
+}
+
+
+/* Links */
+.tas-footer-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #DAA520;
+}
+
+.tas-footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tas-footer-nav li {
+  margin-bottom: 10px;
+}
+
+.tas-footer-nav a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.tas-footer-nav a:hover {
+  color: #DAA520;
+}
+/* footer */

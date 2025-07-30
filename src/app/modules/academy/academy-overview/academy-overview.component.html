@@ -1,0 +1,121 @@
+<section class="hero-section">
+  <header>
+      <app-website-head-menu></app-website-head-menu>
+    </header>
+    <div class="background-blur"></div>
+  <div class="hero-content">
+    <h1>Tech Academy, Trainings & Internships</h1>
+    <p style="color:#DAA520">Get real-world experience, practical skills, and industry certifications that accelerate your tech career.</p>
+    <button class="cta-button" (click)="scrollToSection('programs')">Explore Programs</button>
+  </div>
+</section>
+
+<section class="academy-about">
+  <h2>Why Choose Omnipurse?</h2>
+  <p>We provide a practical, project-based learning environment led by experts in the field. From academy to trainings to internships, we’ve got your growth path covered.</p>
+  <div class="features">
+    <div class="feature">
+      <h4>🌐 Hybrid Learning</h4>
+      <p>Join physically or remotely from anywhere in the world.</p>
+    </div>
+    <div class="feature">
+      <h4>🛠️ Hands-On Projects</h4>
+      <p>Learn by building real applications and systems.</p>
+    </div>
+    <div class="feature">
+      <h4>🎯 Career Mentorship</h4>
+      <p>Get career coaching and portfolio reviews.</p>
+    </div>
+    <div class="feature">
+      <h4>🎓 Certification</h4>
+      <p>Earn recognized certifications after successful completion.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMY SECTION -->
+<section class="section academy-section">
+  <div class="text-content">
+    <h2>Omnipurse Academy</h2>
+    <h4>Zero to Pro: Your Tech Journey Starts Here</h4>
+    <p>
+      Our academy provides structured, curriculum-based learning tailored for beginners and career-switchers.
+      We help you build strong foundations and grow into a professional tech expert.
+    </p>
+    <div class="features">
+      <div class="feature-card">📘 Structured curriculum</div>
+      <div class="feature-card">🎯 Beginner to professional tracks</div>
+      <div class="feature-card">📺 Live & recorded sessions</div>
+      <div class="feature-card">👨‍🏫 Mentorship available</div>
+      <div class="feature-card">🕒 Self-paced duration</div>
+      <div class="feature-card">🎓 Certificates upon completion</div>
+    </div>
+    <button routerLink="/omnipurse-academy" class="cta-button">Visit Our Academy</button>
+  </div>
+  <div class="image-content">
+    <img src="assets/iMG/classroom1.jpg" alt="Omnipurse Academy">
+  </div>
+</section>
+
+<!-- TRAININGS SECTION -->
+<section class="section trainings-section">
+  <div class="image-content">
+    <img src="assets/iMG/prof-trainings.png" alt="Tech Trainings">
+  </div>
+  <div class="text-content">
+    <h2>Professional Trainings</h2>
+    <h4>Skill Up with Expert-Led, Hands-On Learning</h4>
+    <p>
+      We deliver corporate, in-house, and individual IT trainings covering key tech tools and real-world applications.
+      Empower your team or yourself with hands-on knowledge from industry professionals.
+    </p>
+    <div class="features">
+      <div class="feature-card">🏢 Corporate in-house programs</div>
+      <div class="feature-card">🧰 Tech tools training</div>
+      <div class="feature-card">🧪 Hands-on workshops</div>
+      <div class="feature-card">📊 Real-world use cases</div>
+      <div class="feature-card">👨‍🏫 Industry experts as trainers</div>
+      <div class="feature-card">🌐 Online & onsite delivery</div>
+    </div>
+    <button routerLink="/omnipurse-trainings" class="cta-button">Visit Our Trainings</button>
+  </div>
+</section>
+
+<!-- INTERNSHIP SECTION -->
+<section class="section internship-section">
+  <div class="text-content">
+    <h2>Internship Opportunities</h2>
+    <h4>Real-World Experience That Launches Your Career</h4>
+    <p>
+      Our internship program helps students and junior tech enthusiasts gain professional experience, develop practical skills,
+      and transition into full-time roles.
+    </p>
+    <div class="features">
+      <div class="feature-card">🚀 Pathway to full-time roles</div>
+      <div class="feature-card">💼 Industrial exposure</div>
+      <div class="feature-card">🔧 Real project experience</div>
+      <div class="feature-card">👨‍💻 Collaborative work with teams</div>
+      <div class="feature-card">📈 Skill-building opportunities</div>
+      <div class="feature-card">🎯 Portfolio and CV support</div>
+    </div>
+    <button routerLink="/omnipurse-internships" class="cta-button">Visit Our Internships</button>
+  </div>
+  <div class="image-content">
+    <img src="assets/iMG/internship1.jpg" alt="Internship Program">
+  </div>
+</section>
+<section id="programs" class="academy-programs">
+  <h2>Our Programs</h2>
+  <div class="program-grid">
+    <div class="program-card" *ngFor="let program of programs">
+      <h3>{{ program.title }}</h3>
+      <p>{{ program.description }}</p>
+      <button (click)="applyForProgram(program.title)">Apply Now</button>
+    </div>
+  </div>
+</section>
+<footer>
+  <app-website-footer-menu></app-website-footer-menu>
+</footer>
+
+

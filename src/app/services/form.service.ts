@@ -34,4 +34,8 @@ export class FormService {
   {
     return this.http.getData(`${Values.apiUrl}Generic/GetServices`);
   }
+
+  SubmitInternshipApplication(objInternshipApplication:{}){
+    return this.http.postData(`${Values.apiUrl}Academy/SubmitInternshipApplication`,objInternshipApplication);
+  }
 }
